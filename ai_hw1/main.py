@@ -109,6 +109,7 @@ def toy_map_problem_experiments():
     print('Solve the map problem.')
     print('check that git collab works as intended')
     print('check again?')
+    print('check with git desktop')
 
     # Ex.10
     # TODO: Just run it and inspect the printed result.
