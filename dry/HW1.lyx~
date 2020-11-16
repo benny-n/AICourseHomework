@@ -1,0 +1,557 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "David"
+\font_sans "default" "David"
+\font_typewriter "default" "David"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\topmargin 3cm
+\bottommargin 4cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+תרגיל בית
+\family roman
+\series medium
+\shape up
+\size largest
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\family roman
+\series medium
+\shape up
+\size largest
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+- מבוא לבינה מלאכותית
+\family roman
+\series medium
+\shape up
+\size largest
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+236501
+\end_layout
+
+\begin_layout Author
+בני נזימוב
+\family roman
+\series medium
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+314862129
+\numeric off
+ 
+\begin_inset Newline newline
+\end_inset
+
+ליעד ארם
+\family roman
+\series medium
+\shape up
+\size large
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+315695783
+\numeric off
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+חלק_א':
+\end_layout
+
+\begin_layout Description
+
+\numeric on
+1
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+k!\cdot(m+1)^{k}\cdot m
+\]
+
+\end_inset
+
+כאשר 
+\begin_inset Formula $k!$
+\end_inset
+
+ זה מתן סדר לדירות, 
+\begin_inset Formula $(m+1)^{k}$
+\end_inset
+
+ מספר האופציות לביקור
+\backslash
+חוסר ביקור במעבדות בין כל שתי דירות ולפני הדירה הראשונה, ו-
+\begin_inset Formula $m$
+\end_inset
+
+ זה מספר האופציות לסיים במעבדה.
+\end_layout
+
+\begin_layout Description
+
+\numeric on
+2
+\numeric off
+.
+\end_layout
+
+\begin_layout Description
+
+\numeric on
+3
+\numeric off
+.
+\end_layout
+
+\begin_layout Description
+חלק_ג':
+\end_layout
+
+\begin_layout Description
+
+\numeric on
+4
+\numeric off
+.
+ 
+\end_layout
+
+\begin_layout Standard
+ערך הקיצון המקסימלי הוא 
+\begin_inset Formula $k+m$
+\end_inset
+
+ והוא יתקבל במצב בו לא ביקרנו באף אחת מהמעבדות ומספר המטושים באמבולנס קטן
+ ממספר המטושים המקסימלי, וגם לא ביקרנו באף אחת מהדירות ומספר המטושים באמבולנס
+ גדול מספיק כדי שנוכל לבקר בכל אחת מהן.
+\begin_inset Newline newline
+\end_inset
+
+ערך הקיצון המינימלי הוא
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\numeric off
+, והוא יתקבל במצב בו ביקרנו בכל הדירות, וביקרנו בכל המעבדות, וכעת אנו נמצאים
+ במעבדה האחרונה שלה העברנו את כל המטושים שנשארו באמבולנס.
+\end_layout
+
+\begin_layout Description
+
+\numeric on
+5
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+לא ייתכנו מעגלים במרחב המצבים.
+ מצב שבו ה
+\begin_inset Formula $cur.loc$
+\end_inset
+
+ מתאר דירה, אינו יכול להיות חלק ממעגל, כיוון שלא ניתן לבקר בדירה פעמיים.
+ כלומר, מעגלים יכולים להתקבל רק ממצבים בהם המיקום 
+\begin_inset Formula $(cur.loc)$
+\end_inset
+
+ מתאר מעבדות.
+ נשים לב כי ביקור במעבדה מרוקן את קבוצת הבדיקות באמבולנס 
+\begin_inset Formula $(Taken)$
+\end_inset
+
+ ולכן לא יתכן שנחזור למעבדה שבה מסרנו את הבדיקות.
+ נשים לב כי בסיטואציה של רצף ביקורים במעבדות שבכולם ה
+\begin_inset Formula $Taken$
+\end_inset
+
+ הוא ריק, המצבים עדיין נבדלים במספר המטושים הזמינים באמבולנס, שכן אם ביקרנו
+ במעבדה כאשר ה
+\begin_inset Formula $Taken$
+\end_inset
+
+ ריק מספר המטושים שלנו בהכרח יגדל ולכן מדובר על מצבים שונים.
+\end_layout
+
+\begin_layout Description
+
+\numeric on
+6
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+מרחב המצבים כפי שהוגדר הוא אינסופי, כיוון שאחד האיברים בחמישיה שמגדירה מצב
+ הוא מספר מטושים באמבולנס 
+\begin_inset Formula $(Matoshim)$
+\end_inset
+
+, ומספר זה מוגדר להיות מספר טבעי כלשהו.
+ בפועל, לא כל המצבים ישיגים, למשל מצבים בהם הערך 
+\begin_inset Formula $Matoshim$
+\end_inset
+
+ גדול מסכום כל המטושים בכל המעבדות + מספר המטושים ההתחלתי, אינם ישיגים.
+ זאת מכיוון שלקחנו את כל המטושים הזמינים במעבדות ואין לנו מאיפה לקבל עוד
+ מטושים.
+\end_layout
+
+\begin_layout Description
+
+\numeric on
+7
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+כן.
+ לדוגמא מצב 
+\begin_inset Formula $s\in S$
+\end_inset
+
+ כך ש- 
+\begin_inset Formula $s.visitiedLabs=Labs$
+\end_inset
+
+ )כלומר ביקרנו בכל המעבדות ולקחנו את כל המטושים הזמינים( אך 
+\begin_inset Formula $s.Matoshim<d_{i}.roomates$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i$
+\end_inset
+
+ עבורו לא ביקרנו בדירה ה-
+\begin_inset Formula $d_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+
+\numeric on
+8
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+אורך המסלול המינימלי הוא 
+\begin_inset Formula $k+1$
+\end_inset
+
+ קשתות, יתקבל כאשר 
+\begin_inset Formula $initialNrMatoshimAmb\geq\sum_{i=1}^{k}d_{i}.roomates$
+\end_inset
+
+, וגם 
+\begin_inset Formula $ambulanceTestCapacity\geq\sum_{i\in[k]}d_{i}.roomates$
+\end_inset
+
+ לכן נעבור על כל הדירות )
+\begin_inset Formula $k$
+\end_inset
+
+ קשתות( ובסוף נסיים במעבדה כלשהי.
+ סך הכל 
+\begin_inset Formula $k+1$
+\end_inset
+
+ קשתות.
+\begin_inset Newline newline
+\end_inset
+
+אורך המסלול המקסימלי )שמסתיים במצב סופי( מתקבל כאשר נבקר תחילה בכל המעבדות
+ וניקח את כל המטושים הזמינים )
+\begin_inset Formula $m$
+\end_inset
+
+ קשתות(, ולאחר מכן נבקר במעבדה כלשהי פעם נוספת לאחר ביקור בכל דירה )
+\numeric on
+
+\begin_inset Formula $2k$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+קשתות( כדי לשים את הבדיקות שאספנו מהדירה במעבדה.
+ סך הכל נקבל מסלול באורך 
+\begin_inset Formula $2k+m$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+סך הכל הטווח הוא בין 
+\begin_inset Formula $k+1$
+\end_inset
+
+ ל-
+\begin_inset Formula $2k+m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+
+\numeric on
+9
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+{\scriptstyle Succ_{MDA}(s)} & {\scriptstyle =\{(l_{i},\emptyset,s.Taken\cup s.Transferred,s.Matoshim+l_{i}.matoshim,\{l_{i}\}\cup s.VisitedLabs\:|\:i\in[m]\boldsymbol{\land}s.Taken\neq\emptyset)\}}\\
+{\scriptstyle \cup} & {\scriptstyle \{(l_{i},\emptyset,s.Transferred,s.Matoshim+l_{i}.matoshim,\{l_{i}\}\cup s.VisitedLabs\:|\:i\in[m]\boldsymbol{\land}l_{i}\notin s.VisitedLabs\boldsymbol{\land}s.Taken=\emptyset)\}}\\
+{\scriptstyle \cup} & {\scriptstyle \{(d_{i},\{d_{i}\}\cup s.Taken,s.Transferred,s.Matoshim-d_{i}.roomates,s.VisitedLabs\:|\:}\\
+ & {\scriptstyle i\in[k]\boldsymbol{\land}d_{i}\notin s.Taken\cup S.Transferred\boldsymbol{\land}d_{i}.roomates\leq s.matoshim\boldsymbol{\land}d.roomates\leq ambulanceTestCapcitiy-\sum_{d\in s.Taken}d.roomates)\}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
