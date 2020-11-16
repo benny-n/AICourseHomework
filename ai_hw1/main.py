@@ -106,8 +106,8 @@ def run_astar_for_weights_in_range(heuristic_type: HeuristicFunctionType, proble
 # --------------------------------------------------------------------
 
 def toy_map_problem_experiments():
-    print()
     print('Solve the map problem.')
+    print('check that git collab works as intended')
 
     # Ex.10
     # TODO: Just run it and inspect the printed result.
