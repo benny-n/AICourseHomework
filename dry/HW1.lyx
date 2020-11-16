@@ -599,10 +599,10 @@ k!\cdot(m+1)^{k}\cdot m
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-{\scriptstyle Succ_{MDA}(s)} & {\scriptstyle =\{(l_{i},\emptyset,s.Taken\cup s.Transferred,s.Matoshim+l_{i}.matoshim,\{l_{i}\}\cup s.VisitedLabs\:|\:i\in[m]\boldsymbol{\land}s.Taken\neq\emptyset)\}}\\
-{\scriptstyle \cup} & {\scriptstyle \{(l_{i},\emptyset,s.Transferred,s.Matoshim+l_{i}.matoshim,\{l_{i}\}\cup s.VisitedLabs\:|\:i\in[m]\boldsymbol{\land}l_{i}\notin s.VisitedLabs\boldsymbol{\land}s.Taken=\emptyset)\}}\\
-{\scriptstyle \cup} & {\scriptstyle \{(d_{i},\{d_{i}\}\cup s.Taken,s.Transferred,s.Matoshim-d_{i}.roomates,s.VisitedLabs\:|\:}\\
- & {\scriptstyle i\in[k]\boldsymbol{\land}d_{i}\notin s.Taken\cup S.Transferred\boldsymbol{\land}d_{i}.roomates\leq s.matoshim\boldsymbol{\land}d.roomates\leq ambulanceTestCapcitiy-\sum_{d\in s.Taken}d.roomates)\}}
+{\scriptstyle Succ_{MDA}(s)} & {\scriptstyle =\{(l_{i},\emptyset,s.Taken\cup s.Transferred,s.Matoshim+l_{i}.matoshim,\{l_{i}\}\cup s.VisitedLabs)\:|\:i\in[m]\boldsymbol{\land}s.Taken\neq\emptyset)\}}\\
+{\scriptstyle \cup} & {\scriptstyle \{(l_{i},\emptyset,s.Transferred,s.Matoshim+l_{i}.matoshim,\{l_{i}\}\cup s.VisitedLabs)\:|\:i\in[m]\boldsymbol{\land}l_{i}\notin s.VisitedLabs\boldsymbol{\land}s.Taken=\emptyset)\}}\\
+{\scriptstyle \cup} & {\scriptstyle \{(d_{i},\{d_{i}\}\cup s.Taken,s.Transferred,s.Matoshim-d_{i}.roomates,s.VisitedLabs)\:|\:}\\
+ & {\scriptstyle i\in[k]\boldsymbol{\land}d_{i}\notin s.Taken\cup S.Transferred\boldsymbol{\land}d_{i}.roomates\leq s.matoshim\boldsymbol{\land}d_{i}.roomates\leq ambulanceTestCapcitiy-\sum_{d\in s.Taken}d.roomates)\}}
 \end{align*}
 
 \end_inset

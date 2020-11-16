@@ -217,8 +217,33 @@ class MDAProblem(GraphProblem):
         """
 
         assert isinstance(state_to_expand, MDAState)
-        raise NotImplementedError  # TODO: remove this line!
+        apartments = [apartment for apartment in self.get_reported_apartments_waiting_to_visit(state_to_expand) if
+                      apartment not in (state_to_expand.tests_on_ambulance | state_to_expand.tests_transferred_to_lab)
+                      and apartment.nr_roommates <= state_to_expand.nr_matoshim_on_ambulance and
+                      apartment.nr_roommates <= (self.problem_input.ambulance.total_fridges_capacity -
+                      state_to_expand.get_total_nr_tests_taken_and_stored_on_ambulance())]
+        apartment_states = [MDAState(apartment, state_to_expand.tests_on_ambulance | FrozenSet([apartment]),
+                            state_to_expand.tests_transferred_to_lab, state_to_expand.nr_matoshim_on_ambulance
+                            - apartment.nr_roommates, state_to_expand.visited_labs) for apartment in apartments]
+        if not state_to_expand.tests_on_ambulance:
+            unvisited_labs = [lab for lab in self.problem_input.laboratories if lab not in state_to_expand.visited_labs]
+            labs_states = [MDAState(lab, FrozenSet(), state_to_expand.tests_transferred_to_lab,
+                           state_to_expand.nr_matoshim_on_ambulance + lab.max_nr_matoshim,
+                           state_to_expand.visited_labs | FrozenSet([lab])) for lab in unvisited_labs]
+        else:
+            labs_states = []
+            for lab in self.problem_input.laboratories:
+                nr_matoshim_to_add = 0 if lab in state_to_expand.visited_labs else lab.max_nr_matoshim
+                labs_states.append(MDAState(lab, FrozenSet(), state_to_expand.tests_on_ambulance |
+                                            state_to_expand.tests_transferred_to_lab,
+                                            state_to_expand.nr_matoshim_on_ambulance + nr_matoshim_to_add,
+                                            state_to_expand.visited_labs | FrozenSet([lab])))
 
+        for succ_state in (labs_states + apartment_states):
+            yield OperatorResult(succ_state, self.get_operator_cost(state_to_expand, succ_state),
+                                 'visit '+succ_state.current_site.reporter_name if succ_state in apartment_states else
+                                 'go to lab '+succ_state.current_site.name)
+        """maybe should be refactored if ruuntime is too high? ^^^^"""
     def get_operator_cost(self, prev_state: MDAState, succ_state: MDAState) -> MDACost:
         """
         Calculates the operator cost (of type `MDACost`) of an operator (moving from the `prev_state`
@@ -279,7 +304,9 @@ class MDAProblem(GraphProblem):
          In order to create a set from some other collection (list/tuple) you can just `set(some_other_collection)`.
         """
         assert isinstance(state, MDAState)
-        raise NotImplementedError  # TODO: remove the line!
+        return state in self.problem_input.laboratories and not state.tests_on_ambulance and \
+            state.tests_transferred_to_lab == FrozenSet(self.problem_input.reported_apartments) and \
+            state.visited_labs.issubset(self.problem_input.laboratories)
 
     def get_zero_cost(self) -> Cost:
         """
