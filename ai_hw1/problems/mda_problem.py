@@ -222,28 +222,29 @@ class MDAProblem(GraphProblem):
                       and apartment.nr_roommates <= state_to_expand.nr_matoshim_on_ambulance and
                       apartment.nr_roommates <= (self.problem_input.ambulance.total_fridges_capacity -
                       state_to_expand.get_total_nr_tests_taken_and_stored_on_ambulance())]
-        apartment_states = [MDAState(apartment, state_to_expand.tests_on_ambulance | FrozenSet([apartment]),
+        apartment_states = [MDAState(apartment, state_to_expand.tests_on_ambulance | frozenset([apartment]),
                             state_to_expand.tests_transferred_to_lab, state_to_expand.nr_matoshim_on_ambulance
                             - apartment.nr_roommates, state_to_expand.visited_labs) for apartment in apartments]
         if not state_to_expand.tests_on_ambulance:
             unvisited_labs = [lab for lab in self.problem_input.laboratories if lab not in state_to_expand.visited_labs]
-            labs_states = [MDAState(lab, FrozenSet(), state_to_expand.tests_transferred_to_lab,
+            labs_states = [MDAState(lab, frozenset(), state_to_expand.tests_transferred_to_lab,
                            state_to_expand.nr_matoshim_on_ambulance + lab.max_nr_matoshim,
-                           state_to_expand.visited_labs | FrozenSet([lab])) for lab in unvisited_labs]
+                           state_to_expand.visited_labs | frozenset([lab])) for lab in unvisited_labs]
         else:
             labs_states = []
             for lab in self.problem_input.laboratories:
                 nr_matoshim_to_add = 0 if lab in state_to_expand.visited_labs else lab.max_nr_matoshim
-                labs_states.append(MDAState(lab, FrozenSet(), state_to_expand.tests_on_ambulance |
+                labs_states.append(MDAState(lab, frozenset(), state_to_expand.tests_on_ambulance |
                                             state_to_expand.tests_transferred_to_lab,
                                             state_to_expand.nr_matoshim_on_ambulance + nr_matoshim_to_add,
-                                            state_to_expand.visited_labs | FrozenSet([lab])))
-
-        for succ_state in (labs_states + apartment_states):
+                                            state_to_expand.visited_labs | frozenset([lab])))
+        for succ_state in labs_states:
             yield OperatorResult(succ_state, self.get_operator_cost(state_to_expand, succ_state),
-                                 'visit '+succ_state.current_site.reporter_name if succ_state in apartment_states else
                                  'go to lab '+succ_state.current_site.name)
-        """maybe should be refactored if ruuntime is too high? ^^^^"""
+        for succ_state in apartment_states:
+            yield OperatorResult(succ_state, self.get_operator_cost(state_to_expand, succ_state),
+                                 'visit ' + succ_state.current_site.reporter_name)
+
     def get_operator_cost(self, prev_state: MDAState, succ_state: MDAState) -> MDACost:
         """
         Calculates the operator cost (of type `MDACost`) of an operator (moving from the `prev_state`
@@ -274,27 +275,41 @@ class MDAProblem(GraphProblem):
                                 its first `k` items and until the `n`-th item.
             You might find this tip useful for summing a slice of a collection.
         """
-        distance_cost = self.map_distance_finder.get_map_cost_between(prev_state.current_site, succ_state.current_site)
-        # look for bugs here ^^^
+        if isinstance(prev_state.current_site, Junction):
+            source_junction = prev_state.current_site
+        else:
+            source_junction = prev_state.current_site.location
+
+        if isinstance(succ_state.current_site, Junction):
+            target_junction = succ_state.current_site
+        else:
+            target_junction = succ_state.current_site.location
+
+        distance_cost = self.map_distance_finder.get_map_cost_between(source_junction, target_junction)
 
         if distance_cost is None:
-            return MDACost(float('inf'), float('inf'), float('inf'))
+            return MDACost(float('inf'), float('inf'), float('inf'), self.optimization_objective)
 
         active_fridges = math.ceil(prev_state.get_total_nr_tests_taken_and_stored_on_ambulance() /
                                    self.problem_input.ambulance.fridge_capacity)
         fridges_gas_consumption = \
             sum(self.problem_input.ambulance.fridges_gas_consumption_liter_per_meter[:active_fridges])
-        is_laboratory = int(succ_state.current_site is Laboratory)
-        is_taken_not_empty = int(bool(prev_state.tests_on_ambulance))
-        is_already_visited = int(prev_state.visited_labs.__contains__(succ_state.current_site))
+
+        lab_cost = 0
+
+        if isinstance(succ_state.current_site, Laboratory):
+            transfer_cost = succ_state.current_site.tests_transfer_cost if bool(prev_state.tests_on_ambulance) else 0
+            revisit_extra_cost = succ_state.current_site.revisit_extra_cost if \
+                (prev_state.visited_labs.__contains__(succ_state.current_site)) else 0
+            lab_cost = transfer_cost + revisit_extra_cost
+
         monetary_cost = self.problem_input.gas_liter_price * \
             (self.problem_input.ambulance.drive_gas_consumption_liter_per_meter + fridges_gas_consumption) * \
-            distance_cost + is_laboratory * (is_taken_not_empty * succ_state.current_site.tests_transfer_cost +
-                                             is_already_visited * succ_state.current_site.revisit_extra_cost)
+            distance_cost + lab_cost
 
         tests_travel_distance_cost = prev_state.get_total_nr_tests_taken_and_stored_on_ambulance() * distance_cost
 
-        return MDACost(distance_cost, monetary_cost, tests_travel_distance_cost)
+        return MDACost(distance_cost, monetary_cost, tests_travel_distance_cost, self.optimization_objective)
 
     def is_goal(self, state: GraphProblemState) -> bool:
         """
@@ -304,8 +319,8 @@ class MDAProblem(GraphProblem):
          In order to create a set from some other collection (list/tuple) you can just `set(some_other_collection)`.
         """
         assert isinstance(state, MDAState)
-        return state in self.problem_input.laboratories and not state.tests_on_ambulance and \
-            state.tests_transferred_to_lab == FrozenSet(self.problem_input.reported_apartments) and \
+        return state.current_site in self.problem_input.laboratories and not state.tests_on_ambulance and \
+            state.tests_transferred_to_lab == frozenset(self.problem_input.reported_apartments) and \
             state.visited_labs.issubset(self.problem_input.laboratories)
 
     def get_zero_cost(self) -> Cost:
@@ -346,4 +361,7 @@ class MDAProblem(GraphProblem):
             Use the method `self.get_reported_apartments_waiting_to_visit(state)`.
             Use python's `sorted(some_list, key=...)` function.
         """
-        raise NotImplementedError  # TODO: remove this line!
+        list_certain_junctions_in_remaining_ambulance_path = [state.current_location]
+        list_certain_junctions_in_remaining_ambulance_path += \
+            [apartment.location for apartment in self.get_reported_apartments_waiting_to_visit(state)]
+        return sorted(list_certain_junctions_in_remaining_ambulance_path, key=lambda junction: junction.index)
