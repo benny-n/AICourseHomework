@@ -99,11 +99,9 @@ class MDASumAirDistHeuristic(HeuristicFunction):
         cost = 0
         remaining_junctions_in_path = all_certain_junctions_in_remaining_ambulance_path
         while not remaining_junctions_in_path:
-            remaining_junctions_in_path.sort(
-                key=lambda junction:
-                (self.cached_air_distance_calculator.get_air_distance_between_junctions(curr_j, junction),
+            next_j = min(remaining_junctions_in_path, key=lambda junction:
+                 (self.cached_air_distance_calculator.get_air_distance_between_junctions(curr_j, junction),
                  junction.index))
-            next_j = remaining_junctions_in_path[0]
             cost += self.cached_air_distance_calculator.get_air_distance_between_junctions(curr_j, next_j)
             curr_j = next_j
             remaining_junctions_in_path.remove(next_j)
@@ -184,6 +182,8 @@ class MDATestsTravelDistToNearestLabHeuristic(HeuristicFunction):
             """
             Returns the distance between `junction` and the laboratory that is closest to `junction`.
             """
-            return min(...)  # TODO: replace `...` with the relevant implementation.
+            # return min(problem.problem_input.laboratories, key=lambda lab:
+            #      (self.cached_air_distance_calculator.get_air_distance_between_junctions(junction, lab.location),
+            #      lab.location.index))  # TODO: replace `...` with the relevant implementation.
 
         raise NotImplementedError  # TODO: remove this line!

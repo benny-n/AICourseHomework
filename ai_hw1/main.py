@@ -91,7 +91,7 @@ def run_astar_for_weights_in_range(heuristic_type: HeuristicFunctionType, proble
     list_weights_with_solution = []
 
     for weight in list_weights:
-        result = AStar(heuristic_type, weight, max_nr_states_to_expand).solve_problem(problem)
+        result = AStar(heuristic_type, weight).solve_problem(problem)
         if result.is_solution_found:
             list_costs.append(result.solution_g_cost)
             list_states.append(result.nr_expanded_states)
@@ -226,11 +226,15 @@ def mda_problem_with_weighted_astar_experiments():
     #       over the `small_mda_problem_with_distance_cost`.
     run_astar_for_weights_in_range(MDAMSTAirDistHeuristic, small_mda_problem_with_distance_cost)
 
+    print('finished small problem')
+
     # Ex.30
     # TODO: Call here the function `run_astar_for_weights_in_range()`
     #       with `MDASumAirDistHeuristic`
     #       over the `moderate_mda_problem_with_distance_cost`.
-    run_astar_for_weights_in_range(MDASumAirDistHeuristic, moderate_mda_problem_with_distance_cost)
+    #run_astar_for_weights_in_range(MDASumAirDistHeuristic, moderate_mda_problem_with_distance_cost)
+
+    print('finished moderate problem')
 
 
 def monetary_cost_objectives_mda_problem_experiments():
@@ -243,12 +247,16 @@ def monetary_cost_objectives_mda_problem_experiments():
     # Ex.32
     # TODO: create an instance of `UniformCost`
     #       solve the `small_mda_problem_with_monetary_cost` with it and print the results.
-    exit()  # TODO: remove!
+    uc = UniformCost()
+    res = uc.solve_problem(small_mda_problem_with_monetary_cost)
+    print(res)
 
     # Ex.32
     # TODO: create an instance of `UniformCost`
     #       solve the `moderate_mda_problem_with_monetary_cost` with it and print the results.
-    exit()  # TODO: remove!
+    uc = UniformCost()
+    res = uc.solve_problem(moderate_mda_problem_with_monetary_cost)
+    print(res)
 
 
 def multiple_objectives_mda_problem_experiments():
