@@ -93,7 +93,7 @@ def run_astar_for_weights_in_range(heuristic_type: HeuristicFunctionType, proble
     for weight in list_weights:
         result = AStar(heuristic_type, weight, max_nr_states_to_expand).solve_problem(problem)
         if result.is_solution_found:
-            list_costs.append(result.solution_cost)
+            list_costs.append(result.solution_g_cost)
             list_states.append(result.nr_expanded_states)
             list_weights_with_solution.append(weight)
 
@@ -201,12 +201,16 @@ def mda_problem_with_astar_experiments():
     # Ex.25
     # TODO: create an instance of `AStar` with the `MDASumAirDistHeuristic`,
     #       solve the `moderate_mda_problem_with_distance_cost` with it and print the results.
-    exit()  # TODO: remove!
+    astar_max_air_dist = AStar(MDASumAirDistHeuristic)
+    res = astar_max_air_dist.solve_problem(moderate_mda_problem_with_distance_cost)
+    print(res)
 
     # Ex.28
     # TODO: create an instance of `AStar` with the `MDAMSTAirDistHeuristic`,
     #       solve the `moderate_mda_problem_with_distance_cost` with it and print the results.
-    exit()  # TODO: remove!
+    astar_max_air_dist = AStar(MDAMSTAirDistHeuristic)
+    res = astar_max_air_dist.solve_problem(moderate_mda_problem_with_distance_cost)
+    print(res)
 
 
 def mda_problem_with_weighted_astar_experiments():
@@ -220,13 +224,13 @@ def mda_problem_with_weighted_astar_experiments():
     # TODO: Call here the function `run_astar_for_weights_in_range()`
     #       with `MDAMSTAirDistHeuristic`
     #       over the `small_mda_problem_with_distance_cost`.
-    exit()  # TODO: remove!
+    run_astar_for_weights_in_range(MDAMSTAirDistHeuristic, small_mda_problem_with_distance_cost)
 
     # Ex.30
     # TODO: Call here the function `run_astar_for_weights_in_range()`
     #       with `MDASumAirDistHeuristic`
     #       over the `moderate_mda_problem_with_distance_cost`.
-    exit()  # TODO: remove!
+    run_astar_for_weights_in_range(MDASumAirDistHeuristic, moderate_mda_problem_with_distance_cost)
 
 
 def monetary_cost_objectives_mda_problem_experiments():

@@ -95,7 +95,19 @@ class MDASumAirDistHeuristic(HeuristicFunction):
         if len(all_certain_junctions_in_remaining_ambulance_path) < 2:
             return 0
 
-        raise NotImplementedError  # TODO: remove this line and complete the missing part here!
+        curr_j = state.current_site if isinstance(state.current_site, Junction) else state.current_site.location
+        cost = 0
+        remaining_junctions_in_path = all_certain_junctions_in_remaining_ambulance_path
+        while not remaining_junctions_in_path:
+            remaining_junctions_in_path.sort(
+                key=lambda junction:
+                (self.cached_air_distance_calculator.get_air_distance_between_junctions(curr_j, junction),
+                 junction.index))
+            next_j = remaining_junctions_in_path[0]
+            cost += self.cached_air_distance_calculator.get_air_distance_between_junctions(curr_j, next_j)
+            curr_j = next_j
+            remaining_junctions_in_path.remove(next_j)
+        return cost
 
 
 class MDAMSTAirDistHeuristic(HeuristicFunction):
@@ -133,7 +145,12 @@ class MDAMSTAirDistHeuristic(HeuristicFunction):
               Use `nx.minimum_spanning_tree()` to get an MST. Calculate the MST size using the method
               `.size(weight='weight')`. Do not manually sum the edges' weights.
         """
-        raise NotImplementedError  # TODO: remove this line!
+        G = nx.Graph()
+        G.add_nodes_from(junctions)
+        G.add_weighted_edges_from([(j1, j2,
+                                    self.cached_air_distance_calculator.get_air_distance_between_junctions(j1, j2))
+                                   for j1 in junctions for j2 in junctions if j1 != j2])
+        return nx.minimum_spanning_tree(G).size(weight='weight')
 
 
 class MDATestsTravelDistToNearestLabHeuristic(HeuristicFunction):
