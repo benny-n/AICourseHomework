@@ -6,7 +6,6 @@ from framework import *
 from .mda_problem import *
 from .cached_air_distance_calculator import CachedAirDistanceCalculator
 
-
 __all__ = ['MDAMaxAirDistHeuristic', 'MDASumAirDistHeuristic',
            'MDAMSTAirDistHeuristic', 'MDATestsTravelDistToNearestLabHeuristic']
 
@@ -101,8 +100,8 @@ class MDASumAirDistHeuristic(HeuristicFunction):
         while len(remaining_junctions_in_path) > 1:
             remaining_junctions_in_path.remove(curr_j)
             next_j = min(remaining_junctions_in_path, key=lambda junction:
-                 (self.cached_air_distance_calculator.get_air_distance_between_junctions(curr_j, junction),
-                 junction.index))
+             (self.cached_air_distance_calculator.get_air_distance_between_junctions(curr_j, junction),
+             junction.index))
             cost += self.cached_air_distance_calculator.get_air_distance_between_junctions(curr_j, next_j)
             curr_j = next_j
         return cost
