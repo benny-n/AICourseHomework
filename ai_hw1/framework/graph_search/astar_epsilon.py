@@ -72,4 +72,26 @@ class AStarEpsilon(AStar):
          for the extracted (and returned) node.
         """
 
-        raise NotImplementedError  # TODO: remove!
+        if self.open.is_empty():
+            return None
+
+        min_f = self.open.peek_next_node().expanding_priority
+
+        focal = []
+        while len(self.open) > 0 and len(focal) < self.max_focal_size:
+            first_node_in_open = self.open.peek_next_node()
+            if first_node_in_open.expanding_priority <= (1 + self.focal_epsilon) * min_f:
+                focal.append(self.open.pop_next_node())
+            else:
+                break
+
+        next_node_index = np.argmin([self.within_focal_priority_function(node, problem, self) for node in focal])
+        node_to_expand = focal.pop(next_node_index.item(0))
+
+        while len(focal) > 0:
+            self.open.push_node(focal.pop())
+
+        if self.use_close:
+            self.close.add_node(node_to_expand)
+
+        return node_to_expand

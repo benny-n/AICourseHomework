@@ -185,7 +185,6 @@ class MDATestsTravelDistToNearestLabHeuristic(HeuristicFunction):
             """
             return min(self.cached_air_distance_calculator.get_air_distance_between_junctions(junction, lab.location)
                        for lab in labs)
-            # TODO: replace `...` with the relevant implementation.
 
         apartments_to_visit = self.problem.get_reported_apartments_waiting_to_visit(state)
         cost = sum([apartment.nr_roommates * air_dist_to_closest_lab(apartment.location)

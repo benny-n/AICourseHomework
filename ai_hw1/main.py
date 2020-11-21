@@ -91,7 +91,7 @@ def run_astar_for_weights_in_range(heuristic_type: HeuristicFunctionType, proble
     list_weights_with_solution = []
 
     for weight in list_weights:
-        result = AStar(heuristic_type, weight).solve_problem(problem)
+        result = AStar(heuristic_type, weight, max_nr_states_to_expand).solve_problem(problem)
         if result.is_solution_found:
             list_costs.append(result.solution_g_cost)
             list_states.append(result.nr_expanded_states)
@@ -284,7 +284,7 @@ def multiple_objectives_mda_problem_experiments():
     #          previous parameters with their default values and pass an argument to a parameter that is positioned
     #          elsewhere next.
     #       Solve the `moderate_mda_problem_with_tests_travel_dist_cost` with it and print the results.
-    exit()  # TODO: remove!
+    #exit()  # TODO: remove!
 
 
 def mda_problem_with_astar_epsilon_experiments():
@@ -312,7 +312,11 @@ def mda_problem_with_astar_epsilon_experiments():
     #       Use focal_epsilon=0.23, and max_focal_size=40.
     #       Use within_focal_priority_function=within_focal_h_sum_priority_function. This function
     #        (defined just above) is internally using the `MDASumAirDistHeuristic`.
-    exit()  # TODO: remove!
+    astar_epsilon = AStarEpsilon(MDAMSTAirDistHeuristic,
+                                 within_focal_priority_function=within_focal_h_sum_priority_function,
+                                 focal_epsilon=0.23, max_focal_size=40)
+    res = astar_epsilon.solve_problem(small_mda_problem_with_distance_cost)
+    print(res)
 
 
 def mda_problem_anytime_astar_experiments():
