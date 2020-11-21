@@ -610,5 +610,227 @@ k!\cdot(m+1)^{k}\cdot m
 
 \end_layout
 
+\begin_layout Description
+
+\numeric on
+14
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\#dev\_saved\_percentage=\frac{\#dev\_blind-\#dev\_heuristic}{\#dev\_blind}=\frac{17354-2015}{17354}\cdot100=88.3888\%
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+
+\numeric on
+16
+\numeric off
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset Graphics
+	filename 1st_graph.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+הגרף האדום מתאר את מספר הפיתוחים, וככל שיש יותר פיתוחים זמן הריצה גבוה יותר.
+ הגרף הכחול מתאר את איכות הפתרון.
+ ניתן לראות כי ככל שנותנים לפונקציה היוריסטית משקל גבוה יותר כך זמן הריצה
+ למציאת פתרון קטן, אך הפתרון פחות איכותי )יותר יקר(.
+ האזור הכדאי על פי הגרף הוא )בערך( 
+\begin_inset Formula $0.53\leq w\leq0.57$
+\end_inset
+
+ מכיוון שבאזור יש ירידה חדה בזמן הריצה אך איכות הפתרון לא מתרחקת בהרבה מהפתרון
+ האופטימלי.
+\begin_inset Newline newline
+\end_inset
+
+נסתכל על 
+\begin_inset Formula $w_{1}\approx0.67$
+\end_inset
+
+ ו-
+\begin_inset Formula $w_{2}\approx0.7$
+\end_inset
+
+.
+ מתקיים כי 
+\begin_inset Formula $w_{2}>w_{1}$
+\end_inset
+
+ אך איכות הפתרון שמתקבלת עבור 
+\begin_inset Formula $w_{1}$
+\end_inset
+
+ נמוכה יותר מאיכות הפתרון עבור 
+\begin_inset Formula $w_{2}$
+\end_inset
+
+, כפי שנאמר בדגש.
+ 
+\begin_inset Newline newline
+\end_inset
+
+כמו כן, נסתכל על 
+\begin_inset Formula $w_{3}\approx0.8$
+\end_inset
+
+ ו-
+\begin_inset Formula $w_{4}\approx0.87$
+\end_inset
+
+, מתקיים כי 
+\begin_inset Formula $w_{4}>w_{3}$
+\end_inset
+
+ אך מספר הפיתוחים שמתקבל עבור 
+\begin_inset Formula $w_{3}$
+\end_inset
+
+ נמוך יותר ממספר הפיתוחים עבור 
+\begin_inset Formula $w_{4}$
+\end_inset
+
+, כפי שנאמר בדגש.
+ 
+\end_layout
+
+\begin_layout Description
+
+\series bold
+\numeric on
+19
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+החסרון של הגישה מבחינת יעילות הפתרון היה מתבטא בחוסר שימוש ב-
+\begin_inset Formula $cache$
+\end_inset
+
+.
+ במימוש הנוכחי בבעיית המדא כאשר אנו פותרים את בעיית המפה כ
+\begin_inset Quotes erd
+\end_inset
+
+בעיית ביניים
+\begin_inset Quotes erd
+\end_inset
+
+ יתכן כי הפתרון כבר נמצא ב-
+\begin_inset Formula $cache$
+\end_inset
+
+ ונוכל להביאו ולחסוך את עלות החישוב.
+ אם היינו במרחב משולב שהוצע בשאלה, לא היינו יכולים להשתמש ב-
+\begin_inset Formula $cache$
+\end_inset
+
+ מכיוון שכל פעם היינו פותרים בעיה אחרת.
+\end_layout
+
+\begin_layout Description
+
+\numeric on
+20
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename frozen.png
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+השורה הזאת אינה מספיקה, שכן אם אחד מהשדות הוא מבנה נתונים )למשל 
+\begin_inset Formula $set$
+\end_inset
+
+ או 
+\begin_inset Formula $list$
+\end_inset
+
+( אז נוכל לשנות את הערכים בתוך המבנה.
+\begin_inset Newline newline
+\end_inset
+
+כדי למנוע זאת השדות שהם מבני נתונים הוגדרו כ-
+\begin_inset Formula $frozenset$
+\end_inset
+
+, שזהו 
+\begin_inset Formula $immutable\:set$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $set$
+\end_inset
+
+ שלא ניתן לשנות את איבריו.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename frozenset.png
+	lyxscale 75
+	scale 75
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+כן, צומת יכול לעבור מ-
+\begin_inset Formula $close$
+\end_inset
+
+ ל-
+\begin_inset Formula $open$
+\end_inset
+
+ אם מצאנו מסלול יותר זול אליו מהמסלולים שמצאנו עד כה.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename openclose.png
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
