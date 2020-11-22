@@ -275,16 +275,8 @@ class MDAProblem(GraphProblem):
                                 its first `k` items and until the `n`-th item.
             You might find this tip useful for summing a slice of a collection.
         """
-        if isinstance(prev_state.current_site, Junction):
-            source_junction = prev_state.current_site
-        else:
-            source_junction = prev_state.current_site.location
-
-        if isinstance(succ_state.current_site, Junction):
-            target_junction = succ_state.current_site
-        else:
-            target_junction = succ_state.current_site.location
-
+        source_junction = prev_state.current_location
+        target_junction = succ_state.current_location
         distance_cost = self.map_distance_finder.get_map_cost_between(source_junction, target_junction)
 
         if distance_cost is None:
