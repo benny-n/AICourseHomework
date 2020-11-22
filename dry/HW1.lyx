@@ -621,7 +621,7 @@ k!\cdot(m+1)^{k}\cdot m
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\#dev\_saved\_percentage=\frac{\#dev\_blind-\#dev\_heuristic}{\#dev\_blind}=\frac{17354-2015}{17354}\cdot100=88.3888\%
+\#dev\_saved\_percentage=\frac{\#dev\_blind-\#dev\_heuristic}{\#dev\_blind}=\frac{17354-2015}{17354}\cdot100\%=88.3888\%
 \]
 
 \end_inset

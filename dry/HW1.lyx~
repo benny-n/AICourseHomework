@@ -745,7 +745,91 @@ k!\cdot(m+1)^{k}\cdot m
 \end_inset
 
  מכיוון שכל פעם היינו פותרים בעיה אחרת.
- 
+\end_layout
+
+\begin_layout Description
+
+\numeric on
+20
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename frozen.png
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+השורה הזאת אינה מספיקה, שכן אם אחד מהשדות הוא מבנה נתונים )למשל 
+\begin_inset Formula $set$
+\end_inset
+
+ או 
+\begin_inset Formula $list$
+\end_inset
+
+( אז נוכל לשנות את הערכים בתוך המבנה.
+\begin_inset Newline newline
+\end_inset
+
+כדי למנוע זאת השדות שהם מבני נתונים הוגדרו כ-
+\begin_inset Formula $frozenset$
+\end_inset
+
+, שזהו 
+\begin_inset Formula $immutable\:set$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $set$
+\end_inset
+
+ שלא ניתן לשנות את איבריו.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename frozenset.png
+	lyxscale 75
+	scale 75
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+כן, צומת יכול לעבור מ-
+\begin_inset Formula $close$
+\end_inset
+
+ ל-
+\begin_inset Formula $open$
+\end_inset
+
+ אם מצאנו מסלול יותר זול אליו מהמסלולים שמצאנו עד כה.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename openclose.png
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \end_body
