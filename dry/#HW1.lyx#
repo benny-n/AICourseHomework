@@ -1843,10 +1843,6 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \end_layout
 
 \begin_layout Standard
-נוכיח:
-\begin_inset Newline newline
-\end_inset
-
 נניח בשלילה ש-
 \begin_inset Formula $A_{1}$
 \end_inset
@@ -1900,45 +1896,11 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \begin_inset Newline newline
 \end_inset
 
-יהי 
-\begin_inset Formula $P$
-\end_inset
-
- הפתרון האופטימאלי על פי הקריטריון המשולב, אז בפרט מתקיים כי 
-\begin_inset Formula $cost_{MDA}^{dist}(P)\leq(1+\epsilon)\cdot C_{dist}^{*}$
-\end_inset
-
-, ולכן בשלב השלישי באלגוריתם 
-\begin_inset Formula $A_{1}$
-\end_inset
-
- הפעלת האופרטור היא חוקית והמצב יפותח.
- מכיוון ש-
-\begin_inset Formula $P$
-\end_inset
-
- אופטימלי, מתקיים עבורו כי 
-\begin_inset Formula $cost_{MDA}^{test\:travel}(P)\leq cost_{MDA}^{test\:travel}(P')$
-\end_inset
-
- לכל 
-\begin_inset Formula $P\neq P'$
-\end_inset
-
-, ומכיוון ש-
-\begin_inset Formula $UCS$
-\end_inset
-
- הוא אלגוריתם קביל, מובטח כי הוא יחזיר את הפתרון האופטימלי עבור מחיר זה,
- כלומר את הפתרון 
-\begin_inset Formula $P$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
+יהי P הפתרון האופטימאלי על פי הקריטריון המשולב, מובטח לנו כפי שהסברנו בסעיף
+ 32 שכל מצב שנמצא במסלול זה יפותח.
+ האלגוריתם UFS הינו כביל כלומר מכל המצבים שיפותחו מובטח לנו שיתקבל הפתרון
+ האידאלי.
+ ולכן אם יחזור פתרון הוא יהיה האופטימאלי.
 \end_layout
 
 \end_body

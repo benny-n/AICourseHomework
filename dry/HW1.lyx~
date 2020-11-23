@@ -235,10 +235,6 @@
 \end_layout
 
 \begin_layout Description
-חלק_א':
-\end_layout
-
-\begin_layout Description
 
 \numeric on
 1
@@ -288,7 +284,14 @@ k!\cdot(m+1)^{k}\cdot m
 \end_layout
 
 \begin_layout Description
-חלק_ג':
+\begin_inset Graphics
+	filename table.png
+	lyxscale 70
+	scale 70
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Description
@@ -621,7 +624,7 @@ k!\cdot(m+1)^{k}\cdot m
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\#dev\_saved\_percentage=\frac{\#dev\_blind-\#dev\_heuristic}{\#dev\_blind}=\frac{17354-2015}{17354}\cdot100=88.3888\%
+\#dev\_saved\_percentage=\frac{\#dev\_blind-\#dev\_heuristic}{\#dev\_blind}=\frac{17354-2015}{17354}\cdot100\%=88.3888\%
 \]
 
 \end_inset
@@ -755,10 +758,25 @@ k!\cdot(m+1)^{k}\cdot m
 .
 \end_layout
 
+\begin_layout Description
+\begin_inset Formula $\text{.i}$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Graphics
 	filename frozen.png
 
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\text{.ii}$
 \end_inset
 
 
@@ -805,6 +823,14 @@ k!\cdot(m+1)^{k}\cdot m
 \begin_inset Newline newline
 \end_inset
 
+
+\begin_inset Formula $.\text{iii}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
 כן, צומת יכול לעבור מ-
 \begin_inset Formula $close$
 \end_inset
@@ -830,6 +856,1085 @@ k!\cdot(m+1)^{k}\cdot m
 \end_inset
 
 
+\begin_inset Formula $\text{.iv}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+דוגמא למימוש שגוי של המתודה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+expand_state_with_costs
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+היא:
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+State_to_expand.tests_on_ambulance = state_to_expand.tests_on_ambuland | {apartmen
+t}
+\lang hebrew
+
+\begin_inset Newline newline
+\end_inset
+
+כלומר עדכון של שדה ספציפי ב-ֵ
+\lang english
+MDAState
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+במקום יצירת
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+MDAState
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+חדש לגמרי בעזרת
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+c'tor
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+.
+ מימוש זה בעייתי מכיוון שאנו עלולים להיתקל במצב מסוים בשנית גם לאחר שפיתחנו
+ אותו כבר בעבר, כפי שצוין בסעיף לעיל.
+ במקרה זה, אם ננסה לעדכן את
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+MDAState
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מבלי ליצור אחד חדש מה שיקרה בפועל הוא שנדרוס את השדות של המצב בו כבר נתקלנו
+ מכיוון שבפייתון אנחנו מחזיקים מצביע לאובייקט ולא מעתיקים אותו.
+ כלומר, המצב שכרגע נמצא ב-
+\lang english
+close
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+יתעדכן, וכאשר נחפש מצב מתאים לעדכון ב-
+\lang english
+close
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+לא נמצא אותו.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+
+\numeric on
+23
+\series bold
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+נוכיח כי לכל צומת 
+\begin_inset Formula $n$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $0\leq h(n)\leq h^{*}(n)$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+מכיוון שמדובר במרחק, ברור כי 
+\begin_inset Formula $h(n)\geq0$
+\end_inset
+
+ לכל צומת 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+יהי מצב 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ אם נשארה דירה אחת 
+\begin_inset Formula $d$
+\end_inset
+
+ לבקר בה, המרחק האווירי שלה מעצמה הוא
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ולכן לפי הגדרת 
+\begin_inset Formula $h$
+\end_inset
+
+ נקבל: 
+\begin_inset Formula $h(n)=0\leq h^{*}(n)$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+אחרת, יהיו 
+\begin_inset Formula $d_{1},d_{2},...d_{k}$
+\end_inset
+
+ דירות אשר נשאר לאמבולנס לבקר בהן בשלב כלשהו בתכנית.
+ נניח כי המרחק האווירי המקסימלי בין שתי דירות מכל זוגות הדירות הוא 
+\begin_inset Formula $\delta_{max}(d_{i},d_{j})$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+נשים לב כי לכל מסלול ממצב 
+\begin_inset Formula $n$
+\end_inset
+
+ למצב מטרה המוביל למחיר אופטימלי 
+\begin_inset Formula $h^{*}(n)$
+\end_inset
+
+, האמבולנס יעבור במסלול שלו ב-
+\begin_inset Formula $d_{i}$
+\end_inset
+
+ וב-
+\begin_inset Formula $d_{j}$
+\end_inset
+
+ )נניח בה
+\begin_inset Quotes erd
+\end_inset
+
+כ שיעבור קודם ב-
+\begin_inset Formula $d_{i}$
+\end_inset
+
+( בדרך כלשהי, נסמנה 
+\begin_inset Formula $dist(d_{i},d_{j})$
+\end_inset
+
+.
+ לכן:
+\begin_inset Formula 
+\[
+0\leq h(n)\overset{(1)}{=}\delta_{max}(d_{i},d_{j})\overset{(2)}{\leq}dist(d_{i},d_{j})\overset{(3)}{\leq}h^{*}(n)
+\]
+
+\end_inset
+
+כאשר מעבר )
+\numeric on
+1
+\numeric off
+( נובע מהגדרת הפונקציה היוריסטית 
+\begin_inset Formula $h(n)$
+\end_inset
+
+, מעבר )
+\numeric on
+2
+\numeric off
+( נובע מאי-שוויון המשולש, ומעבר )
+\numeric on
+3
+\numeric off
+( נובע מכך ש-
+\begin_inset Formula $dist(d_{i},d_{j})$
+\end_inset
+
+ הוא חלק מהמסלול האופטימלי.
+ לכן היוריסטיקה קבילה.
+\end_layout
+
+\begin_layout Description
+
+\numeric on
+26
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+היוריסטיקה אינה קבילה, נפריך באמצעות דוגמא נגדית:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+
+\numeric on
+29
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+נוכיח כי לכל צומת 
+\begin_inset Formula $n$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $0\leq h(n)\leq h^{*}(n)$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+מכיוון שמדובר במרחק, ברור כי 
+\begin_inset Formula $h(n)\geq0$
+\end_inset
+
+ לכל צומת 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+יהי מצב 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ אם נשארה דירה אחת 
+\begin_inset Formula $d$
+\end_inset
+
+ לבקר בה, העץ הפורש מכיל רק אותה, ולכן ערכו
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+.
+ נקבל לפי הגדרת 
+\begin_inset Formula $h$
+\end_inset
+
+: 
+\begin_inset Formula $h(n)=0\leq h^{*}(n)$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+אחרת, יהיו 
+\begin_inset Formula $d_{1},d_{2},...d_{k}$
+\end_inset
+
+ דירות אשר נשאר לאמבולנס לבקר בהן בשלב כלשהו בתכנית.
+\begin_inset Newline newline
+\end_inset
+
+נסמן ב-
+\begin_inset Formula $G$
+\end_inset
+
+ את הגרף המלא שצמתיו הן הדירות שנשאר לאמבולנס לעבור בהן, ומשקלי הקשתות הן
+ המרחק האווירי בין הצמתים שהן מחברות.
+\begin_inset Newline newline
+\end_inset
+
+נשים לב כי כל מסלול ממצב 
+\begin_inset Formula $n$
+\end_inset
+
+ למצב מטרה המוביל למחיר אופטימלי 
+\begin_inset Formula $h^{*}(n)$
+\end_inset
+
+ עובר בכל הדירות שנותרו, ובפרט פעם אחת בכל דירה.
+ נניח כי הפתרון הוא 
+\begin_inset Formula $P:d_{1}\rightarrow...\rightarrow d_{k}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+נסמן ב-
+\begin_inset Formula $T$
+\end_inset
+
+ את הגרף המושרה המתקבל על ידי המסלול 
+\begin_inset Formula $P$
+\end_inset
+
+ בגרף 
+\begin_inset Formula $G$
+\end_inset
+
+ .
+ 
+\begin_inset Newline newline
+\end_inset
+
+מעצם בנייתו, 
+\begin_inset Formula $T$
+\end_inset
+
+ הינו שרוך ולכן בפרט עץ פורש לגרף 
+\begin_inset Formula $G$
+\end_inset
+
+.
+ נסמן ב-
+\begin_inset Formula $T^{*}$
+\end_inset
+
+ עץ פורש מינימום לגרף 
+\begin_inset Formula $G$
+\end_inset
+
+.
+ נקבל:
+\begin_inset Formula 
+\[
+0\leq h(n)\overset{(1)}{=}w(T^{*})\overset{(2)}{\leq}w(T)\overset{(3)}{\leq}w(P)=h^{*}(n)
+\]
+
+\end_inset
+
+כאשר מעבר )
+\numeric on
+1
+\numeric off
+( נובע מהגדרת הפונקציה היוריסטית 
+\begin_inset Formula $h(n)$
+\end_inset
+
+, מעבר )
+\numeric on
+2
+\numeric off
+( נובע ממינימליות 
+\begin_inset Formula $T^{*}$
+\end_inset
+
+, ומעבר )
+\numeric on
+3
+\numeric off
+( נובע מכך שלכל 
+\begin_inset Formula $d_{i}\rightarrow d_{i+1}$
+\end_inset
+
+ במסלול 
+\begin_inset Formula $P$
+\end_inset
+
+, מתקיים כי 
+\begin_inset Formula $\delta(d_{i},d_{i+1})\leq dist(d_{i},d_{i+1})$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $\delta$
+\end_inset
+
+ הוא המרחק האווירי בין הצמתים ו-
+\begin_inset Formula $dist$
+\end_inset
+
+ הוא המרחק במסלול.
+ לכן היוריסטיקה קבילה.
+\end_layout
+
+\begin_layout Description
+
+\numeric on
+30
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename 2nd_graph.png
+	lyxscale 75
+	scale 50
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+האזור הכדאי על פי הגרף הוא )בערך( 
+\begin_inset Formula $0.65\leq w\leq0.8$
+\end_inset
+
+ מכיוון שבאזור יש ירידה חדה בזמן הריצה אך איכות הפתרון לא מתרחקת בהרבה מהפתרון
+ האופטימלי.
+\end_layout
+
+\begin_layout Description
+
+\numeric on
+31
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename heuristics.png
+	lyxscale 75
+	scale 75
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+
+\numeric on
+32
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename distancevsmonetary.png
+	lyxscale 75
+	scale 75
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+
+\numeric on
+34
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+נשים לב כי עבור צומת 
+\begin_inset Formula $n$
+\end_inset
+
+, 
+\begin_inset Formula $h^{*}(n)$
+\end_inset
+
+ היא הסכום המינימלי של כל הבדיקות מוכפלות במרחק שהן עברו עד שהגיעו למעבדה.
+\begin_inset Newline newline
+\end_inset
+
+נוכיח כי לכל צומת 
+\begin_inset Formula $n$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $0\leq h(n)\leq h^{*}(n)$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+מכיוון שמדובר במרחק, ברור כי 
+\begin_inset Formula $h(n)\geq0$
+\end_inset
+
+ לכל צומת 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+יהי מצב 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ ויהי מסלול 
+\begin_inset Formula $P$
+\end_inset
+
+ למצב מטרה כך שמחירו אופטימלי, כלומר 
+\begin_inset Formula $cost_{MDA}^{test\:travel}(P)=h^{*}(n)$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+לכל דירה 
+\begin_inset Formula $d_{i}$
+\end_inset
+
+ שנשאר לבקר בה נסמן ב-
+\begin_inset Formula $d_{i}.travelled$
+\end_inset
+
+ את המרחק שעברו הבדיקות מ-
+\begin_inset Formula $d_{i}$
+\end_inset
+
+ מהרגע שנאספו עד למסירתן למעבדה כלשהי, וב-
+\begin_inset Formula $L_{i}$
+\end_inset
+
+ את המעבדה הקרובה ביותר ל-
+\begin_inset Formula $d_{i}$
+\end_inset
+
+.
+ מתקיים:
+\begin_inset Formula 
+\[
+h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\sum_{i=1}^{n}d_{i}.travelled\cdot d_{i}.roomates\overset{(2)}{=}cost_{MDA}^{test\:travel}=h^{*}(n)
+\]
+
+\end_inset
+
+כאשר מעבר )
+\numeric on
+1
+\numeric off
+( נובע מכך שהמרחק המינימלי שבדיקה יכולה לעבור הוא בדיוק המרחק מהדירה בה
+ היא נלקחה למעבדה הקרובה ביותר לדירה זו, ומעבר )
+\numeric on
+2
+\numeric off
+( הוא לפי הגדרה.
+ לכן היוריסטיקה קבילה.
+\end_layout
+
+\begin_layout Description
+
+\numeric on
+35
+\numeric off
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset Graphics
+	filename distancevsteststravel.png
+	lyxscale 75
+	scale 75
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+
+\numeric on
+36
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+נוכיח:
+\begin_inset Newline newline
+\end_inset
+
+נניח בשלילה ש-
+\begin_inset Formula $A_{1}$
+\end_inset
+
+ לא החזיר פתרון.
+ כלומר, הפעלת האופרטור לא הייתה חוקית עבור אף מצב.
+\begin_inset Newline newline
+\end_inset
+
+מכך נובע שלכל מסלול 
+\begin_inset Formula $P$
+\end_inset
+
+ התקיים ש-
+\begin_inset Formula $cost_{MDA}^{dist}(P)>(1+\epsilon)\cdot C_{dist}^{*}$
+\end_inset
+
+ אבל נתון כי היה קיים פתרון במרחב המקורי 
+\begin_inset Formula $S_{MDA}$
+\end_inset
+
+ ולכן בוודאות קיים מסלול 
+\begin_inset Formula $P$
+\end_inset
+
+ שעבורו 
+\begin_inset Formula $cost_{MDA}^{dist}(P)=C_{dist}^{*}\leq(1+\epsilon)\cdot C_{dist}^{*}$
+\end_inset
+
+ ולכן נקבל סתירה לקבילות של 
+\begin_inset Formula $A^{*}$
+\end_inset
+
+, לכן 
+\begin_inset Formula $A_{1}$
+\end_inset
+
+ תמיד מחזיר פתרון.
+\end_layout
+
+\begin_layout Description
+
+\numeric on
+37
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+נוכיח:
+\begin_inset Newline newline
+\end_inset
+
+יהי 
+\begin_inset Formula $P$
+\end_inset
+
+ הפתרון האופטימאלי על פי הקריטריון המשולב, אז בפרט מתקיים כי 
+\begin_inset Formula $cost_{MDA}^{dist}(P)\leq(1+\epsilon)\cdot C_{dist}^{*}$
+\end_inset
+
+, ולכן בשלב השלישי באלגוריתם 
+\begin_inset Formula $A_{1}$
+\end_inset
+
+ הפעלת האופרטור היא חוקית והמצב יפותח.
+ מכיוון ש-
+\begin_inset Formula $P$
+\end_inset
+
+ אופטימלי, מתקיים עבורו כי 
+\begin_inset Formula $cost_{MDA}^{test\:travel}(P)\leq cost_{MDA}^{test\:travel}(P')$
+\end_inset
+
+ לכל 
+\begin_inset Formula $P\neq P'$
+\end_inset
+
+, ומכיוון ש-
+\begin_inset Formula $UCS$
+\end_inset
+
+ הוא אלגוריתם קביל, מובטח כי הוא יחזיר את הפתרון האופטימלי עבור מחיר זה,
+ כלומר את הפתרון 
+\begin_inset Formula $P$
+\end_inset
+
+.
 \end_layout
 
 \end_body
