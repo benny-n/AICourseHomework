@@ -1937,5 +1937,9 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 .
 \end_layout
 
+\begin_layout Standard
+
+\end_layout
+
 \end_body
 \end_document

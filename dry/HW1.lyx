@@ -1670,6 +1670,27 @@ close
 
  מכיוון שבאזור יש ירידה חדה בזמן הריצה אך איכות הפתרון לא מתרחקת בהרבה מהפתרון
  האופטימלי.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename 3rd_graph.png
+	lyxscale 68
+	scale 45
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+האזור הכדאי על פי הגרף הוא )בערך( 
+\begin_inset Formula $0.65\leq w\leq0.725$
+\end_inset
+
+ מכיוון שבאזור יש ירידה חדה בזמן הריצה אך איכות הפתרון לא מתרחקת בהרבה מהפתרון
+ האופטימלי.
 \end_layout
 
 \begin_layout Description
@@ -1935,10 +1956,6 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-
 \end_layout
 
 \end_body
