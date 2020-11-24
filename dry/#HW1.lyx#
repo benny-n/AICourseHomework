@@ -1406,7 +1406,199 @@ close
 \end_layout
 
 \begin_layout Standard
-היוריסטיקה אינה קבילה, נפריך באמצעות דוגמא נגדית:
+היוריסטיקה אינה קבילה, נפריך בעזרת דוגמא נגדית:
+\begin_inset Newline newline
+\end_inset
+
+נסתכל על המרחב הבא במצב 
+\begin_inset Formula $s$
+\end_inset
+
+: יש
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+4
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+דירות והאמבולנס נמצא בנקודה )
+\numeric on
+0
+\numeric off
+,
+\numeric on
+0
+\numeric off
+(.
+\begin_inset Newline newline
+\end_inset
+
+דירה 
+\begin_inset Formula $A$
+\end_inset
+
+ בנקודה )
+\numeric on
+0
+\numeric off
+,
+\numeric on
+0
+\numeric off
+( שבא האמבולנס נמצא כרגע, דירה 
+\begin_inset Formula $B$
+\end_inset
+
+ בנקודה )
+\numeric on
+2
+\numeric off
+,
+\numeric on
+0
+\numeric off
+(, דירה 
+\begin_inset Formula $C$
+\end_inset
+
+ בנקודה )
+\numeric on
+4
+\numeric off
+,
+\numeric on
+0
+\numeric off
+( ודירה 
+\begin_inset Formula $D$
+\end_inset
+
+ בנקודה )
+\numeric on
+0
+\numeric off
+,
+\numeric on
+3
+\numeric off
+(.
+\begin_inset Newline newline
+\end_inset
+
+נראה שמתקיים 
+\begin_inset Formula $h(s)>h(s^{*})$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+h(s)\stackrel{(1)}{=}cost_{MDA}^{dist}(A\rightarrow B\rightarrow C\rightarrow D)=9>8.6=cost_{MDA}^{dist}(A\rightarrow D\rightarrow B\rightarrow C)\stackrel{(2)}{=}h^{*}(s)
+\]
+
+\end_inset
+
+מעבר )
+\numeric on
+1
+\numeric off
+( נובע מהגדרת היוריסטיקה שבונה את המסלול כך שהיא תמיד בוחרת את הדירה הבאה
+ במסלול בתור הדירה הקרובה ביותר באותו רגע.
+\begin_inset Newline newline
+\end_inset
+
+מעבר )
+\numeric on
+2
+\numeric off
+( נובע מכך שזה המסלול שעובר בכל ארבעת הדירות )כאשר מתחילים ב-
+\numeric on
+
+\begin_inset Formula $A$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+( במחיר האופטימלי.
+\begin_inset Newline newline
+\end_inset
+
+סרטוט להמחשה :
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Newline newline
 \end_inset
 
@@ -1670,6 +1862,27 @@ close
 
  מכיוון שבאזור יש ירידה חדה בזמן הריצה אך איכות הפתרון לא מתרחקת בהרבה מהפתרון
  האופטימלי.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename 3rd_graph.png
+	lyxscale 68
+	scale 45
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+האזור הכדאי על פי הגרף הוא )בערך( 
+\begin_inset Formula $0.65\leq w\leq0.725$
+\end_inset
+
+ מכיוון שבאזור יש ירידה חדה בזמן הריצה אך איכות הפתרון לא מתרחקת בהרבה מהפתרון
+ האופטימלי.
 \end_layout
 
 \begin_layout Description
@@ -1843,6 +2056,10 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \end_layout
 
 \begin_layout Standard
+נוכיח:
+\begin_inset Newline newline
+\end_inset
+
 נניח בשלילה ש-
 \begin_inset Formula $A_{1}$
 \end_inset
@@ -1857,7 +2074,7 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \end_inset
 
  התקיים ש-
-\begin_inset Formula $cost_{MDA}^{dist}(P)>(1+\epsilon)\cdot C_{dist}^{*}$
+\begin_inset Formula $cost_{MDA}^{dist}(P)>(1+\varepsilon)\cdot C_{dist}^{*}$
 \end_inset
 
  אבל נתון כי היה קיים פתרון במרחב המקורי 
@@ -1869,7 +2086,7 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \end_inset
 
  שעבורו 
-\begin_inset Formula $cost_{MDA}^{dist}(P)=C_{dist}^{*}\leq(1+\epsilon)\cdot C_{dist}^{*}$
+\begin_inset Formula $cost_{MDA}^{dist}(P)=C_{dist}^{*}\leq(1+\varepsilon)\cdot C_{dist}^{*}$
 \end_inset
 
  ולכן נקבל סתירה לקבילות של 
@@ -1896,11 +2113,654 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \begin_inset Newline newline
 \end_inset
 
-יהי P הפתרון האופטימאלי על פי הקריטריון המשולב, מובטח לנו כפי שהסברנו בסעיף
- 32 שכל מצב שנמצא במסלול זה יפותח.
- האלגוריתם UFS הינו כביל כלומר מכל המצבים שיפותחו מובטח לנו שיתקבל הפתרון
- האידאלי.
- ולכן אם יחזור פתרון הוא יהיה האופטימאלי.
+יהי 
+\begin_inset Formula $P$
+\end_inset
+
+ הפתרון האופטימאלי על פי הקריטריון המשולב, אז בפרט מתקיים כי 
+\begin_inset Formula $cost_{MDA}^{dist}(P)\leq(1+\varepsilon)\cdot C_{dist}^{*}$
+\end_inset
+
+, ולכן בשלב השלישי באלגוריתם 
+\begin_inset Formula $A_{1}$
+\end_inset
+
+ הפעלת האופרטור היא חוקית והמצב יפותח.
+ מכיוון ש-
+\begin_inset Formula $P$
+\end_inset
+
+ אופטימלי, מתקיים עבורו כי 
+\begin_inset Formula $cost_{MDA}^{test\:travel}(P)\leq cost_{MDA}^{test\:travel}(P')$
+\end_inset
+
+ לכל 
+\begin_inset Formula $P\neq P'$
+\end_inset
+
+, ומכיוון ש-
+\begin_inset Formula $UCS$
+\end_inset
+
+ הוא אלגוריתם קביל, מובטח כי הוא יחזיר את הפתרון האופטימלי עבור מחיר זה,
+ כלומר את הפתרון 
+\begin_inset Formula $P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+
+\numeric on
+38
+\series bold
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+תהיה פה טבלה:
+\begin_inset Newline newline
+\end_inset
+
+ניתן לראות על פי הטבלה שקיבלנו מסלול יותר יקר מבחינת פונקציית המחיר 
+\begin_inset Formula $cost_{MDA}^{dist}$
+\end_inset
+
+ )אך עדיין בתחום הנדרש לפי 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+ כפי שנראה למטה( וכמו כן מסלול זול יותר ביחס לפונקציית המחיר 
+\begin_inset Formula $cost_{MDA}^{test\:travel}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+כלומר אכן התקיים האיזון בין שני המדדים.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{DistCost(ReturnedSolution)}{C_{dist}^{*}}-1=\frac{66696.615}{43034.79407}-1=0.5498<0.6=\varepsilon
+\]
+
+\end_inset
+
+ניתן לראות כי אכן נשמר ערך ה-
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+ הנקוב.
+\end_layout
+
+\begin_layout Description
+
+\numeric on
+39
+\numeric off
+.
+\end_layout
+
+\begin_layout Description
+
+\numeric on
+40
+\numeric off
+.
+\end_layout
+
+\begin_layout Description
+
+\numeric on
+41
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+נשים לב כי בשני השלבים הראשונים האלגוריתמים 
+\begin_inset Formula $A_{1}$
+\end_inset
+
+ ו-
+\begin_inset Formula $A_{2}$
+\end_inset
+
+ זהים.
+ היתרון הצפוי של 
+\begin_inset Formula $A_{2}$
+\end_inset
+
+ על פני 
+\begin_inset Formula $A_{1}$
+\end_inset
+
+ נובע מכך שב-
+\begin_inset Formula $A_{2}$
+\end_inset
+
+ בשלב השלישי אנו מריצים 
+\begin_inset Formula $Astar$
+\end_inset
+
+ על אותו מרחב כמו בשלב הראשון, ואילו ב-
+\begin_inset Formula $A_{1}$
+\end_inset
+
+ אנו מריצים 
+\begin_inset Formula $Astar$
+\end_inset
+
+ על 
+\begin_inset Quotes eld
+\end_inset
+
+מרחב המסלולים
+\begin_inset Quotes erd
+\end_inset
+
+ שגודלו הוא מסדר גודל
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula $2^{|S|}$
+\end_inset
+
+ )כגודל 
+\begin_inset Formula $P(S)$
+\end_inset
+
+( כאשר 
+\begin_inset Formula $S$
+\end_inset
+
+ הוא המרחב מהשלב הראשון, לכן זמן הריצה של 
+\begin_inset Formula $A_{1}$
+\end_inset
+
+ יהיה גדול משל 
+\begin_inset Formula $A_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+
+\numeric on
+44
+\series bold
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename astar_epsilon.png
+	scale 80
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+כפי שניתן לראות מתוצאות ההרצה, אכן חסכנו במספר הפיתוחים, פיתחנו כ-
+\numeric on
+10%
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+פחות צמתים.
+ הגמישות של 
+\begin_inset Formula $A^{*}\varepsilon$
+\end_inset
+
+ תעזור לנו בכך שהיא תיתן אופציה לצמתים עם ערך 
+\begin_inset Formula $g$
+\end_inset
+
+ גבוה יותר )לכל היותר ב-
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+( אך עם ערך 
+\begin_inset Formula $h$
+\end_inset
+
+ נמוך יותר להיכנס ל-
+\lang english
+open
+\lang hebrew
+.
+ כלומר, בחיפוש שלנו נבדוק גם צמתים אשר הפונקציה היוריסטית תעריך אותם כיותר
+ קרובים לפתרון, למרות שערך ה-
+\begin_inset Formula $g$
+\end_inset
+
+ שלהם אינו אופטימלי.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+חלק_י':
+\end_layout
+
+\begin_layout Description
+א'.
+\end_layout
+
+\begin_layout Standard
+המדד הביצועי שאנו משפרים הוא 
+\series bold
+זכרון.
+ 
+\series default
+הסיבה לכך היא שהאלגוריתם 
+\begin_inset Formula $IDA^{*}$
+\end_inset
+
+ הוא אלגוריתם איטרטיבי המחפש לעומק, ולכן בעל דרישות זכרון נמוכות.
+\end_layout
+
+\begin_layout Description
+ב'.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\text{.i}$
+\end_inset
+
+ זמן ריצה.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\text{.ii}$
+\end_inset
+
+ עבור פונקציות יוריסטיות מסוימות יכול להיות שנרוויח קצת מאוד צמתים בעומק
+ כל איטרציה, ולכן הריצה תהיה מאוד ארוכה.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $.\text{iii}$
+\end_inset
+
+ מדד זה נפגע פחות ביחס מהאופן שבו הוא נפגע ב-
+\lang english
+ID-DFS
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+לעומת
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+BFS
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מכיוון שעבור 
+\begin_inset Formula $IDA^{*}$
+\end_inset
+
+ קיימות פונקציות יוריסטיות קבילות שעבורן הבעיה שתיארנו בסעיף הקודם לא תיגרם
+ ונקבל זמן ריצה טוב יותר.
+ לעומת זאת ריצה של
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+ID-DFS
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+תמיד מכילה באיטרציה האחרונה שלה ריצה של
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+BFS
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ ולכן זמנה יהיה לכל הפחות כמו זמן הריצה של 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+BFS
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ ולרוב אף גבוה יותר.
+\end_layout
+
+\begin_layout Description
+ג'.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\text{.i}$
+\end_inset
+
+ במקרה הגרוע ביותר, כל איטרציה נגדיל את 
+\begin_inset Formula $nextFlimit$
+\end_inset
+
+ ב-
+\begin_inset Formula $\frac{1}{k}$
+\end_inset
+
+ כאשר ערכו ההתחלתי הוא 
+\begin_inset Formula $Q_{k}(h(I))$
+\end_inset
+
+ כפי שהוגדר.
+ ברגע ש-
+\begin_inset Formula $f$
+\end_inset
+
+ יגיע לערך 
+\begin_inset Formula $C_{S}^{*}$
+\end_inset
+
+ האלגוריתם ימצא פתרון ויעצור.
+ לכן מספר האיטרציות לכל היותר יהיה 
+\begin_inset Formula 
+\[
+\#max\_iterations=\bigg\lceil\frac{C_{S}^{*}-Q_{k}(h(I))}{\frac{1}{k}}\bigg\rceil=\lceil k\cdot\left(C_{S}^{*}-Q_{k}(h(I))\right)\rceil
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\text{.ii}$
+\end_inset
+
+ החסם ההדוק על 
+\begin_inset Formula $\varepsilon(A_{1},S)$
+\end_inset
+
+ הוא 
+\begin_inset Formula $\frac{1}{k}$
+\end_inset
+
+, כלומר מתקיים 
+\begin_inset Formula $\varepsilon(A_{1},S)<\frac{1}{k}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+נוכיח: מתקיים כי 
+\begin_inset Formula $Q_{k}(origNextFLimit)\leq C_{S}^{*}$
+\end_inset
+
+ לכל שלב באלגוריתם עד מציאת פתרון, מכיוון שמובטח לנו שקיים צומת שיביא אותנו
+ לפתרון האופטימלי שערכו 
+\begin_inset Formula $C_{S}^{*}$
+\end_inset
+
+, ולכן ערך ה-
+\begin_inset Formula $f$
+\end_inset
+
+.
+ נסתכל על האיטרציה האחרונה לפני שאנו מוצאים את הפתרון בה נקראת הפונקציה
+ 
+\begin_inset Formula $nextFLimit$
+\end_inset
+
+.
+ כאשר 
+\begin_inset Formula $C_{S}^{*}-prevFLimit\leq\frac{1}{k}$
+\end_inset
+
+ נקבל ש-
+\begin_inset Formula $Q_{k}(origNextFLimit)\leq C_{S}^{*}<prevFLimit+\frac{1}{k}$
+\end_inset
+
+ ואז:
+\begin_inset Formula 
+\[
+nextFLimit=max\{prevFLimit+\frac{1}{k},Q_{k}(origNextFLimit)\}=prevFLimit+\frac{1}{k}
+\]
+
+\end_inset
+
+כעת, באיטרציה האחרונה האלגוריתם יכול למצוא כל פתרון בטווח 
+\begin_inset Formula $[C_{S}^{*},prevFLimit+\frac{1}{k}]$
+\end_inset
+
+ נשים לב כי כאשר 
+\begin_inset Formula $C_{S}^{*}-prevFLimit\longrightarrow0$
+\end_inset
+
+ נקבל את הטווח 
+\begin_inset Formula $[C_{S}^{*},C_{S}^{*}+\frac{1}{k})$
+\end_inset
+
+ ולכן הסטייה המקסימלית מהפתרון חסומה ע
+\begin_inset Quotes erd
+\end_inset
+
+י 
+\begin_inset Formula $\frac{1}{k}$
+\end_inset
+
+.
 \end_layout
 
 \end_body
