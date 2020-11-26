@@ -2179,11 +2179,11 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \begin_inset Formula $\varepsilon$
 \end_inset
 
- כפי שנראה למטה( וכמו כן מסלול זול יותר ביחס לפונקציית המחיר 
+ כפי שנראה למטה( וכמו כן מסלול טיפה יותר יקר ביחס לפונקציית המחיר 
 \begin_inset Formula $cost_{MDA}^{test\:travel}$
 \end_inset
 
-.
+ אך קרוב למדי לאופטימלי.
 \begin_inset Newline newline
 \end_inset
 

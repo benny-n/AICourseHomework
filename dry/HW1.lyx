@@ -2676,14 +2676,14 @@ BFS
 \end_inset
 
  יגיע לערך 
-\begin_inset Formula $C_{S}^{*}$
+\begin_inset Formula $Cost(A(S))$
 \end_inset
 
  האלגוריתם ימצא פתרון ויעצור.
  לכן מספר האיטרציות לכל היותר יהיה 
 \begin_inset Formula 
 \[
-\#max\_iterations=\bigg\lceil\frac{C_{S}^{*}-Q_{k}(h(I))}{\frac{1}{k}}\bigg\rceil=\lceil k\cdot\left(C_{S}^{*}-Q_{k}(h(I))\right)\rceil
+\#max\_iterations=\bigg\lceil\frac{Cost(A(S))-Q_{k}(h(I))}{\frac{1}{k}}\bigg\rceil=\lceil k\cdot\left(Cost(A(S))-Q_{k}(h(I))\right)\rceil
 \]
 
 \end_inset
