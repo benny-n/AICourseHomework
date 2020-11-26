@@ -2214,6 +2214,923 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 .
 \end_layout
 
+\begin_layout Standard
+הטענה אינה נכונה.
+ נפריך בעזרת דוגמא נגדית.
+\begin_inset Newline newline
+\end_inset
+
+נסתכל על הסימולציה הבאה: האמבולנס נמצא בנקודת ההתחלה 
+\begin_inset Formula $S(0,0)$
+\end_inset
+
+ ללא מטושים כלל.
+ דירה 
+\begin_inset Formula $A$
+\end_inset
+
+ בנקודה 
+\begin_inset Formula $(1,0)$
+\end_inset
+
+ עם שני דיירים.
+ מעבדה 
+\begin_inset Formula $B$
+\end_inset
+
+ בנקודה 
+\begin_inset Formula $(2,0)$
+\end_inset
+
+ עם מטוש אחד במלאי.
+ ומעבדה 
+\begin_inset Formula $C$
+\end_inset
+
+ בנקודה 
+\begin_inset Formula $(3,0)$
+\end_inset
+
+ עם מטוש אחד במלאי.
+\begin_inset Newline newline
+\end_inset
+
+תחילה נשים לב כי הפתרון האופטימלי שיוחזר עם פונקציית העלות 
+\begin_inset Formula $cost_{MDA}^{dist}$
+\end_inset
+
+ הוא 
+\begin_inset Formula $S\rightarrow B\rightarrow C\rightarrow A$
+\end_inset
+
+ שמחירו 
+\begin_inset Formula $C_{S}^{*}=5$
+\end_inset
+
+.
+ כעת נגדיר 
+\begin_inset Formula $\varepsilon=0.1$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $max\_distance\_cost=5.5$
+\end_inset
+
+, ונראה כי האלגוריתם מחזיר שאין פתרון:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align right
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="7.5cm">
+<column alignment="center" valignment="top" width="0.8cm">
+<column alignment="center" valignment="top" width="1cm">
+<column alignment="center" valignment="top" width="5cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+צעד
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Formula $open$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $close$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+הצומת הבא לפיתוח
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align center
+הסבר
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\numeric on
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Formula $s_{1}=\left\{ S,\emptyset,\emptyset,0,\emptyset\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\emptyset$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $s_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align right
+מפתחים את 
+\begin_inset Formula $S$
+\end_inset
+
+ לפי האלגוריתם
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\numeric on
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Formula $s_{2}=\left\{ C,\emptyset,\emptyset,1,\{C\}\right\} ,g=0,h=2,f=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Formula $s_{3}=\left\{ B,\emptyset,\emptyset,1,\{B\}\right\} ,g=0,h=2,f=2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $s_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $s_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align right
+מכיוון שערכי 
+\begin_inset Formula $f$
+\end_inset
+
+ של שני הצמתים זהים, 
+\end_layout
+
+\begin_layout Plain Layout
+\align right
+ניתן לבחור איזה צומת האלגוריתם יפתח.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\numeric on
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Formula $s_{4}=\left\{ B,\emptyset,\emptyset,2,\{B,C\}\right\} ,g=0,h=2,f=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Formula $s_{3}=\left\{ B,\emptyset,\emptyset,1,\{B\}\right\} ,g=0,h=2,f=2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $s_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $s_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $s_{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align right
+כשבאנו לפתח את צומת 
+\begin_inset Formula $C$
+\end_inset
+
+ עדיין אין ברשותנו 
+\end_layout
+
+\begin_layout Plain Layout
+\align right
+מספיק מטושים כדי ללכת לדירה 
+\begin_inset Formula $A$
+\end_inset
+
+, לכן הצומת הבא 
+\end_layout
+
+\begin_layout Plain Layout
+\align right
+היחיד שניתן להגיע אליו זה צומת 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+\align right
+נשים לב כי זה לא אותו מצב כמו 
+\begin_inset Formula $s_{3}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\align right
+שהוא מצב שמתאר מסלול שבו מתחילים בצומת 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+כמו כן, ערכי 
+\begin_inset Formula $f$
+\end_inset
+
+ עדיין זהים ולכן נוכל לבחור להמשיך מ-
+\begin_inset Formula $s_{4}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\numeric on
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Formula $s_{5}=\left\{ A,\{A\},\emptyset,0,\{B,C\}\right\} ,g=0,h=2,f=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Formula $s_{3}=\left\{ B,\emptyset,\emptyset,1,\{B\}\right\} ,g=0,h=2,f=2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $s_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $s_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $s_{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $s_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align right
+הגענו לדירה ולקחנו את הבדיקות.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\align right
+ערכי 
+\begin_inset Formula $f$
+\end_inset
+
+ בין המצבים עדיין זהים ולכן נמשיך 
+\end_layout
+
+\begin_layout Plain Layout
+\align right
+לפתח את צומת 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\numeric on
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Formula $s_{3}=\left\{ B,\emptyset,\emptyset,1,\{B\}\right\} ,g=0,h=2,f=2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $s_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $s_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $s_{4}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $s_{5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $s_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align right
+\begin_inset Formula $(*)$
+\end_inset
+
+ הסבר מתחת לטבלה.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\numeric on
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Formula $s_{8}=\left\{ C,\emptyset,\emptyset,2,\{B,C\}\right\} ,g=0,h=2,f=2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $s_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $s_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $s_{4}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $s_{5}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $s_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $s_{8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align right
+מפתחים את 
+\begin_inset Formula $s_{3}$
+\end_inset
+
+ לפי האלגוריתם
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\numeric on
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Formula $s_{9}=\left\{ A,\{A\},\emptyset,0,\{B,C\}\right\} ,g=0,h=2,f=2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $s_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $s_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $s_{4}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $s_{5}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $s_{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $s_{8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $s_{9}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align right
+הצומת הבא שהאלגוריתם יבוא לפתח הוא 
+\begin_inset Formula $s_{9}$
+\end_inset
+
+.
+ אך נשים לב כי 
+\begin_inset Formula $s_{9}$
+\end_inset
+
+ זהה ל-
+\begin_inset Formula $s_{5}$
+\end_inset
+
+ עם אותו ערך 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ ולכן האלגוריתם ייראה שהמצב הזה נמצא ב-
+\begin_inset Formula $close$
+\end_inset
+
+ ולא יפתח אותו פעם נוספת.
+ האלגוריתם סיים לרוץ על כל המצבים ולא החזיר פתרון
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align right
+\begin_inset Formula $(*)$
+\end_inset
+
+ הסבר צעד
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+5
+\numeric off
+: לאחר הפיתוח של 
+\begin_inset Formula $s_{5}$
+\end_inset
+
+ בשלב זה נוצרים שני המצבים הבאים:
+\begin_inset Formula 
+\begin{align*}
+s_{6} & =\left\{ B,\emptyset,\{A\},0,\{B,C\}\right\} \\
+s_{7} & =\left\{ C,\emptyset,\{A\},0,\{B,C\}\right\} 
+\end{align*}
+
+\end_inset
+
+נשים לב כי המסלול שעברנו עד כה הוא: 
+\begin_inset Formula $P=C\rightarrow B\rightarrow A$
+\end_inset
+
+, ולכן מתקיים כי:
+\begin_inset Formula 
+\begin{align*}
+cost_{MDA}^{dist}(s_{6}) & =cost_{MDA}^{dist}(C\rightarrow B\rightarrow A\rightarrow B)=6>5.5\\
+cost_{MDA}^{dist}(s_{7}) & =cost_{MDA}^{dist}(C\rightarrow B\rightarrow A\rightarrow C)=7>5.5
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align right
+כתוצאה מכך, בגלל ההגבלה שנתנו אף אחד מהמצבים 
+\begin_inset Formula $s_{6},s_{7}$
+\end_inset
+
+ לא ייכנס ל-
+\begin_inset Formula $open$
+\end_inset
+
+.
+ האלגוריתם יסיים את הפיתוח של 
+\begin_inset Formula $s_{5}$
+\end_inset
+
+ ויעביר אותו ל-
+\begin_inset Formula $close$
+\end_inset
+
+.
+ הצומת הבא לפיתוח יהיה 
+\begin_inset Formula $s_{3}$
+\end_inset
+
+ שהוא היחיד שכרגע ב-
+\begin_inset Formula $open$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\align right
+ניתן לראות כי למרות 
+\series bold
+שקיים הפתרון
+\series default
+ 
+\begin_inset Formula $C_{S}^{*}$
+\end_inset
+
+ האלוגריתם 
+\series bold
+החזיר שאין פתרון.
+\end_layout
+
 \begin_layout Description
 
 \numeric on
