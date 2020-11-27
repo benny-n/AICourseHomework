@@ -356,89 +356,60 @@ k!\cdot(m+1)^{k}\cdot m
 \end_layout
 
 \begin_layout Standard
-לא ייתכנו מעגלים במרחב המצבים.
- מצב שבו ה
-\begin_inset Formula $cur.loc$
+נראה כי לא ייתכנו מעגלים במרחב המצבים.
+ תחילה נשים לב לאבחנה: מצב עבורו ה-
+\begin_inset Formula $curLoc$
 \end_inset
 
- מתאר דירה, אינו יכול להיות חלק ממעגל, כיוון שלא ניתן לבקר בדירה פעמיים.
- כלומר, מעגלים יכולים להתקבל רק ממצבים בהם המיקום 
-\begin_inset Formula $(cur.loc)$
-\end_inset
-
- מתאר מעבדות.
- נשים לב כי ביקור במעבדה מרוקן את קבוצת הבדיקות באמבולנס 
-\begin_inset Formula $(Taken)$
-\end_inset
-
- ולכן לא יתכן שנחזור למעבדה שבה מסרנו את הבדיקות.
- נשים לב כי בסיטואציה של רצף ביקורים במעבדות שבכולם ה
-\begin_inset Formula $Taken$
-\end_inset
-
- הוא ריק, המצבים עדיין נבדלים במספר המטושים הזמינים באמבולנס, שכן אם ביקרנו
- במעבדה כאשר ה
-\begin_inset Formula $Taken$
-\end_inset
-
- ריק מספר המטושים שלנו בהכרח יגדל ולכן מדובר על מצבים שונים.
+ מתאר דירה לא יכול להיות חלק ממעגל, כי לפי תנאי התרגיל לא ניתן לבקר באותה
+ דירה פעמיים.
  
-\backslash
+\begin_inset Newline newline
+\end_inset
 
-\backslash
+נניח בשלילה כי קיים מעגל בגרף.
+ לפי האבחנה הוא מכיל מצבים שמתארים מעבדות בלבד.
+ על פי הגדרת האופרטור 
+\begin_inset Formula $o_{l_{i}}(s)$
+\end_inset
 
-\backslash
+ נקבל כי לכל המצבים מתקיים 
+\begin_inset Formula $s.Taken=\emptyset$
+\end_inset
 
-\backslash
+.
+ לכן הפעלת האופרטור התאפשרה בגלל שהתנאי השני התקיים שהוא 
+\begin_inset Formula $l_{i}\notin s.VisitedLabs$
+\end_inset
 
-\backslash
+.
+ נסמן את המעגל: 
+\begin_inset Formula $P=s_{1}\rightarrow s_{2}\rightarrow...\rightarrow s_{n}\rightarrow s_{1}$
+\end_inset
 
-\backslash
+.
+ ונבחן את הצומת 
+\begin_inset Formula $s_{n}$
+\end_inset
 
-\backslash
+, הפעלת האופרטור על 
+\begin_inset Formula $s_{n}$
+\end_inset
 
-\backslash
+ התאפשרה מפני ש-
+\begin_inset Formula $s_{1}\notin s_{n}.VisitedLabs$
+\end_inset
 
-\backslash
+, אך זאת 
+\series bold
+סתירה
+\series default
+ מכיוון שהתחלנו את המסלול בביקור במעבדה 
+\begin_inset Formula $s_{1}$
+\end_inset
 
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-דרוש שינוי ניסוח?
+.
+ לכן לא ייתכנו מעגלים בגרף.
 \end_layout
 
 \begin_layout Description
@@ -480,7 +451,7 @@ k!\cdot(m+1)^{k}\cdot m
 \end_inset
 
  כך ש- 
-\begin_inset Formula $s.visitiedLabs=Labs$
+\begin_inset Formula $s.VisitiedLabs=Labs$
 \end_inset
 
  )כלומר ביקרנו בכל המעבדות ולקחנו את כל המטושים הזמינים( אך 
@@ -2225,26 +2196,26 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \end_inset
 
  ללא מטושים כלל.
- דירה 
-\begin_inset Formula $A$
+ ישנה מעבדה 
+\begin_inset Formula $L_{1}$
 \end_inset
 
  בנקודה 
 \begin_inset Formula $(1,0)$
 \end_inset
 
- עם שני דיירים.
- מעבדה 
-\begin_inset Formula $B$
+ עם מטוש אחד במלאי.
+ דירה 
+\begin_inset Formula $A$
 \end_inset
 
  בנקודה 
 \begin_inset Formula $(2,0)$
 \end_inset
 
- עם מטוש אחד במלאי.
+ עם שני דיירים.
  ומעבדה 
-\begin_inset Formula $C$
+\begin_inset Formula $L_{2}$
 \end_inset
 
  בנקודה 
@@ -2260,7 +2231,7 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \end_inset
 
  הוא 
-\begin_inset Formula $S\rightarrow B\rightarrow C\rightarrow A$
+\begin_inset Formula $S\rightarrow L_{1}\rightarrow L_{2}\rightarrow A\rightarrow L_{1}$
 \end_inset
 
  שמחירו 
@@ -2269,14 +2240,55 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 .
  כעת נגדיר 
-\begin_inset Formula $\varepsilon=0.1$
+\begin_inset Formula $\varepsilon=0.2$
 \end_inset
 
 , כלומר 
-\begin_inset Formula $max\_distance\_cost=5.5$
+\begin_inset Formula $max\_distance\_cost=6$
 \end_inset
 
 , ונראה כי האלגוריתם מחזיר שאין פתרון:
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+הערה:
+\series default
+ מכיוון שלפי האלגוריתם אנו מריצים 
+\begin_inset Formula $UniformCost$
+\end_inset
+
+, אין פונקציה יוריסטית ולכן 
+\begin_inset Formula $h=0$
+\end_inset
+
+ לכל מצב.
+ כלומר, בחירת הצמתים מ-
+\begin_inset Formula $open$
+\end_inset
+
+ מתבצעת לפי הערך של 
+\begin_inset Formula $g$
+\end_inset
+
+ בלבד.
+\begin_inset Newline newline
+\end_inset
+
+כמו כן, אנו ממזערים באלגוריתם זה את 
+\begin_inset Formula $TestsTravelDistance$
+\end_inset
+
+ לכן ערך ה-
+\begin_inset Formula $g$
+\end_inset
+
+ הוא המרחק שעברו הבדיקות על האמבולנס.
+\begin_inset Newline newline
+\end_inset
+
+טבלת המעקב העמוד הבא.
 \begin_inset Newline newline
 \end_inset
 
@@ -2289,10 +2301,10 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 <lyxtabular version="3" rows="8" columns="5">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
-<column alignment="center" valignment="top" width="7.5cm">
+<column alignment="center" valignment="top" width="5.4cm">
 <column alignment="center" valignment="top" width="0.8cm">
 <column alignment="center" valignment="top" width="1cm">
-<column alignment="center" valignment="top" width="5cm">
+<column alignment="center" valignment="top" width="7cm">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -2429,7 +2441,7 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 \begin_layout Plain Layout
 \align left
-\begin_inset Formula $s_{2}=\left\{ C,\emptyset,\emptyset,1,\{C\}\right\} ,g=0,h=2,f=2$
+\begin_inset Formula $s_{2}=\left\{ L_{2},\emptyset,\emptyset,1,\{L_{2}\}\right\} ,g=0$
 \end_inset
 
 
@@ -2437,7 +2449,7 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 \begin_layout Plain Layout
 \align left
-\begin_inset Formula $s_{3}=\left\{ B,\emptyset,\emptyset,1,\{B\}\right\} ,g=0,h=2,f=2$
+\begin_inset Formula $s_{3}=\left\{ L_{1},\emptyset,\emptyset,1,\{L_{1}\}\right\} ,g=0$
 \end_inset
 
 
@@ -2474,11 +2486,11 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 \begin_layout Plain Layout
 \align right
-מכיוון שערכי 
-\begin_inset Formula $f$
+מכיוון שערך ה-
+\begin_inset Formula $g$
 \end_inset
 
- של שני הצמתים זהים, 
+ של שני הצמתים זהה, 
 \end_layout
 
 \begin_layout Plain Layout
@@ -2506,7 +2518,7 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 \begin_layout Plain Layout
 \align left
-\begin_inset Formula $s_{4}=\left\{ B,\emptyset,\emptyset,2,\{B,C\}\right\} ,g=0,h=2,f=2$
+\begin_inset Formula $s_{4}=\left\{ L_{1},\emptyset,\emptyset,2,\{L_{1},L_{2}\}\right\} ,g=0$
 \end_inset
 
 
@@ -2514,7 +2526,7 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 \begin_layout Plain Layout
 \align left
-\begin_inset Formula $s_{3}=\left\{ B,\emptyset,\emptyset,1,\{B\}\right\} ,g=0,h=2,f=2$
+\begin_inset Formula $s_{3}=\left\{ L_{1},\emptyset,\emptyset,1,\{L_{1}\}\right\} ,g=0$
 \end_inset
 
 
@@ -2558,55 +2570,33 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 \begin_layout Plain Layout
 \align right
-כשבאנו לפתח את צומת 
-\begin_inset Formula $C$
+כשבאנו לפתח את הצומת 
+\begin_inset Formula $s_{2}$
 \end_inset
 
- עדיין אין ברשותנו 
-\end_layout
-
-\begin_layout Plain Layout
-\align right
-מספיק מטושים כדי ללכת לדירה 
+ עדיין אין ברשותנו מספיק מטושים כדי ללכת לדירה 
 \begin_inset Formula $A$
 \end_inset
 
-, לכן הצומת הבא 
-\end_layout
-
-\begin_layout Plain Layout
-\align right
-היחיד שניתן להגיע אליו זה צומת 
-\begin_inset Formula $B$
+, לכן היעד הבא היחיד שניתן להגיע אליו הוא 
+\begin_inset Formula $L_{1}$
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Plain Layout
-\align right
-נשים לב כי זה לא אותו מצב כמו 
+ נשים לב כי זה לא אותו מצב כמו 
 \begin_inset Formula $s_{3}$
 \end_inset
 
- 
-\end_layout
-
-\begin_layout Plain Layout
-\align right
-שהוא מצב שמתאר מסלול שבו מתחילים בצומת 
-\begin_inset Formula $B$
+ שהוא מצב שמתאר מסלול שבו מתחילים במעבדה 
+\begin_inset Formula $L_{1}$
 \end_inset
 
 .
-\begin_inset Newline newline
+ כמו כן, ערכי 
+\begin_inset Formula $g$
 \end_inset
 
-כמו כן, ערכי 
-\begin_inset Formula $f$
-\end_inset
-
- עדיין זהים ולכן נוכל לבחור להמשיך מ-
+ עדיין זהים ולכן נוכל לבחור להמשיך לפתח מ-
 \begin_inset Formula $s_{4}$
 \end_inset
 
@@ -2633,7 +2623,7 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 \begin_layout Plain Layout
 \align left
-\begin_inset Formula $s_{5}=\left\{ A,\{A\},\emptyset,0,\{B,C\}\right\} ,g=0,h=2,f=2$
+\begin_inset Formula $s_{5}=\left\{ A,\{A\},\emptyset,0,\{L_{1},L_{2}\}\right\} ,g=0$
 \end_inset
 
 
@@ -2641,7 +2631,7 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 \begin_layout Plain Layout
 \align left
-\begin_inset Formula $s_{3}=\left\{ B,\emptyset,\emptyset,1,\{B\}\right\} ,g=0,h=2,f=2$
+\begin_inset Formula $s_{3}=\left\{ L_{1},\emptyset,\emptyset,1,\{L_{1}\}\right\} ,g=0$
 \end_inset
 
 
@@ -2692,23 +2682,17 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 \begin_layout Plain Layout
 \align right
-הגענו לדירה ולקחנו את הבדיקות.
- 
-\end_layout
-
-\begin_layout Plain Layout
-\align right
-ערכי 
-\begin_inset Formula $f$
+הגענו לדירה 
+\begin_inset Formula $A$
 \end_inset
 
- בין המצבים עדיין זהים ולכן נמשיך 
-\end_layout
+ ולקחנו את הבדיקות של הדיירים.
+ ערכי 
+\begin_inset Formula $g$
+\end_inset
 
-\begin_layout Plain Layout
-\align right
-לפתח את צומת 
-\begin_inset Formula $A$
+ בין המצבים עדיין זהים ולכן נבחר להמשיך לפתח את הצומת 
+\begin_inset Formula $s_{5}$
 \end_inset
 
 .
@@ -2734,7 +2718,7 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 \begin_layout Plain Layout
 \align left
-\begin_inset Formula $s_{3}=\left\{ B,\emptyset,\emptyset,1,\{B\}\right\} ,g=0,h=2,f=2$
+\begin_inset Formula $s_{3}=\left\{ L_{1},\emptyset,\emptyset,1,\{L_{1}\}\right\} ,g=0$
 \end_inset
 
 
@@ -2792,10 +2776,73 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 \begin_layout Plain Layout
 \align right
-\begin_inset Formula $(*)$
+לאחר הפיתוח של 
+\begin_inset Formula $s_{5}$
 \end_inset
 
- הסבר מתחת לטבלה.
+ בשלב זה נוצרים שני המצבים הבאים:
+\begin_inset Formula 
+\begin{align*}
+s_{6} & =\left\{ L_{1},\emptyset,\{A\},0,\{L_{1},L_{2}\}\right\} ,g=2\\
+s_{7} & =\left\{ L_{2},\emptyset,\{A\},0,\{L_{1},L_{2}\}\right\} ,g=2
+\end{align*}
+
+\end_inset
+
+נשים לב כי המסלול שעברנו עד כה הוא:
+\end_layout
+
+\begin_layout Plain Layout
+\align right
+\begin_inset Formula $P=L_{2}\rightarrow L_{1}\rightarrow A$
+\end_inset
+
+ ומתקיים כי 
+\begin_inset Formula $cost_{MDA}^{dist}(P)=6$
+\end_inset
+
+, לכן נקבל:
+\begin_inset Formula 
+\begin{align*}
+cost_{MDA}^{dist}(s_{6}) & =\\
+cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{1})=7>6\\
+cost_{MDA}^{dist}(s_{7}) & =\\
+cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
+\end{align*}
+
+\end_inset
+
+כתוצאה מכך, בגלל ההגבלה שנתנו על 
+\begin_inset Formula $cost_{MDA}^{dist}$
+\end_inset
+
+, אף אחד מהמצבים 
+\begin_inset Formula $s_{6},s_{7}$
+\end_inset
+
+ לא ייכנס ל-
+\begin_inset Formula $open$
+\end_inset
+
+.
+ האלגוריתם יסיים את הפיתוח של 
+\begin_inset Formula $s_{5}$
+\end_inset
+
+ ויעביר אותו ל-
+\begin_inset Formula $close$
+\end_inset
+
+.
+ הצומת הבא לפיתוח יהיה 
+\begin_inset Formula $s_{3}$
+\end_inset
+
+ שהוא היחיד שכרגע ב-
+\begin_inset Formula $open$
+\end_inset
+
+.
 \end_layout
 
 \end_inset
@@ -2818,7 +2865,7 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 \begin_layout Plain Layout
 \align left
-\begin_inset Formula $s_{8}=\left\{ C,\emptyset,\emptyset,2,\{B,C\}\right\} ,g=0,h=2,f=2$
+\begin_inset Formula $s_{8}=\left\{ L_{2},\emptyset,\emptyset,2,\{L_{1},L_{2}\}\right\} ,g=0$
 \end_inset
 
 
@@ -2910,7 +2957,7 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 \begin_layout Plain Layout
 \align left
-\begin_inset Formula $s_{9}=\left\{ A,\{A\},\emptyset,0,\{B,C\}\right\} ,g=0,h=2,f=2$
+\begin_inset Formula $s_{9}=\left\{ A,\{A\},\emptyset,0,\{L_{1},L_{2}\}\right\} ,g=0$
 \end_inset
 
 
@@ -2996,7 +3043,7 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \end_inset
 
  עם אותו ערך 
-\begin_inset Formula $f$
+\begin_inset Formula $g$
 \end_inset
 
 .
@@ -3019,100 +3066,6 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \end_layout
 
 \begin_layout Standard
-\align right
-\begin_inset Formula $(*)$
-\end_inset
-
- הסבר צעד
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\numeric on
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-5
-\numeric off
-: לאחר הפיתוח של 
-\begin_inset Formula $s_{5}$
-\end_inset
-
- בשלב זה נוצרים שני המצבים הבאים:
-\begin_inset Formula 
-\begin{align*}
-s_{6} & =\left\{ B,\emptyset,\{A\},0,\{B,C\}\right\} \\
-s_{7} & =\left\{ C,\emptyset,\{A\},0,\{B,C\}\right\} 
-\end{align*}
-
-\end_inset
-
-נשים לב כי המסלול שעברנו עד כה הוא: 
-\begin_inset Formula $P=C\rightarrow B\rightarrow A$
-\end_inset
-
-, ולכן מתקיים כי:
-\begin_inset Formula 
-\begin{align*}
-cost_{MDA}^{dist}(s_{6}) & =cost_{MDA}^{dist}(C\rightarrow B\rightarrow A\rightarrow B)=6>5.5\\
-cost_{MDA}^{dist}(s_{7}) & =cost_{MDA}^{dist}(C\rightarrow B\rightarrow A\rightarrow C)=7>5.5
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align right
-כתוצאה מכך, בגלל ההגבלה שנתנו אף אחד מהמצבים 
-\begin_inset Formula $s_{6},s_{7}$
-\end_inset
-
- לא ייכנס ל-
-\begin_inset Formula $open$
-\end_inset
-
-.
- האלגוריתם יסיים את הפיתוח של 
-\begin_inset Formula $s_{5}$
-\end_inset
-
- ויעביר אותו ל-
-\begin_inset Formula $close$
-\end_inset
-
-.
- הצומת הבא לפיתוח יהיה 
-\begin_inset Formula $s_{3}$
-\end_inset
-
- שהוא היחיד שכרגע ב-
-\begin_inset Formula $open$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
 
 \end_layout
 
@@ -3126,7 +3079,7 @@ cost_{MDA}^{dist}(s_{7}) & =cost_{MDA}^{dist}(C\rightarrow B\rightarrow A\righta
 \begin_inset Formula $C_{S}^{*}$
 \end_inset
 
- האלוגריתם 
+ המקיים את הדרישה של הקריטריון המשולב, האלוגריתם 
 \series bold
 החזיר שאין פתרון.
 \end_layout
