@@ -1264,7 +1264,11 @@ close
 \begin_inset Formula $h$
 \end_inset
 
- נקבל: 
+ נקבל:
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $h(n)=0\leq h^{*}(n)$
 \end_inset
 
@@ -2117,7 +2121,7 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \begin_inset Graphics
 	filename table2.png
 	lyxscale 75
-	scale 75
+	scale 60
 
 \end_inset
 
