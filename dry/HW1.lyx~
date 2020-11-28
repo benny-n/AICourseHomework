@@ -889,31 +889,10 @@ expand_state_with_costs
 \noun default
 \color inherit
 היא:
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
+\begin_inset Newline newline
+\end_inset
+
+
 \lang english
 State_to_expand.tests_on_ambulance = state_to_expand.tests_on_ambuland | {apartmen
 t}
@@ -1570,7 +1549,11 @@ h(s)\stackrel{(1)}{=}cost_{MDA}^{dist}(A\rightarrow B\rightarrow C\rightarrow D)
 \end_inset
 
 
-\begin_inset Newline newline
+\begin_inset Graphics
+	filename bad_heuristic.png
+	lyxscale 50
+	scale 50
+
 \end_inset
 
 
@@ -1819,7 +1802,7 @@ h(s)\stackrel{(1)}{=}cost_{MDA}^{dist}(A\rightarrow B\rightarrow C\rightarrow D)
 \begin_inset Graphics
 	filename 2nd_graph.png
 	lyxscale 75
-	scale 50
+	scale 75
 
 \end_inset
 
@@ -1840,7 +1823,7 @@ h(s)\stackrel{(1)}{=}cost_{MDA}^{dist}(A\rightarrow B\rightarrow C\rightarrow D)
 \begin_inset Graphics
 	filename 3rd_graph.png
 	lyxscale 68
-	scale 45
+	scale 67
 
 \end_inset
 
@@ -1868,7 +1851,7 @@ h(s)\stackrel{(1)}{=}cost_{MDA}^{dist}(A\rightarrow B\rightarrow C\rightarrow D)
 \begin_inset Graphics
 	filename heuristics.png
 	lyxscale 75
-	scale 75
+	scale 50
 
 \end_inset
 
@@ -2165,7 +2148,7 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 \begin_inset Formula 
 \[
-\frac{DistCost(ReturnedSolution)}{C_{dist}^{*}}-1=\frac{66696.615}{43034.794}-1=0.5498<0.6=\varepsilon
+\frac{DistCost(ReturnedSolution)}{C_{dist}^{*}}-1=\frac{65686.522}{43034.794}-1=0.526<0.6=\varepsilon
 \]
 
 \end_inset
@@ -3188,7 +3171,7 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 \end_inset
 
  בנקודה 
-\begin_inset Formula $(1\frac{\sqrt{3}}{2},\frac{1}{2})$
+\begin_inset Formula $(1+\frac{\sqrt{3}}{2},\frac{1}{2})$
 \end_inset
 
  עם שני דיירים.
@@ -3197,12 +3180,12 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 \end_inset
 
  בנקודה 
-\begin_inset Formula $(1\frac{\sqrt{3}}{2},-\frac{1}{2})$
+\begin_inset Formula $(1+\frac{\sqrt{3}}{2},-\frac{1}{2})$
 \end_inset
 
  עם שני דיירים.
  נשים לב כי המשולש 
-\begin_inset Formula $L_{1}A_{1}A_{2}$
+\begin_inset Formula $L_{2}A_{1}A_{2}$
 \end_inset
 
  הינו משולש שווה צלעות שאורך כל צלע היא
@@ -3281,44 +3264,14 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 \end_inset
 
 
-\backslash
+\begin_inset Graphics
+	filename ex40.png
+	lyxscale 50
+	scale 50
 
-\backslash
+\end_inset
 
-\backslash
 
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-פה יהיה שרטוט
 \begin_inset Newline newline
 \end_inset
 
@@ -3347,12 +3300,16 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 \begin_inset Newline newline
 \end_inset
 
-נשים לב כי המסלול האופטימלי לפי 
-\begin_inset Formula $TestsTavelDistance$
+נשים לב כי המסלול האופטימלי 
+\begin_inset Formula $P^{*}$
 \end_inset
 
- שמקיים את הדרישה של 
-\begin_inset Formula $cost_{MDA}^{dist}$
+ לפי 
+\begin_inset Formula $cost_{MDA}^{test\:travel}$
+\end_inset
+
+ שמקיים את הדרישה 
+\begin_inset Formula $cost_{MDA}^{dist}(P^{*})\leq(1+\varepsilon)C_{S}^{*}$
 \end_inset
 
  הוא: 
@@ -3371,11 +3328,11 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 \begin_inset Newline newline
 \end_inset
 
-נראה כי האלגוריתם מחזיר פתרון לא אופטימלי )
-\begin_inset Formula $g=6$
+נראה כי האלגוריתם מחזיר פתרון 
+\begin_inset Formula $g=6>4$
 \end_inset
 
-(:
+ ולכן פתרון זה לא אופטימלי :
 \begin_inset Newline newline
 \end_inset
 
@@ -6277,7 +6234,7 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \begin_inset Formula $L_{1},L_{2}$
 \end_inset
 
- מתקיים: 
+: 
 \begin_inset Formula 
 \begin{align*}
 cost_{MDA}^{dist}(P & \rightarrow L_{2})=9>8.5\\

@@ -889,10 +889,31 @@ expand_state_with_costs
 \noun default
 \color inherit
 היא:
-\begin_inset Newline newline
-\end_inset
-
-
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
 \lang english
 State_to_expand.tests_on_ambulance = state_to_expand.tests_on_ambuland | {apartmen
 t}
@@ -1264,11 +1285,7 @@ close
 \begin_inset Formula $h$
 \end_inset
 
- נקבל:
-\begin_inset Newline newline
-\end_inset
-
-
+ נקבל: 
 \begin_inset Formula $h(n)=0\leq h^{*}(n)$
 \end_inset
 
@@ -1555,8 +1572,8 @@ h(s)\stackrel{(1)}{=}cost_{MDA}^{dist}(A\rightarrow B\rightarrow C\rightarrow D)
 
 \begin_inset Graphics
 	filename bad_heuristic.png
-	lyxscale 50
-	scale 50
+	lyxscale 75
+	scale 75
 
 \end_inset
 
@@ -2121,7 +2138,7 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \begin_inset Graphics
 	filename table2.png
 	lyxscale 75
-	scale 60
+	scale 75
 
 \end_inset
 
@@ -3268,14 +3285,44 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 \end_inset
 
 
-\begin_inset Graphics
-	filename ex40.png
-	lyxscale 50
-	scale 50
+\backslash
 
-\end_inset
+\backslash
 
+\backslash
 
+\backslash
+
+\backslash
+
+\backslash
+
+\backslash
+
+\backslash
+
+\backslash
+
+\backslash
+
+\backslash
+
+\backslash
+
+\backslash
+
+\backslash
+
+\backslash
+
+\backslash
+
+\backslash
+
+\backslash
+
+\backslash
+פה יהיה שרטוט
 \begin_inset Newline newline
 \end_inset
 
