@@ -250,6 +250,8 @@ k!\cdot(m+1)^{k}\cdot m
 
 \end_inset
 
+
+\size scriptsize
 כאשר 
 \begin_inset Formula $k!$
 \end_inset
@@ -304,6 +306,8 @@ k!\cdot(m+1)^{k}\cdot m
 \end_layout
 
 \begin_layout Standard
+
+\size scriptsize
 ערך הקיצון המקסימלי הוא 
 \begin_inset Formula $k+m$
 \end_inset
@@ -314,37 +318,13 @@ k!\cdot(m+1)^{k}\cdot m
 \begin_inset Newline newline
 \end_inset
 
-ערך הקיצון המינימלי הוא
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\numeric on
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-0
-\numeric off
-, והוא יתקבל במצב בו ביקרנו בכל הדירות, וביקרנו בכל המעבדות, וכעת אנו נמצאים
- במעבדה האחרונה שלה העברנו את כל המטושים שנשארו באמבולנס.
+
+\begin_inset Newline newline
+\end_inset
+
+ערך הקיצון המינימלי הוא 0, והוא יתקבל במצב בו ביקרנו בכל הדירות, וביקרנו
+ בכל המעבדות, וכעת אנו נמצאים במעבדה האחרונה שלה העברנו את כל המטושים שנשארו
+ באמבולנס.
 \end_layout
 
 \begin_layout Description
@@ -356,6 +336,8 @@ k!\cdot(m+1)^{k}\cdot m
 \end_layout
 
 \begin_layout Standard
+
+\size footnotesize
 נראה כי לא ייתכנו מעגלים במרחב המצבים.
  תחילה נשים לב לאבחנה: מצב עבורו ה-
 \begin_inset Formula $curLoc$
@@ -421,6 +403,8 @@ k!\cdot(m+1)^{k}\cdot m
 \end_layout
 
 \begin_layout Standard
+
+\size footnotesize
 מרחב המצבים כפי שהוגדר הוא אינסופי, כיוון שאחד האיברים בחמישיה שמגדירה מצב
  הוא מספר מטושים באמבולנס 
 \begin_inset Formula $(Matoshim)$
@@ -445,8 +429,10 @@ k!\cdot(m+1)^{k}\cdot m
 \end_layout
 
 \begin_layout Standard
+
+\size footnotesize
 כן.
- לדוגמא מצב 
+ מצב 
 \begin_inset Formula $s\in S$
 \end_inset
 
@@ -454,7 +440,7 @@ k!\cdot(m+1)^{k}\cdot m
 \begin_inset Formula $s.VisitiedLabs=Labs$
 \end_inset
 
- )כלומר ביקרנו בכל המעבדות ולקחנו את כל המטושים הזמינים( אך 
+ )ביקרנו בכל המעבדות ולקחנו את כל המטושים הזמינים( אך 
 \begin_inset Formula $s.Matoshim<d_{i}.roomates$
 \end_inset
 
@@ -573,10 +559,8 @@ k!\cdot(m+1)^{k}\cdot m
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-{\scriptstyle Succ_{MDA}(s)} & {\scriptstyle =\{(l_{i},\emptyset,s.Taken\cup s.Transferred,s.Matoshim+l_{i}.matoshim,\{l_{i}\}\cup s.VisitedLabs)\:|\:i\in[m]\boldsymbol{\land}s.Taken\neq\emptyset)\}}\\
-{\scriptstyle \cup} & {\scriptstyle \{(l_{i},\emptyset,s.Transferred,s.Matoshim+l_{i}.matoshim,\{l_{i}\}\cup s.VisitedLabs)\:|\:i\in[m]\boldsymbol{\land}l_{i}\notin s.VisitedLabs\boldsymbol{\land}s.Taken=\emptyset)\}}\\
-{\scriptstyle \cup} & {\scriptstyle \{(d_{i},\{d_{i}\}\cup s.Taken,s.Transferred,s.Matoshim-d_{i}.roomates,s.VisitedLabs)\:|\:}\\
- & {\scriptstyle i\in[k]\boldsymbol{\land}d_{i}\notin s.Taken\cup S.Transferred\boldsymbol{\land}d_{i}.roomates\leq s.matoshim\boldsymbol{\land}d_{i}.roomates\leq ambulanceTestCapcitiy-\sum_{d\in s.Taken}d.roomates)\}}
+{\scriptstyle Succ_{MDA}(s)} & {\scriptstyle =\{(l_{i},\emptyset,s.Taken\cup s.Transferred,s.Matoshim+l_{i}.matoshim\cdot\mathbb{I}_{\{l_{i}\notin s.VisitedLabs\}},\{l_{i}\}\cup s.VisitedLabs)\:|\:i\in[m]\boldsymbol{\land}CanVisit(s,l_{i}))\}}\\
+{\scriptstyle \cup} & {\scriptstyle {\scriptstyle \{(d_{i},\{d_{i}\}\cup s.Taken,s.Transferred,s.Matoshim-d_{i}.roomates,s.VisitedLabs)\:|\:i\in[k]\boldsymbol{\land}CanVisit(s,d_{i})\}}}
 \end{align*}
 
 \end_inset
@@ -623,6 +607,8 @@ k!\cdot(m+1)^{k}\cdot m
 \end_layout
 
 \begin_layout Standard
+
+\size scriptsize
 הגרף האדום מתאר את מספר הפיתוחים, וככל שיש יותר פיתוחים זמן הריצה גבוה יותר.
  הגרף הכחול מתאר את איכות הפתרון.
  ניתן לראות כי ככל שנותנים לפונקציה היוריסטית משקל גבוה יותר כך זמן הריצה
@@ -834,11 +820,12 @@ k!\cdot(m+1)^{k}\cdot m
 \begin_inset Newline newline
 \end_inset
 
-דוגמא למימוש שגוי של המתודה
+
+\size footnotesize
+דוגמא למימוש שגוי:
 \family roman
 \series medium
 \shape up
-\size normal
 \emph off
 \bar no
 \strikeout off
@@ -851,7 +838,6 @@ k!\cdot(m+1)^{k}\cdot m
 \family default
 \series default
 \shape default
-\size default
 \emph default
 \bar default
 \strikeout default
@@ -861,301 +847,22 @@ k!\cdot(m+1)^{k}\cdot m
 \noun default
 \color inherit
 \lang english
-expand_state_with_costs
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-\lang hebrew
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-היא:
-\begin_inset Newline newline
-\end_inset
-
-
-\lang english
-State_to_expand.tests_on_ambulance = state_to_expand.tests_on_ambuland | {apartmen
-t}
+States_to_expand.tests_on_ambulance = States_to_expand.tests_on_ambulance
+ | {apartment} 
 \lang hebrew
 
 \begin_inset Newline newline
 \end_inset
 
-כלומר עדכון של שדה ספציפי ב-ֵ
-\lang english
-MDAState
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-\lang hebrew
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-במקום יצירת
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-\lang english
-MDAState
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-\lang hebrew
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-חדש לגמרי בעזרת
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-\lang english
-c'tor
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-\lang hebrew
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-.
+כלומר עדכון של שדה ספציפי ב-MDAState במקום יצירת MDAState חדש לגמרי בעזרת
+ c'tor .
  מימוש זה בעייתי מכיוון שאנו עלולים להיתקל במצב מסוים בשנית גם לאחר שפיתחנו
  אותו כבר בעבר, כפי שצוין בסעיף לעיל.
- במקרה זה, אם ננסה לעדכן את
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-\lang english
-MDAState
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-\lang hebrew
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-מבלי ליצור אחד חדש מה שיקרה בפועל הוא שנדרוס את השדות של המצב בו כבר נתקלנו
- מכיוון שבפייתון אנחנו מחזיקים מצביע לאובייקט ולא מעתיקים אותו.
- כלומר, המצב שכרגע נמצא ב-
-\lang english
-close
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-\lang hebrew
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-יתעדכן, וכאשר נחפש מצב מתאים לעדכון ב-
-\lang english
-close
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-\lang hebrew
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-לא נמצא אותו.
+ במקרה זה, אם ננסה לעדכן את MDAState מבלי ליצור אחד חדש מה שיקרה בפועל הוא
+ שנדרוס את השדות של המצב בו כבר נתקלנו מכיוון שבפייתון אנחנו מחזיקים מצביע
+ לאובייקט ולא מעתיקים אותו.
+ כלומר, המצב שכרגע נמצא ב-close יתעדכן, וכאשר נחפש מצב מתאים לעדכון ב-close
+ לא נמצא אותו.
 \begin_inset Newline newline
 \end_inset
 
@@ -1665,6 +1372,10 @@ h(s)\stackrel{(1)}{=}cost_{MDA}^{dist}(A\rightarrow B\rightarrow C\rightarrow D)
 \end_inset
 
 : 
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $h(n)=0\leq h^{*}(n)$
 \end_inset
 
@@ -3263,7 +2974,90 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 \end_inset
 
 .
- שרטוט להמחשה:
+ שרטוט להמחשה )כאשר
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+m
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+הוא מספר המטושים ו-
+\lang english
+r
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+הוא מספר הדיירים(:
 \begin_inset Newline newline
 \end_inset
 
@@ -6799,36 +6593,9 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \begin_inset Newline newline
 \end_inset
 
-כפי שניתן לראות מתוצאות ההרצה, אכן חסכנו במספר הפיתוחים, פיתחנו כ-
-\numeric on
-10%
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\numeric off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-פחות צמתים.
+
+\size footnotesize
+אכן חסכנו במספר הפיתוחים, פיתחנו כ-10% פחות צמתים.
  הגמישות של 
 \begin_inset Formula $A^{*}\varepsilon$
 \end_inset
@@ -6845,17 +6612,15 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \begin_inset Formula $h$
 \end_inset
 
- נמוך יותר להיכנס ל-
-\lang english
-open
-\lang hebrew
-.
+ נמוך יותר להיכנס ל-open.
  כלומר, בחיפוש שלנו נבדוק גם צמתים אשר הפונקציה היוריסטית תעריך אותם כיותר
  קרובים לפתרון, למרות שערך ה-
 \begin_inset Formula $g$
 \end_inset
 
  שלהם אינו אופטימלי.
+\size default
+
 \begin_inset Newline newline
 \end_inset
 
@@ -7206,11 +6971,16 @@ BFS
 \end_inset
 
 .
- כאשר 
+ בשלב זה מתקיים 
 \begin_inset Formula $C_{S}^{*}-prevFLimit\leq\frac{1}{k}$
 \end_inset
 
- נקבל ש-
+.
+ כי אחרת, היינו עושים לפחות עוד איטרציה ולא היינו באיטרציה האחרונה.
+\begin_inset Newline newline
+\end_inset
+
+מתקיים ש-
 \begin_inset Formula $Q_{k}(origNextFLimit)\leq C_{S}^{*}\leq prevFLimit+\frac{1}{k}$
 \end_inset
 

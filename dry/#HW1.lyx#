@@ -250,6 +250,8 @@ k!\cdot(m+1)^{k}\cdot m
 
 \end_inset
 
+
+\size scriptsize
 כאשר 
 \begin_inset Formula $k!$
 \end_inset
@@ -304,6 +306,8 @@ k!\cdot(m+1)^{k}\cdot m
 \end_layout
 
 \begin_layout Standard
+
+\size scriptsize
 ערך הקיצון המקסימלי הוא 
 \begin_inset Formula $k+m$
 \end_inset
@@ -314,37 +318,13 @@ k!\cdot(m+1)^{k}\cdot m
 \begin_inset Newline newline
 \end_inset
 
-ערך הקיצון המינימלי הוא
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\numeric on
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-0
-\numeric off
-, והוא יתקבל במצב בו ביקרנו בכל הדירות, וביקרנו בכל המעבדות, וכעת אנו נמצאים
- במעבדה האחרונה שלה העברנו את כל המטושים שנשארו באמבולנס.
+
+\begin_inset Newline newline
+\end_inset
+
+ערך הקיצון המינימלי הוא 0, והוא יתקבל במצב בו ביקרנו בכל הדירות, וביקרנו
+ בכל המעבדות, וכעת אנו נמצאים במעבדה האחרונה שלה העברנו את כל המטושים שנשארו
+ באמבולנס.
 \end_layout
 
 \begin_layout Description
@@ -356,6 +336,8 @@ k!\cdot(m+1)^{k}\cdot m
 \end_layout
 
 \begin_layout Standard
+
+\size footnotesize
 נראה כי לא ייתכנו מעגלים במרחב המצבים.
  תחילה נשים לב לאבחנה: מצב עבורו ה-
 \begin_inset Formula $curLoc$
@@ -421,6 +403,8 @@ k!\cdot(m+1)^{k}\cdot m
 \end_layout
 
 \begin_layout Standard
+
+\size footnotesize
 מרחב המצבים כפי שהוגדר הוא אינסופי, כיוון שאחד האיברים בחמישיה שמגדירה מצב
  הוא מספר מטושים באמבולנס 
 \begin_inset Formula $(Matoshim)$
@@ -445,8 +429,10 @@ k!\cdot(m+1)^{k}\cdot m
 \end_layout
 
 \begin_layout Standard
+
+\size footnotesize
 כן.
- לדוגמא מצב 
+ מצב 
 \begin_inset Formula $s\in S$
 \end_inset
 
@@ -454,7 +440,7 @@ k!\cdot(m+1)^{k}\cdot m
 \begin_inset Formula $s.VisitiedLabs=Labs$
 \end_inset
 
- )כלומר ביקרנו בכל המעבדות ולקחנו את כל המטושים הזמינים( אך 
+ )ביקרנו בכל המעבדות ולקחנו את כל המטושים הזמינים( אך 
 \begin_inset Formula $s.Matoshim<d_{i}.roomates$
 \end_inset
 
@@ -573,10 +559,8 @@ k!\cdot(m+1)^{k}\cdot m
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-{\scriptstyle Succ_{MDA}(s)} & {\scriptstyle =\{(l_{i},\emptyset,s.Taken\cup s.Transferred,s.Matoshim+l_{i}.matoshim,\{l_{i}\}\cup s.VisitedLabs)\:|\:i\in[m]\boldsymbol{\land}s.Taken\neq\emptyset)\}}\\
-{\scriptstyle \cup} & {\scriptstyle \{(l_{i},\emptyset,s.Transferred,s.Matoshim+l_{i}.matoshim,\{l_{i}\}\cup s.VisitedLabs)\:|\:i\in[m]\boldsymbol{\land}l_{i}\notin s.VisitedLabs\boldsymbol{\land}s.Taken=\emptyset)\}}\\
-{\scriptstyle \cup} & {\scriptstyle \{(d_{i},\{d_{i}\}\cup s.Taken,s.Transferred,s.Matoshim-d_{i}.roomates,s.VisitedLabs)\:|\:}\\
- & {\scriptstyle i\in[k]\boldsymbol{\land}d_{i}\notin s.Taken\cup S.Transferred\boldsymbol{\land}d_{i}.roomates\leq s.matoshim\boldsymbol{\land}d_{i}.roomates\leq ambulanceTestCapcitiy-\sum_{d\in s.Taken}d.roomates)\}}
+{\scriptstyle Succ_{MDA}(s)} & {\scriptstyle =\{(l_{i},\emptyset,s.Taken\cup s.Transferred,s.Matoshim+l_{i}.matoshim\cdot\mathbb{I}_{\{l_{i}\notin s.VisitedLabs\}},\{l_{i}\}\cup s.VisitedLabs)\:|\:i\in[m]\boldsymbol{\land}CanVisit(s,l_{i}))\}}\\
+{\scriptstyle \cup} & {\scriptstyle {\scriptstyle \{(d_{i},\{d_{i}\}\cup s.Taken,s.Transferred,s.Matoshim-d_{i}.roomates,s.VisitedLabs)\:|\:i\in[k]\boldsymbol{\land}CanVisit(s,d_{i})\}}}
 \end{align*}
 
 \end_inset
@@ -623,6 +607,8 @@ k!\cdot(m+1)^{k}\cdot m
 \end_layout
 
 \begin_layout Standard
+
+\size scriptsize
 הגרף האדום מתאר את מספר הפיתוחים, וככל שיש יותר פיתוחים זמן הריצה גבוה יותר.
  הגרף הכחול מתאר את איכות הפתרון.
  ניתן לראות כי ככל שנותנים לפונקציה היוריסטית משקל גבוה יותר כך זמן הריצה
@@ -889,31 +875,10 @@ expand_state_with_costs
 \noun default
 \color inherit
 היא:
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
+\begin_inset Newline newline
+\end_inset
+
+
 \lang english
 State_to_expand.tests_on_ambulance = state_to_expand.tests_on_ambuland | {apartmen
 t}
@@ -922,7 +887,7 @@ t}
 \begin_inset Newline newline
 \end_inset
 
-כלומר עדכון של שדה ספציפי ב-ֵ
+כלומר עדכון של שדה ספציפי ב-
 \lang english
 MDAState
 \family roman
@@ -1285,7 +1250,11 @@ close
 \begin_inset Formula $h$
 \end_inset
 
- נקבל: 
+ נקבל:
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $h(n)=0\leq h^{*}(n)$
 \end_inset
 
@@ -1572,8 +1541,8 @@ h(s)\stackrel{(1)}{=}cost_{MDA}^{dist}(A\rightarrow B\rightarrow C\rightarrow D)
 
 \begin_inset Graphics
 	filename bad_heuristic.png
-	lyxscale 75
-	scale 75
+	lyxscale 50
+	scale 50
 
 \end_inset
 
@@ -1682,6 +1651,10 @@ h(s)\stackrel{(1)}{=}cost_{MDA}^{dist}(A\rightarrow B\rightarrow C\rightarrow D)
 \end_inset
 
 : 
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $h(n)=0\leq h^{*}(n)$
 \end_inset
 
@@ -2138,7 +2111,7 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \begin_inset Graphics
 	filename table2.png
 	lyxscale 75
-	scale 75
+	scale 60
 
 \end_inset
 
@@ -3280,49 +3253,102 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 \end_inset
 
 .
- שרטוט להמחשה:
+ שרטוט להמחשה )כאשר
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+m
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+הוא מספר המטושים ו-
+\lang english
+r
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+הוא מספר הדיירים(:
 \begin_inset Newline newline
 \end_inset
 
 
-\backslash
+\begin_inset Graphics
+	filename ex40.png
+	lyxscale 50
+	scale 50
 
-\backslash
+\end_inset
 
-\backslash
 
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-פה יהיה שרטוט
 \begin_inset Newline newline
 \end_inset
 
