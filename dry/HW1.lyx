@@ -686,7 +686,9 @@ k!\cdot(m+1)^{k}\cdot m
 \end_layout
 
 \begin_layout Standard
-החסרון של הגישה מבחינת יעילות הפתרון היה מתבטא בחוסר שימוש ב-
+
+\size small
+החסרון של הגישה הפתרון היה מתבטא בשימוש לא יעיל ב-
 \begin_inset Formula $cache$
 \end_inset
 
@@ -699,16 +701,17 @@ k!\cdot(m+1)^{k}\cdot m
 \begin_inset Quotes erd
 \end_inset
 
- יתכן כי הפתרון כבר נמצא ב-
+ אנו מאחסנים ב-
 \begin_inset Formula $cache$
 \end_inset
 
- ונוכל להביאו ולחסוך את עלות החישוב.
- אם היינו במרחב משולב שהוצע בשאלה, לא היינו יכולים להשתמש ב-
+ רק את המיקומים של שני הצמתים ושומרים את הפתרון לשימוש עתידי.
+ אם היינו במרחב המוצע כל נקודה על המפה הייתה מיוצגת כמצב )חמישייה( והיינו
+ צריכים התאמה מדויקת של המצב כדי להשתמש ב-
 \begin_inset Formula $cache$
 \end_inset
 
- מכיוון שכל פעם היינו פותרים בעיה אחרת.
+, מה שלרוב לא היה קורה, וכך זמן הריצה היה גדל משמעותית.
 \end_layout
 
 \begin_layout Description
@@ -1570,7 +1573,7 @@ h(s)\stackrel{(1)}{=}cost_{MDA}^{dist}(A\rightarrow B\rightarrow C\rightarrow D)
 \begin_inset Graphics
 	filename heuristics.png
 	lyxscale 75
-	scale 50
+	scale 35
 
 \end_inset
 
@@ -6660,232 +6663,53 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \begin_inset Formula $\text{.i}$
 \end_inset
 
- זמן ריצה.
+ 
+\size small
+זמן ריצה.
 \end_layout
 
 \begin_layout Description
+
+\size small
 \begin_inset Formula $\text{.ii}$
 \end_inset
 
- עבור פונקציות יוריסטיות מסוימות יכול להיות שנרוויח קצת מאוד צמתים בעומק
- כל איטרציה, ולכן הריצה תהיה מאוד ארוכה.
+ עבור פונקציות יוריסטיות מסוימות ייתכן שנרוויח מעט צמתים בעומק כל איטרציה,
+ וכל התקדמות לעומק גוררת פיתוח חוזר של כל הצמתים בדרך, מה שעלול להגדיל את
+ זמן הריצה.
 \end_layout
 
 \begin_layout Description
+
+\size small
 \begin_inset Formula $.\text{iii}$
 \end_inset
 
  מדד זה נפגע פחות ביחס מהאופן שבו הוא נפגע ב-
 \lang english
 ID-DFS
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
 \lang hebrew
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-לעומת
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
+ לעומת 
 \lang english
 BFS
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
 \lang hebrew
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-מכיוון שעבור 
+ מכיוון שעבור 
 \begin_inset Formula $IDA^{*}$
 \end_inset
 
  קיימות פונקציות יוריסטיות קבילות שעבורן הבעיה שתיארנו בסעיף הקודם לא תיגרם
  ונקבל זמן ריצה טוב יותר.
- לעומת זאת ריצה של
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
+ לעומת זאת ריצה של 
 \lang english
 ID-DFS
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
 \lang hebrew
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-תמיד מכילה באיטרציה האחרונה שלה ריצה של
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
+ תמיד מכילה באיטרציה האחרונה שלה ריצה של 
 \lang english
 BFS
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
 \lang hebrew
  ולכן זמנה יהיה לכל הפחות כמו זמן הריצה של 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
 \lang english
 BFS
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
 \lang hebrew
  ולרוב אף גבוה יותר.
 \end_layout
