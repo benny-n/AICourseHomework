@@ -243,30 +243,38 @@
 \end_layout
 
 \begin_layout Standard
+
+\size footnotesize
 \begin_inset Formula 
 \[
-k!\cdot(m+1)^{k}\cdot m
+\underbrace{k!}_{(1)}\cdot\underbrace{(m+1)^{k}}_{(2)}\cdot\underbrace{m}_{(3)}
 \]
 
 \end_inset
 
 
-\size scriptsize
-כאשר 
-\begin_inset Formula $k!$
+\begin_inset Formula $\boldsymbol{(1)}$
 \end_inset
 
- זה מתן סדר לדירות, 
-\begin_inset Formula $(m+1)^{k}$
+: מתן סדר לדירות.
+\begin_inset Newline newline
 \end_inset
 
- מספר האופציות לביקור
+
+\begin_inset Formula $\boldsymbol{(2)}$
+\end_inset
+
+: מספר האופציות לביקור
 \backslash
-חוסר ביקור במעבדות בין כל שתי דירות ולפני הדירה הראשונה, ו-
-\begin_inset Formula $m$
+חוסר ביקור במעבדות בין כל שתי דירות ולפני הדירה הראשונה.
+\begin_inset Newline newline
 \end_inset
 
- זה מספר האופציות לסיים במעבדה.
+ 
+\begin_inset Formula $\boldsymbol{(3)}$
+\end_inset
+
+: מספר האופציות לסיים במעבדה.
 \end_layout
 
 \begin_layout Description
@@ -307,14 +315,17 @@ k!\cdot(m+1)^{k}\cdot m
 
 \begin_layout Standard
 
-\size scriptsize
-ערך הקיצון המקסימלי הוא 
-\begin_inset Formula $k+m$
+\size footnotesize
+\begin_inset Formula $:\underline{max}$
 \end_inset
 
- והוא יתקבל במצב בו לא ביקרנו באף אחת מהמעבדות ומספר המטושים באמבולנס קטן
- ממספר המטושים המקסימלי, וגם לא ביקרנו באף אחת מהדירות ומספר המטושים באמבולנס
- גדול מספיק כדי שנוכל לבקר בכל אחת מהן.
+ 
+\begin_inset Formula $\boldsymbol{k+m}$
+\end_inset
+
+.
+ לא ביקרנו באף מעבדה ובאף דירה, מספר המטושים באמבולנס גדול מספיק כדי לבקר
+ בכל הדירות וקטן ממספר המטושים המקסימלי.
 \begin_inset Newline newline
 \end_inset
 
@@ -322,9 +333,17 @@ k!\cdot(m+1)^{k}\cdot m
 \begin_inset Newline newline
 \end_inset
 
-ערך הקיצון המינימלי הוא 0, והוא יתקבל במצב בו ביקרנו בכל הדירות, וביקרנו
- בכל המעבדות, וכעת אנו נמצאים במעבדה האחרונה שלה העברנו את כל המטושים שנשארו
- באמבולנס.
+
+\begin_inset Formula $:\underline{min}$
+\end_inset
+
+ 
+\series bold
+0
+\series default
+.
+ ביקרנו בכל הדירות ובכל המעבדות, וכעת אנו נמצאים במעבדה האחרונה שלה העברנו
+ את כל המטושים שנשארו באמבולנס.
 \end_layout
 
 \begin_layout Description
@@ -345,11 +364,7 @@ k!\cdot(m+1)^{k}\cdot m
 
  מתאר דירה לא יכול להיות חלק ממעגל, כי לפי תנאי התרגיל לא ניתן לבקר באותה
  דירה פעמיים.
- 
-\begin_inset Newline newline
-\end_inset
-
-נניח בשלילה כי קיים מעגל בגרף.
+ נניח בשלילה כי קיים מעגל בגרף.
  לפי האבחנה הוא מכיל מצבים שמתארים מעבדות בלבד.
  על פי הגדרת האופרטור 
 \begin_inset Formula $o_{l_{i}}(s)$
@@ -365,11 +380,7 @@ k!\cdot(m+1)^{k}\cdot m
 \end_inset
 
 .
- נסמן את המעגל:
-\begin_inset Newline newline
-\end_inset
-
-
+ נסמן את המעגל: 
 \begin_inset Formula $P=s_{1}\rightarrow s_{2}\rightarrow...\rightarrow s_{n}\rightarrow s_{1}$
 \end_inset
 
@@ -436,27 +447,50 @@ k!\cdot(m+1)^{k}\cdot m
 
 \size footnotesize
 כן.
- מצב 
-\begin_inset Formula $s\in S$
+ כאשר
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+s.VisitedLabs=Labs
+\lang hebrew
+ )לקחנו את כל המטושים הזמינים מהמעבדות( אך
+\size scriptsize
+ 
+\begin_inset Formula $d_{i}.roomates$
 \end_inset
 
- כך ש- 
-\begin_inset Formula $s.VisitiedLabs=Labs$
+>
+\begin_inset Formula $s.Matoshim$
 \end_inset
 
- )ביקרנו בכל המעבדות ולקחנו את כל המטושים הזמינים( אך 
-\begin_inset Formula $s.Matoshim<d_{i}.roomates$
-\end_inset
 
- לכל 
-\begin_inset Formula $i$
-\end_inset
-
- עבורו לא ביקרנו בדירה ה-
+\size footnotesize
+ לכל דירה 
 \begin_inset Formula $d_{i}$
 \end_inset
 
-.
+ שעוד לא ביקרנו בה.
 \end_layout
 
 \begin_layout Description
@@ -468,6 +502,8 @@ k!\cdot(m+1)^{k}\cdot m
 \end_layout
 
 \begin_layout Standard
+
+\size footnotesize
 אורך המסלול המינימלי הוא 
 \begin_inset Formula $k+1$
 \end_inset
@@ -476,7 +512,11 @@ k!\cdot(m+1)^{k}\cdot m
 \begin_inset Formula $initialNrMatoshimAmb\geq\sum_{i=1}^{k}d_{i}.roomates$
 \end_inset
 
-, וגם 
+, 
+\begin_inset Newline newline
+\end_inset
+
+וגם 
 \begin_inset Formula $ambulanceTestCapacity\geq\sum_{i\in[k]}d_{i}.roomates$
 \end_inset
 
@@ -490,58 +530,22 @@ k!\cdot(m+1)^{k}\cdot m
 \end_inset
 
  קשתות.
-\begin_inset Newline newline
-\end_inset
-
-אורך המסלול המקסימלי )שמסתיים במצב סופי( מתקבל כאשר נבקר תחילה בכל המעבדות
+ אורך המסלול המקסימלי )שמסתיים במצב סופי( מתקבל כאשר נבקר תחילה בכל המעבדות
  וניקח את כל המטושים הזמינים )
 \begin_inset Formula $m$
 \end_inset
 
  קשתות(, ולאחר מכן נבקר במעבדה כלשהי פעם נוספת לאחר ביקור בכל דירה )
-\numeric on
-
 \begin_inset Formula $2k$
 \end_inset
 
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\numeric off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-קשתות( כדי לשים את הבדיקות שאספנו מהדירה במעבדה.
+ קשתות(, כדי לשים את הבדיקות שאספנו מהדירה במעבדה.
  סך הכל נקבל מסלול באורך 
 \begin_inset Formula $2k+m$
 \end_inset
 
 .
- 
-\begin_inset Newline newline
-\end_inset
-
-סך הכל הטווח הוא בין 
+ סך הכל הטווח הוא בין 
 \begin_inset Formula $k+1$
 \end_inset
 
@@ -612,7 +616,7 @@ k!\cdot(m+1)^{k}\cdot m
 
 \begin_layout Standard
 
-\size scriptsize
+\size footnotesize
 הגרף האדום מתאר את מספר הפיתוחים, וככל שיש יותר פיתוחים זמן הריצה גבוה יותר.
  הגרף הכחול מתאר את איכות הפתרון.
  ניתן לראות כי ככל שנותנים לפונקציה היוריסטית משקל גבוה יותר כך זמן הריצה
@@ -648,11 +652,7 @@ k!\cdot(m+1)^{k}\cdot m
 \end_inset
 
 , כפי שנאמר בדגש.
- 
-\begin_inset Newline newline
-\end_inset
-
-כמו כן, נסתכל על 
+ כמו כן, נסתכל על 
 \begin_inset Formula $w_{3}\approx0.8$
 \end_inset
 
@@ -687,7 +687,7 @@ k!\cdot(m+1)^{k}\cdot m
 
 \begin_layout Standard
 
-\size small
+\size footnotesize
 החסרון של הפתרון היה מתבטא בשימוש לא יעיל ב-
 \begin_inset Formula $cache$
 \end_inset
@@ -747,6 +747,8 @@ k!\cdot(m+1)^{k}\cdot m
 \begin_inset Newline newline
 \end_inset
 
+
+\size footnotesize
 השורה הזאת אינה מספיקה, שכן אם אחד מהשדות הוא מבנה נתונים )למשל 
 \begin_inset Formula $set$
 \end_inset
@@ -776,6 +778,8 @@ k!\cdot(m+1)^{k}\cdot m
 \end_inset
 
 
+\size default
+
 \begin_inset Graphics
 	filename frozenset.png
 	lyxscale 75
@@ -795,6 +799,8 @@ k!\cdot(m+1)^{k}\cdot m
 \begin_inset Newline newline
 \end_inset
 
+
+\size footnotesize
 כן, צומת יכול לעבור מ-
 \begin_inset Formula $close$
 \end_inset
@@ -807,6 +813,8 @@ k!\cdot(m+1)^{k}\cdot m
 \begin_inset Newline newline
 \end_inset
 
+
+\size default
 
 \begin_inset Graphics
 	filename openclose.png
@@ -886,6 +894,8 @@ States_to_expand.tests_on_ambulance = States_to_expand.tests_on_ambulance
 \end_layout
 
 \begin_layout Standard
+
+\size footnotesize
 נוכיח כי לכל צומת 
 \begin_inset Formula $n$
 \end_inset
@@ -920,61 +930,7 @@ States_to_expand.tests_on_ambulance = States_to_expand.tests_on_ambulance
 \begin_inset Formula $d$
 \end_inset
 
- לבקר בה, המרחק האווירי שלה מעצמה הוא
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\numeric on
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-0
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\numeric off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-ולכן לפי הגדרת 
+ לבקר בה, המרחק האווירי שלה מעצמה הוא 0 ולכן לפי הגדרת 
 \begin_inset Formula $h$
 \end_inset
 
@@ -1041,23 +997,11 @@ States_to_expand.tests_on_ambulance = States_to_expand.tests_on_ambulance
 
 \end_inset
 
-כאשר מעבר )
-\numeric on
-1
-\numeric off
-( נובע מהגדרת הפונקציה היוריסטית 
+כאשר מעבר )1( נובע מהגדרת הפונקציה היוריסטית 
 \begin_inset Formula $h(n)$
 \end_inset
 
-, מעבר )
-\numeric on
-2
-\numeric off
-( נובע מאי-שוויון המשולש, ומעבר )
-\numeric on
-3
-\numeric off
-( נובע מכך ש-
+, מעבר )2( נובע מאי-שוויון המשולש, ומעבר )3( נובע מכך ש-
 \begin_inset Formula $dist(d_{i},d_{j})$
 \end_inset
 
@@ -1074,6 +1018,8 @@ States_to_expand.tests_on_ambulance = States_to_expand.tests_on_ambulance
 \end_layout
 
 \begin_layout Standard
+
+\size footnotesize
 היוריסטיקה אינה קבילה, נפריך בעזרת דוגמא נגדית:
 \begin_inset Newline newline
 \end_inset
@@ -1082,69 +1028,7 @@ States_to_expand.tests_on_ambulance = States_to_expand.tests_on_ambulance
 \begin_inset Formula $s$
 \end_inset
 
-: יש
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\numeric on
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-4
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\numeric off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-דירות והאמבולנס נמצא בנקודה )
-\numeric on
-0
-\numeric off
-,
-\numeric on
-0
-\numeric off
-(.
+: יש 4 דירות והאמבולנס נמצא בנקודה )0,0(.
 \begin_inset Newline newline
 \end_inset
 
@@ -1152,56 +1036,24 @@ States_to_expand.tests_on_ambulance = States_to_expand.tests_on_ambulance
 \begin_inset Formula $A$
 \end_inset
 
- בנקודה )
-\numeric on
-0
-\numeric off
-,
-\numeric on
-0
-\numeric off
-( שבא האמבולנס נמצא כרגע, דירה 
+ בנקודה )0,0( שבא האמבולנס נמצא כרגע, דירה 
 \begin_inset Formula $B$
 \end_inset
 
- בנקודה )
-\numeric on
-2
-\numeric off
-,
-\numeric on
-0
-\numeric off
-(, דירה 
+ בנקודה )2,0(, דירה 
 \begin_inset Formula $C$
 \end_inset
 
- בנקודה )
-\numeric on
-4
-\numeric off
-,
-\numeric on
-0
-\numeric off
-( ודירה 
+ בנקודה )4,0( ודירה 
 \begin_inset Formula $D$
 \end_inset
 
- בנקודה )
-\numeric on
-0
-\numeric off
-,
-\numeric on
-3
-\numeric off
-(.
+ בנקודה )0,3(.
 \begin_inset Newline newline
 \end_inset
 
 נראה שמתקיים 
-\begin_inset Formula $h(s)>h(s^{*})$
+\begin_inset Formula $h(s)>h^{*}(s)$
 \end_inset
 
 .
@@ -1212,57 +1064,22 @@ h(s)\stackrel{(1)}{=}cost_{MDA}^{dist}(A\rightarrow B\rightarrow C\rightarrow D)
 
 \end_inset
 
-מעבר )
-\numeric on
-1
-\numeric off
-( נובע מהגדרת היוריסטיקה שבונה את המסלול כך שהיא תמיד בוחרת את הדירה הבאה
- במסלול בתור הדירה הקרובה ביותר באותו רגע.
+מעבר )1( נובע מהגדרת היוריסטיקה שבונה את המסלול כך שהיא תמיד בוחרת את הדירה
+ הבאה במסלול בתור הדירה הקרובה ביותר באותו רגע.
 \begin_inset Newline newline
 \end_inset
 
-מעבר )
-\numeric on
-2
-\numeric off
-( נובע מכך שזה המסלול שעובר בכל ארבעת הדירות )כאשר מתחילים ב-
-\numeric on
-
+מעבר )2( נובע מכך שזה המסלול שעובר בכל ארבעת הדירות )כאשר מתחילים ב-
 \begin_inset Formula $A$
 \end_inset
 
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\numeric off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-( במחיר האופטימלי.
+ ( במחיר האופטימלי.
 \begin_inset Newline newline
 \end_inset
 
 סרטוט להמחשה :
+\size default
+
 \begin_inset Newline newline
 \end_inset
 
@@ -1286,6 +1103,8 @@ h(s)\stackrel{(1)}{=}cost_{MDA}^{dist}(A\rightarrow B\rightarrow C\rightarrow D)
 \end_layout
 
 \begin_layout Standard
+
+\size footnotesize
 נוכיח כי לכל צומת 
 \begin_inset Formula $n$
 \end_inset
@@ -1319,61 +1138,7 @@ h(s)\stackrel{(1)}{=}cost_{MDA}^{dist}(A\rightarrow B\rightarrow C\rightarrow D)
 \begin_inset Formula $d$
 \end_inset
 
- לבקר בה, העץ הפורש מכיל רק אותה, ולכן ערכו
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\numeric on
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-0
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\numeric off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-.
+ לבקר בה, העץ הפורש מכיל רק אותה, ולכן ערכו 0 .
  נקבל לפי הגדרת 
 \begin_inset Formula $h$
 \end_inset
@@ -1468,27 +1233,15 @@ h(s)\stackrel{(1)}{=}cost_{MDA}^{dist}(A\rightarrow B\rightarrow C\rightarrow D)
 
 \end_inset
 
-כאשר מעבר )
-\numeric on
-1
-\numeric off
-( נובע מהגדרת הפונקציה היוריסטית 
+כאשר מעבר )1( נובע מהגדרת הפונקציה היוריסטית 
 \begin_inset Formula $h(n)$
 \end_inset
 
-, מעבר )
-\numeric on
-2
-\numeric off
-( נובע ממינימליות 
+, מעבר )2( נובע ממינימליות 
 \begin_inset Formula $T^{*}$
 \end_inset
 
-, ומעבר )
-\numeric on
-3
-\numeric off
-( נובע מכך שלכל 
+, ומעבר )3( נובע מכך שלכל 
 \begin_inset Formula $d_{i}\rightarrow d_{i+1}$
 \end_inset
 
@@ -1532,12 +1285,16 @@ h(s)\stackrel{(1)}{=}cost_{MDA}^{dist}(A\rightarrow B\rightarrow C\rightarrow D)
 \begin_inset Newline newline
 \end_inset
 
+
+\size footnotesize
 האזור הכדאי על פי הגרף הוא )בערך( 
 \begin_inset Formula $0.65\leq w\leq0.8$
 \end_inset
 
  מכיוון שבאזור יש ירידה חדה בזמן הריצה אך איכות הפתרון לא מתרחקת בהרבה מהפתרון
  האופטימלי.
+\size default
+
 \begin_inset Newline newline
 \end_inset
 
@@ -1553,6 +1310,8 @@ h(s)\stackrel{(1)}{=}cost_{MDA}^{dist}(A\rightarrow B\rightarrow C\rightarrow D)
 \begin_inset Newline newline
 \end_inset
 
+
+\size footnotesize
 האזור הכדאי על פי הגרף הוא )בערך( 
 \begin_inset Formula $0.65\leq w\leq0.725$
 \end_inset
@@ -1608,6 +1367,8 @@ h(s)\stackrel{(1)}{=}cost_{MDA}^{dist}(A\rightarrow B\rightarrow C\rightarrow D)
 \end_layout
 
 \begin_layout Standard
+
+\size footnotesize
 נשים לב כי עבור צומת 
 \begin_inset Formula $n$
 \end_inset
@@ -1691,16 +1452,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 \end_inset
 
-כאשר מעבר )
-\numeric on
-1
-\numeric off
-( נובע מכך שהמרחק המינימלי שבדיקה יכולה לעבור הוא בדיוק המרחק מהדירה בה
- היא נלקחה למעבדה הקרובה ביותר לדירה זו, ומעבר )
-\numeric on
-2
-\numeric off
-( הוא לפי הגדרה.
+כאשר מעבר )1( נובע מכך שהמרחק המינימלי שבדיקה יכולה לעבור הוא בדיוק המרחק
+ מהדירה בה היא נלקחה למעבדה הקרובה ביותר לדירה זו, ומעבר )2( הוא לפי הגדרה.
  לכן היוריסטיקה קבילה.
 \end_layout
 
@@ -1732,6 +1485,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \end_layout
 
 \begin_layout Standard
+
+\size footnotesize
 נוכיח:
 \begin_inset Newline newline
 \end_inset
@@ -1785,6 +1540,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \end_layout
 
 \begin_layout Standard
+
+\size footnotesize
 נוכיח:
 \begin_inset Newline newline
 \end_inset
@@ -1847,6 +1604,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \begin_inset Newline newline
 \end_inset
 
+
+\size footnotesize
 ניתן לראות על פי הטבלה שקיבלנו מסלול יותר יקר מבחינת פונקציית המחיר 
 \begin_inset Formula $cost_{MDA}^{dist}$
 \end_inset
@@ -1891,6 +1650,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \end_layout
 
 \begin_layout Standard
+
+\size footnotesize
 הטענה אינה נכונה.
  נפריך בעזרת דוגמא נגדית.
 \begin_inset Newline newline
@@ -1994,6 +1755,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \end_inset
 
 טבלת המעקב העמוד הבא.
+\size default
+
 \begin_inset Newline newline
 \end_inset
 
@@ -2002,6 +1765,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 \begin_layout Standard
 \align right
+
+\size footnotesize
 \begin_inset Tabular
 <lyxtabular version="3" rows="8" columns="5">
 <features tabularvalignment="middle">
@@ -2015,6 +1780,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 צעד
 \end_layout
 
@@ -2025,6 +1792,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 \begin_layout Plain Layout
 \align center
+
+\size footnotesize
 \begin_inset Formula $open$
 \end_inset
 
@@ -2037,6 +1806,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $close$
 \end_inset
 
@@ -2049,6 +1820,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 הצומת הבא לפיתוח
 \end_layout
 
@@ -2059,6 +1832,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 \begin_layout Plain Layout
 \align center
+
+\size footnotesize
 הסבר
 \end_layout
 
@@ -2071,7 +1846,7 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 \begin_layout Plain Layout
 
-\numeric on
+\size footnotesize
 1
 \end_layout
 
@@ -2082,6 +1857,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{1}=\left\{ S,\emptyset,\emptyset,0,\emptyset\right\} $
 \end_inset
 
@@ -2094,6 +1871,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $\emptyset$
 \end_inset
 
@@ -2106,6 +1885,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{1}$
 \end_inset
 
@@ -2119,6 +1900,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 מפתחים את הצומת 
 \begin_inset Formula $s_{1}$
 \end_inset
@@ -2135,7 +1918,7 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 \begin_layout Plain Layout
 
-\numeric on
+\size footnotesize
 2
 \end_layout
 
@@ -2146,6 +1929,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{2}=\left\{ L_{2},\emptyset,\emptyset,1,\{L_{2}\}\right\} ,g=0$
 \end_inset
 
@@ -2154,6 +1939,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{3}=\left\{ L_{1},\emptyset,\emptyset,1,\{L_{1}\}\right\} ,g=0$
 \end_inset
 
@@ -2166,6 +1953,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{1}$
 \end_inset
 
@@ -2178,6 +1967,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{2}$
 \end_inset
 
@@ -2191,6 +1982,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 מכיוון שערך ה-
 \begin_inset Formula $g$
 \end_inset
@@ -2200,6 +1993,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 ניתן לבחור איזה צומת האלגוריתם יפתח.
 \end_layout
 
@@ -2212,7 +2007,7 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 \begin_layout Plain Layout
 
-\numeric on
+\size footnotesize
 3
 \end_layout
 
@@ -2223,6 +2018,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{4}=\left\{ L_{1},\emptyset,\emptyset,2,\{L_{1},L_{2}\}\right\} ,g=0$
 \end_inset
 
@@ -2231,6 +2028,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{3}=\left\{ L_{1},\emptyset,\emptyset,1,\{L_{1}\}\right\} ,g=0$
 \end_inset
 
@@ -2243,6 +2042,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{1}$
 \end_inset
 
@@ -2250,6 +2051,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{2}$
 \end_inset
 
@@ -2262,6 +2065,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{4}$
 \end_inset
 
@@ -2275,6 +2080,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 כשבאנו לפתח את הצומת 
 \begin_inset Formula $s_{2}$
 \end_inset
@@ -2317,7 +2124,7 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 \begin_layout Plain Layout
 
-\numeric on
+\size footnotesize
 4
 \end_layout
 
@@ -2328,6 +2135,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{5}=\left\{ A,\{A\},\emptyset,0,\{L_{1},L_{2}\}\right\} ,g=0$
 \end_inset
 
@@ -2336,6 +2145,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{3}=\left\{ L_{1},\emptyset,\emptyset,1,\{L_{1}\}\right\} ,g=0$
 \end_inset
 
@@ -2348,6 +2159,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{1}$
 \end_inset
 
@@ -2355,6 +2168,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{2}$
 \end_inset
 
@@ -2362,6 +2177,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{4}$
 \end_inset
 
@@ -2374,6 +2191,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{2}$
 \end_inset
 
@@ -2387,6 +2206,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 הגענו לדירה 
 \begin_inset Formula $A$
 \end_inset
@@ -2412,7 +2233,7 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 \begin_layout Plain Layout
 
-\numeric on
+\size footnotesize
 5
 \end_layout
 
@@ -2423,6 +2244,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{3}=\left\{ L_{1},\emptyset,\emptyset,1,\{L_{1}\}\right\} ,g=0$
 \end_inset
 
@@ -2435,6 +2258,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{1}$
 \end_inset
 
@@ -2442,6 +2267,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{2}$
 \end_inset
 
@@ -2449,6 +2276,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{4}$
 \end_inset
 
@@ -2456,6 +2285,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{5}$
 \end_inset
 
@@ -2468,6 +2299,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{3}$
 \end_inset
 
@@ -2481,6 +2314,8 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 לאחר הפיתוח של 
 \begin_inset Formula $s_{5}$
 \end_inset
@@ -2499,6 +2334,8 @@ s_{7} & =\left\{ L_{2},\emptyset,\{A\},0,\{L_{1},L_{2}\}\right\} ,g=2
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 \begin_inset Formula $P=L_{2}\rightarrow L_{1}\rightarrow A$
 \end_inset
 
@@ -2559,7 +2396,7 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 
 \begin_layout Plain Layout
 
-\numeric on
+\size footnotesize
 6
 \end_layout
 
@@ -2570,6 +2407,8 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{8}=\left\{ L_{2},\emptyset,\emptyset,2,\{L_{1},L_{2}\}\right\} ,g=0$
 \end_inset
 
@@ -2582,6 +2421,8 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{1}$
 \end_inset
 
@@ -2589,6 +2430,8 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{2}$
 \end_inset
 
@@ -2596,6 +2439,8 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{4}$
 \end_inset
 
@@ -2603,6 +2448,8 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{5}$
 \end_inset
 
@@ -2610,6 +2457,8 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{3}$
 \end_inset
 
@@ -2622,6 +2471,8 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{8}$
 \end_inset
 
@@ -2635,6 +2486,8 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 מפתחים את 
 \begin_inset Formula $s_{3}$
 \end_inset
@@ -2651,7 +2504,7 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 
 \begin_layout Plain Layout
 
-\numeric on
+\size footnotesize
 7
 \end_layout
 
@@ -2662,6 +2515,8 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{9}=\left\{ A,\{A\},\emptyset,0,\{L_{1},L_{2}\}\right\} ,g=0$
 \end_inset
 
@@ -2674,6 +2529,8 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{1}$
 \end_inset
 
@@ -2681,6 +2538,8 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{2}$
 \end_inset
 
@@ -2688,6 +2547,8 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{4}$
 \end_inset
 
@@ -2695,6 +2556,8 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{5}$
 \end_inset
 
@@ -2702,6 +2565,8 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{3}$
 \end_inset
 
@@ -2709,6 +2574,8 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{8}$
 \end_inset
 
@@ -2721,6 +2588,8 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{9}$
 \end_inset
 
@@ -2734,6 +2603,8 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 הצומת הבא שהאלגוריתם יבוא לפתח הוא 
 \begin_inset Formula $s_{9}$
 \end_inset
@@ -2776,6 +2647,8 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 
 \begin_layout Standard
 \align right
+
+\size footnotesize
 ניתן לראות כי למרות 
 \series bold
 שקיים הפתרון
@@ -2787,6 +2660,44 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
  המקיים את הדרישה של הקריטריון המשולב, האלוגריתם 
 \series bold
 החזיר שאין פתרון.
+\size default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Newline newline
 \end_inset
 
@@ -2806,6 +2717,8 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 \end_layout
 
 \begin_layout Standard
+
+\size footnotesize
 הטענה אינה נכונה.
  נפריך בעזרת דוגמא נגדית.
 \begin_inset Newline newline
@@ -2833,61 +2746,7 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 \begin_inset Formula $(1,0)$
 \end_inset
 
- עם
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\numeric on
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-3
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\numeric off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-מטושים במלאי.
+ עם 3 מטושים במלאי.
  דירה 
 \begin_inset Formula $A_{1}$
 \end_inset
@@ -2910,36 +2769,7 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 \begin_inset Formula $L_{2}A_{1}A_{2}$
 \end_inset
 
- הינו משולש שווה צלעות שאורך כל צלע היא
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\numeric on
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-1
-\numeric off
-.
+ הינו משולש שווה צלעות שאורך כל צלע היא 1.
  כמו נניח כי קיימים כבישים רק מ-
 \begin_inset Formula $L_{1}$
 \end_inset
@@ -2981,90 +2811,9 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 \end_inset
 
 .
- שרטוט להמחשה )כאשר
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
+ שרטוט להמחשה )כאשר m הוא מספר המטושים ו-r הוא מספר הדיירים(:
 \size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-\lang english
-m
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-\lang hebrew
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-הוא מספר המטושים ו-
-\lang english
-r
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-\lang hebrew
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-הוא מספר הדיירים(:
+
 \begin_inset Newline newline
 \end_inset
 
@@ -3080,6 +2829,8 @@ r
 \begin_inset Newline newline
 \end_inset
 
+
+\size footnotesize
 תחילה נשים לב כי הפתרון האופטימלי שיוחזר עם פונקציית העלות 
 \begin_inset Formula $cost_{MDA}^{dist}$
 \end_inset
@@ -3191,6 +2942,8 @@ r
 \end_inset
 
 טבלת המעקב העמוד הבא.
+\size default
+
 \begin_inset Newline newline
 \end_inset
 
@@ -3199,6 +2952,8 @@ r
 
 \begin_layout Standard
 \align right
+
+\size footnotesize
 \begin_inset Tabular
 <lyxtabular version="3" rows="9" columns="5">
 <features tabularvalignment="middle">
@@ -3222,6 +2977,8 @@ r
 
 \begin_layout Plain Layout
 \align center
+
+\size footnotesize
 \begin_inset Formula $open$
 \end_inset
 
@@ -3234,6 +2991,8 @@ r
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $close$
 \end_inset
 
@@ -3246,6 +3005,8 @@ r
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 הצומת הבא לפיתוח
 \end_layout
 
@@ -3256,6 +3017,8 @@ r
 
 \begin_layout Plain Layout
 \align center
+
+\size footnotesize
 הסבר
 \end_layout
 
@@ -3268,7 +3031,7 @@ r
 
 \begin_layout Plain Layout
 
-\numeric on
+\size footnotesize
 1
 \end_layout
 
@@ -3279,6 +3042,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{1}=\left\{ S,\emptyset,\emptyset,0,\emptyset\right\} $
 \end_inset
 
@@ -3300,6 +3065,8 @@ r
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{1}$
 \end_inset
 
@@ -3312,6 +3079,8 @@ r
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 מפתחים את הצומת 
 \begin_inset Formula $s_{1}$
 \end_inset
@@ -3328,7 +3097,7 @@ r
 
 \begin_layout Plain Layout
 
-\numeric on
+\size footnotesize
 2
 \end_layout
 
@@ -3339,6 +3108,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{2}=\left\{ L_{2},\emptyset,\emptyset,3,\{L_{2}\}\right\} ,g=0,d=1$
 \end_inset
 
@@ -3347,6 +3118,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{3}=\left\{ L_{1},\emptyset,\emptyset,1,\{L_{1}\}\right\} ,g=0,d=1$
 \end_inset
 
@@ -3359,6 +3132,8 @@ r
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{1}$
 \end_inset
 
@@ -3371,6 +3146,8 @@ r
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{2}$
 \end_inset
 
@@ -3395,7 +3172,7 @@ r
 
 \begin_layout Plain Layout
 
-\numeric on
+\size footnotesize
 3
 \end_layout
 
@@ -3406,6 +3183,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{3}=\left\{ L_{1},\emptyset,\emptyset,1,\{L_{1}\}\right\} ,g=0,d=1$
 \end_inset
 
@@ -3414,6 +3193,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{4}=\left\{ L_{1},\emptyset,\emptyset,4,\{L_{1},L_{2}\}\right\} ,g=0,d=3$
 \end_inset
 
@@ -3422,6 +3203,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{5}=\left\{ A_{1},\{A_{1}\},\emptyset,1,\{L_{2}\}\right\} ,g=0,d=2$
 \end_inset
 
@@ -3430,6 +3213,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{6}=\left\{ A_{2},\{A_{2}\},\emptyset,1,\{L_{2}\}\right\} ,g=0,d=2$
 \end_inset
 
@@ -3442,6 +3227,8 @@ r
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{1},s_{2}$
 \end_inset
 
@@ -3454,6 +3241,8 @@ r
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{4}$
 \end_inset
 
@@ -3479,7 +3268,7 @@ r
 
 \begin_layout Plain Layout
 
-\numeric on
+\size footnotesize
 4
 \end_layout
 
@@ -3490,6 +3279,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{3}=\left\{ L_{1},\emptyset,\emptyset,1,\{L_{1}\}\right\} ,g=0,d=1$
 \end_inset
 
@@ -3498,6 +3289,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{5}=\left\{ A_{1},\{A_{1}\},\emptyset,1,\{L_{2}\}\right\} ,g=0,d=2$
 \end_inset
 
@@ -3506,6 +3299,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{6}=\left\{ A_{2},\{A_{2}\},\emptyset,1,\{L_{2}\}\right\} ,g=0,d=2$
 \end_inset
 
@@ -3514,6 +3309,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{7}=\left\{ A_{1},\{A_{1}\},\emptyset,2,\{L_{1},L_{2}\}\right\} ,g=0,d=6$
 \end_inset
 
@@ -3522,6 +3319,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{8}=\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\} ,g=0,d=6$
 \end_inset
 
@@ -3534,6 +3333,8 @@ r
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{1},s_{2}$
 \end_inset
 
@@ -3541,6 +3342,8 @@ r
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{4}$
 \end_inset
 
@@ -3553,6 +3356,8 @@ r
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{7}$
 \end_inset
 
@@ -3566,6 +3371,8 @@ r
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 כשבאנו לפתח את הצומת 
 \begin_inset Formula $s_{4}$
 \end_inset
@@ -3582,7 +3389,7 @@ r
 
 \begin_layout Plain Layout
 
-\numeric on
+\size footnotesize
 5
 \end_layout
 
@@ -3593,6 +3400,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{3}=\left\{ L_{1},\emptyset,\emptyset,1,\{L_{1}\}\right\} ,g=0,d=1$
 \end_inset
 
@@ -3601,6 +3410,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{5}=\left\{ A_{1},\{A_{1}\},\emptyset,1,\{L_{2}\}\right\} ,g=0,d=2$
 \end_inset
 
@@ -3609,6 +3420,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{6}=\left\{ A_{2},\{A_{2}\},\emptyset,1,\{L_{2}\}\right\} ,g=0,d=2$
 \end_inset
 
@@ -3617,6 +3430,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{8}=\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\} ,g=0,d=6$
 \end_inset
 
@@ -3625,6 +3440,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{9}=\left\{ L_{2},\emptyset,\{A_{1}\},2,\{L_{1},L_{2}\}\right\} ,g=2,d=7$
 \end_inset
 
@@ -3633,6 +3450,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{10}=\left\{ A_{2},\{A_{1},A_{2}\},\emptyset,0,\{L_{1},L_{2}\}\right\} ,g=2,d=7$
 \end_inset
 
@@ -3645,6 +3464,8 @@ r
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{1},s_{2}$
 \end_inset
 
@@ -3652,6 +3473,8 @@ r
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{4},s_{7}$
 \end_inset
 
@@ -3664,6 +3487,8 @@ r
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{8}$
 \end_inset
 
@@ -3677,6 +3502,8 @@ r
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 כשבאנו לפתח את הצומת 
 \begin_inset Formula $s_{7}$
 \end_inset
@@ -3686,6 +3513,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $P=L_{2}\rightarrow L_{1}\rightarrow A_{1}$
 \end_inset
 
@@ -3694,6 +3523,8 @@ r
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 ומתקיים 
 \begin_inset Formula $cost_{MDA}^{dist}(P)=6$
 \end_inset
@@ -3718,7 +3549,7 @@ r
 
 \begin_layout Plain Layout
 
-\numeric on
+\size footnotesize
 6
 \end_layout
 
@@ -3729,6 +3560,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{3}=\left\{ L_{1},\emptyset,\emptyset,1,\{L_{1}\}\right\} ,g=0,d=1$
 \end_inset
 
@@ -3737,6 +3570,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{5}=\left\{ A_{1},\{A_{1}\},\emptyset,1,\{L_{2}\}\right\} ,g=0,d=2$
 \end_inset
 
@@ -3745,6 +3580,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{6}=\left\{ A_{2},\{A_{2}\},\emptyset,1,\{L_{2}\}\right\} ,g=0,d=2$
 \end_inset
 
@@ -3753,6 +3590,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{9}=\left\{ L_{2},\emptyset,\{A_{1}\},2,\{L_{1},L_{2}\}\right\} ,g=2,d=7$
 \end_inset
 
@@ -3761,6 +3600,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{10}=\left\{ A_{2},\{A_{1},A_{2}\},\emptyset,0,\{L_{1},L_{2}\}\right\} ,g=2,d=7$
 \end_inset
 
@@ -3769,6 +3610,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{11}=\left\{ L_{2},\emptyset,\{A_{2}\},2,\{L_{1},L_{2}\}\right\} ,g=2,d=7$
 \end_inset
 
@@ -3777,6 +3620,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{12}=\left\{ A_{1},\{A_{1},A_{2}\},\emptyset,0,\{L_{1},L_{2}\}\right\} ,g=2,d=7$
 \end_inset
 
@@ -3789,6 +3634,8 @@ r
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{1},s_{2}$
 \end_inset
 
@@ -3796,6 +3643,8 @@ r
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{4},s_{7}$
 \end_inset
 
@@ -3803,6 +3652,8 @@ r
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{8}$
 \end_inset
 
@@ -3815,6 +3666,8 @@ r
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{3}$
 \end_inset
 
@@ -3828,6 +3681,8 @@ r
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 כשבאנו לפתח את הצומת 
 \begin_inset Formula $s_{8}$
 \end_inset
@@ -3837,6 +3692,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $P=L_{2}\rightarrow L_{1}\rightarrow A_{2}$
 \end_inset
 
@@ -3845,6 +3702,8 @@ r
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 ומתקיים 
 \begin_inset Formula $cost_{MDA}^{dist}(P)=6$
 \end_inset
@@ -3869,7 +3728,7 @@ r
 
 \begin_layout Plain Layout
 
-\numeric on
+\size footnotesize
 7
 \end_layout
 
@@ -3880,6 +3739,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{5}=\left\{ A_{1},\{A_{1}\},\emptyset,1,\{L_{2}\}\right\} ,g=0,d=2$
 \end_inset
 
@@ -3888,6 +3749,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{6}=\left\{ A_{2},\{A_{2}\},\emptyset,1,\{L_{2}\}\right\} ,g=0,d=2$
 \end_inset
 
@@ -3896,6 +3759,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{9}=\left\{ L_{2},\emptyset,\{A_{1}\},2,\{L_{1},L_{2}\}\right\} ,g=2,d=7$
 \end_inset
 
@@ -3904,6 +3769,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{10}=\left\{ A_{2},\{A_{1},A_{2}\},\emptyset,0,\{L_{1},L_{2}\}\right\} ,g=2,d=7$
 \end_inset
 
@@ -3912,6 +3779,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{11}=\left\{ L_{2},\emptyset,\{A_{2}\},2,\{L_{1},L_{2}\}\right\} ,g=2,d=7$
 \end_inset
 
@@ -3920,6 +3789,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{12}=\left\{ A_{1},\{A_{1},A_{2}\},\emptyset,0,\{L_{1},L_{2}\}\right\} ,g=2,dist=7$
 \end_inset
 
@@ -3928,6 +3799,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{13}=\left\{ L_{2},\emptyset,\emptyset,4,\{L_{1},L_{2}\}\right\} ,g=0,d=3$
 \end_inset
 
@@ -3940,6 +3813,8 @@ r
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{1},s_{2}$
 \end_inset
 
@@ -3947,6 +3822,8 @@ r
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{4},s_{7}$
 \end_inset
 
@@ -3954,6 +3831,8 @@ r
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{8},s_{3}$
 \end_inset
 
@@ -3966,6 +3845,8 @@ r
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{13}$
 \end_inset
 
@@ -3979,6 +3860,8 @@ r
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 כשבאנו לפתח את 
 \begin_inset Formula $s_{3}$
 \end_inset
@@ -4000,7 +3883,7 @@ r
 
 \begin_layout Plain Layout
 
-\numeric on
+\size footnotesize
 8
 \end_layout
 
@@ -4011,6 +3894,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{5}=\left\{ A_{1},\{A_{1}\},\emptyset,1,\{L_{2}\}\right\} ,g=0,d=2$
 \end_inset
 
@@ -4019,6 +3904,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{6}=\left\{ A_{2},\{A_{2}\},\emptyset,1,\{L_{2}\}\right\} ,g=0,d=2$
 \end_inset
 
@@ -4027,6 +3914,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{9}=\left\{ L_{2},\emptyset,\{A_{1}\},2,\{L_{1},L_{2}\}\right\} ,g=2,d=7$
 \end_inset
 
@@ -4035,6 +3924,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{10}=\left\{ A_{2},\{A_{1},A_{2}\},\emptyset,0,\{L_{1},L_{2}\}\right\} ,g=2,d=7$
 \end_inset
 
@@ -4043,6 +3934,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{11}=\left\{ L_{2},\emptyset,\{A_{2}\},2,\{L_{1},L_{2}\}\right\} ,g=2,d=7$
 \end_inset
 
@@ -4051,6 +3944,8 @@ r
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{12}=\left\{ A_{1},\{A_{1},A_{2}\},\emptyset,0,\{L_{1},L_{2}\}\right\} ,g=2,d=7$
 \end_inset
 
@@ -4063,6 +3958,8 @@ r
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{1},s_{2}$
 \end_inset
 
@@ -4070,6 +3967,8 @@ r
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{4},s_{7}$
 \end_inset
 
@@ -4077,6 +3976,8 @@ r
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{8},s_{3}$
 \end_inset
 
@@ -4084,6 +3985,8 @@ r
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{13}$
 \end_inset
 
@@ -4096,6 +3999,8 @@ r
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{5}$
 \end_inset
 
@@ -4109,6 +4014,8 @@ r
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 כשבאנו לפתח את 
 \begin_inset Formula $s_{13}$
 \end_inset
@@ -4161,6 +4068,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Standard
 \align right
+
+\size footnotesize
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="5">
 <features tabularvalignment="middle">
@@ -4184,6 +4093,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align center
+
+\size footnotesize
 \begin_inset Formula $open$
 \end_inset
 
@@ -4196,6 +4107,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $close$
 \end_inset
 
@@ -4208,6 +4121,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 הצומת הבא לפיתוח
 \end_layout
 
@@ -4218,6 +4133,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align center
+
+\size footnotesize
 הסבר
 \end_layout
 
@@ -4230,7 +4147,7 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 
-\numeric on
+\size footnotesize
 9
 \end_layout
 
@@ -4241,6 +4158,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{6}=\left\{ A_{2},\{A_{2}\},\emptyset,1,\{L_{2}\}\right\} ,g=0,d=2$
 \end_inset
 
@@ -4249,6 +4168,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{9}=\left\{ L_{2},\emptyset,\{A_{1}\},2,\{L_{1},L_{2}\}\right\} ,g=2,d=7$
 \end_inset
 
@@ -4257,6 +4178,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{10}=\left\{ A_{2},\{A_{1},A_{2}\},\emptyset,0,\{L_{1},L_{2}\}\right\} ,g=2,d=7$
 \end_inset
 
@@ -4265,6 +4188,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{11}=\left\{ L_{2},\emptyset,\{A_{2}\},2,\{L_{1},L_{2}\}\right\} ,g=2,d=7$
 \end_inset
 
@@ -4273,6 +4198,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{12}=\left\{ A_{1},\{A_{1},A_{2}\},\emptyset,0,\{L_{1},L_{2}\}\right\} ,g=2,d=7$
 \end_inset
 
@@ -4281,6 +4208,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{16}=\left\{ L_{2},\emptyset,\{A_{1}\},1,\{L_{2}\}\right\} ,g=2,d=3$
 \end_inset
 
@@ -4289,6 +4218,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{17}=\left\{ L_{1},\emptyset,\{A_{1}\},2,\{L_{1},L_{2}\}\right\} ,g=6,d=5$
 \end_inset
 
@@ -4301,6 +4232,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{1},s_{2}$
 \end_inset
 
@@ -4308,6 +4241,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{4},s_{7}$
 \end_inset
 
@@ -4315,6 +4250,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{8},s_{3}$
 \end_inset
 
@@ -4322,6 +4259,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{13},s_{5}$
 \end_inset
 
@@ -4334,6 +4273,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{6}$
 \end_inset
 
@@ -4347,6 +4288,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 כשבאנו לפתח את 
 \begin_inset Formula $s_{5}$
 \end_inset
@@ -4375,7 +4318,7 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 
-\numeric on
+\size footnotesize
 10
 \end_layout
 
@@ -4386,6 +4329,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{9}=\left\{ L_{2},\emptyset,\{A_{1}\},2,\{L_{1},L_{2}\}\right\} ,g=2,d=7$
 \end_inset
 
@@ -4394,6 +4339,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{10}=\left\{ A_{2},\{A_{1},A_{2}\},\emptyset,0,\{L_{1},L_{2}\}\right\} ,g=2,d=7$
 \end_inset
 
@@ -4402,6 +4349,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{11}=\left\{ L_{2},\emptyset,\{A_{2}\},2,\{L_{1},L_{2}\}\right\} ,g=2,d=7$
 \end_inset
 
@@ -4410,6 +4359,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{12}=\left\{ A_{1},\{A_{1},A_{2}\},\emptyset,0,\{L_{1},L_{2}\}\right\} ,g=2,d=7$
 \end_inset
 
@@ -4418,6 +4369,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{16}=\left\{ L_{2},\emptyset,\{A_{1}\},1,\{L_{2}\}\right\} ,g=2,d=3$
 \end_inset
 
@@ -4426,6 +4379,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{17}=\left\{ L_{1},\emptyset,\{A_{1}\},2,\{L_{1},L_{2}\}\right\} ,g=6,d=5$
 \end_inset
 
@@ -4434,6 +4389,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{18}=\left\{ L_{2},\emptyset,\{A_{2}\},1,\{L_{2}\}\right\} ,g=2,d=3$
 \end_inset
 
@@ -4442,6 +4399,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{19}=\left\{ L_{1},\emptyset,\{A_{2}\},2,\{L_{1},L_{2}\}\right\} ,g=6,d=5$
 \end_inset
 
@@ -4454,6 +4413,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{1},s_{2}$
 \end_inset
 
@@ -4461,6 +4422,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{4},s_{7}$
 \end_inset
 
@@ -4468,6 +4431,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{8},s_{3}$
 \end_inset
 
@@ -4475,6 +4440,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{13},s_{5}$
 \end_inset
 
@@ -4482,6 +4449,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{6}$
 \end_inset
 
@@ -4494,6 +4463,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{9}$
 \end_inset
 
@@ -4507,6 +4478,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 כשבאנו לפתח את 
 \begin_inset Formula $s_{6}$
 \end_inset
@@ -4535,7 +4508,7 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 
-\numeric on
+\size footnotesize
 11
 \end_layout
 
@@ -4546,6 +4519,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{10}=\left\{ A_{2},\{A_{1},A_{2}\},\emptyset,0,\{L_{1},L_{2}\}\right\} ,g=2,d=7$
 \end_inset
 
@@ -4554,6 +4529,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{11}=\left\{ L_{2},\emptyset,\{A_{2}\},2,\{L_{1},L_{2}\}\right\} ,g=2,d=7$
 \end_inset
 
@@ -4562,6 +4539,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{12}=\left\{ A_{1},\{A_{1},A_{2}\},\emptyset,0,\{L_{1},L_{2}\}\right\} ,g=2,d=7$
 \end_inset
 
@@ -4570,6 +4549,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{16}=\left\{ L_{2},\emptyset,\{A_{1}\},1,\{L_{2}\}\right\} ,g=2,d=3$
 \end_inset
 
@@ -4578,6 +4559,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{17}=\left\{ L_{1},\emptyset,\{A_{1}\},2,\{L_{1},L_{2}\}\right\} ,g=6,d=5$
 \end_inset
 
@@ -4586,6 +4569,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{18}=\left\{ L_{2},\emptyset,\{A_{2}\},1,\{L_{2}\}\right\} ,g=2,d=3$
 \end_inset
 
@@ -4594,6 +4579,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{19}=\left\{ L_{1},\emptyset,\{A_{2}\},2,\{L_{1},L_{2}\}\right\} ,g=6,d=5$
 \end_inset
 
@@ -4602,6 +4589,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{20}=\left\{ A_{2},\{A_{2}\},\{A_{1}\},0,\{L_{1},L_{2}\}\right\} ,g=2,d=8$
 \end_inset
 
@@ -4614,6 +4603,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{1},s_{2}$
 \end_inset
 
@@ -4621,6 +4612,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{4},s_{7}$
 \end_inset
 
@@ -4628,6 +4621,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{8},s_{3}$
 \end_inset
 
@@ -4635,6 +4630,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{13},s_{5}$
 \end_inset
 
@@ -4642,6 +4639,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{6},s_{9}$
 \end_inset
 
@@ -4654,6 +4653,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{20}$
 \end_inset
 
@@ -4667,6 +4668,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 כשבאנו לפתח את הצומת 
 \begin_inset Formula $s_{9}$
 \end_inset
@@ -4687,7 +4690,7 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 
-\numeric on
+\size footnotesize
 12
 \end_layout
 
@@ -4698,6 +4701,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{10}=\left\{ A_{2},\{A_{1},A_{2}\},\emptyset,0,\{L_{1},L_{2}\}\right\} ,g=2,d=7$
 \end_inset
 
@@ -4706,6 +4711,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{11}=\left\{ L_{2},\emptyset,\{A_{2}\},2,\{L_{1},L_{2}\}\right\} ,g=2,d=7$
 \end_inset
 
@@ -4714,6 +4721,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{12}=\left\{ A_{1},\{A_{1},A_{2}\},\emptyset,0,\{L_{1},L_{2}\}\right\} ,g=2,d=7$
 \end_inset
 
@@ -4722,6 +4731,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{16}=\left\{ L_{2},\emptyset,\{A_{1}\},1,\{L_{2}\}\right\} ,g=2,d=3$
 \end_inset
 
@@ -4730,6 +4741,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{17}=\left\{ L_{1},\emptyset,\{A_{1}\},2,\{L_{1},L_{2}\}\right\} ,g=6,d=5$
 \end_inset
 
@@ -4738,6 +4751,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{18}=\left\{ L_{2},\emptyset,\{A_{2}\},1,\{L_{2}\}\right\} ,g=2,d=3$
 \end_inset
 
@@ -4746,6 +4761,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{19}=\left\{ L_{1},\emptyset,\{A_{2}\},2,\{L_{1},L_{2}\}\right\} ,g=6,d=5$
 \end_inset
 
@@ -4758,6 +4775,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{1},s_{2}$
 \end_inset
 
@@ -4765,6 +4784,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{4},s_{7}$
 \end_inset
 
@@ -4772,6 +4793,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{8},s_{3}$
 \end_inset
 
@@ -4779,6 +4802,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{13},s_{5}$
 \end_inset
 
@@ -4786,6 +4811,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{6},s_{9}$
 \end_inset
 
@@ -4793,6 +4820,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{20}$
 \end_inset
 
@@ -4805,6 +4834,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{10}$
 \end_inset
 
@@ -4818,6 +4849,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 כשבאנו לפתח את הצומת 
 \begin_inset Formula $s_{20}$
 \end_inset
@@ -4827,6 +4860,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $P=L_{2}\rightarrow L_{1}\rightarrow A_{1}\rightarrow L_{2}\rightarrow A_{2}$
 \end_inset
 
@@ -4835,6 +4870,8 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 ומתקיים 
 \begin_inset Formula $cost_{MDA}^{dist}(P)=8$
 \end_inset
@@ -4864,7 +4901,7 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 
-\numeric on
+\size footnotesize
 13
 \end_layout
 
@@ -4875,6 +4912,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{11}=\left\{ L_{2},\emptyset,\{A_{2}\},2,\{L_{1},L_{2}\}\right\} ,g=2,d=7$
 \end_inset
 
@@ -4883,6 +4922,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{12}=\left\{ A_{1},\{A_{1},A_{2}\},\emptyset,0,\{L_{1},L_{2}\}\right\} ,g=2,d=7$
 \end_inset
 
@@ -4891,6 +4932,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{16}=\left\{ L_{2},\emptyset,\{A_{1}\},1,\{L_{2}\}\right\} ,g=2,d=3$
 \end_inset
 
@@ -4899,6 +4942,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{17}=\left\{ L_{1},\emptyset,\{A_{1}\},2,\{L_{1},L_{2}\}\right\} ,g=6,d=5$
 \end_inset
 
@@ -4907,6 +4952,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{18}=\left\{ L_{2},\emptyset,\{A_{2}\},1,\{L_{2}\}\right\} ,g=2,d=3$
 \end_inset
 
@@ -4915,6 +4962,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{19}=\left\{ L_{1},\emptyset,\{A_{2}\},2,\{L_{1},L_{2}\}\right\} ,g=6,d=5$
 \end_inset
 
@@ -4923,6 +4972,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{21}=\left\{ L_{2},\emptyset,\{A_{1},A_{2}\},0,\{L_{1},L_{2}\}\right\} ,g=6,d=7$
 \end_inset
 
@@ -4935,6 +4986,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{1},s_{2}$
 \end_inset
 
@@ -4942,6 +4995,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{4},s_{7}$
 \end_inset
 
@@ -4949,6 +5004,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{8},s_{3}$
 \end_inset
 
@@ -4956,6 +5013,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{13},s_{5}$
 \end_inset
 
@@ -4963,6 +5022,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{6},s_{9}$
 \end_inset
 
@@ -4970,6 +5031,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{20},s_{10}$
 \end_inset
 
@@ -4982,6 +5045,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{11}$
 \end_inset
 
@@ -4995,6 +5060,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 כשבאנו לפתח את הצומת 
 \begin_inset Formula $s_{10}$
 \end_inset
@@ -5004,6 +5071,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $P=L_{2}\rightarrow L_{1}\rightarrow A_{1}\rightarrow A_{2}$
 \end_inset
 
@@ -5012,6 +5081,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 ומתקיים 
 \begin_inset Formula $cost_{MDA}^{dist}(P)=7$
 \end_inset
@@ -5043,6 +5114,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Standard
 \align right
+
+\size footnotesize
 \begin_inset Tabular
 <lyxtabular version="3" rows="5" columns="5">
 <features tabularvalignment="middle">
@@ -5066,6 +5139,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align center
+
+\size footnotesize
 \begin_inset Formula $open$
 \end_inset
 
@@ -5078,6 +5153,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $close$
 \end_inset
 
@@ -5090,6 +5167,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 הצומת הבא לפיתוח
 \end_layout
 
@@ -5100,6 +5179,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align center
+
+\size footnotesize
 הסבר
 \end_layout
 
@@ -5112,7 +5193,7 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 
-\numeric on
+\size footnotesize
 14
 \end_layout
 
@@ -5123,6 +5204,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{12}=\left\{ A_{1},\{A_{1},A_{2}\},\emptyset,0,\{L_{1},L_{2}\}\right\} ,g=2,d=7$
 \end_inset
 
@@ -5131,6 +5214,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{16}=\left\{ L_{2},\emptyset,\{A_{1}\},1,\{L_{2}\}\right\} ,g=2,d=3$
 \end_inset
 
@@ -5139,6 +5224,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{17}=\left\{ L_{1},\emptyset,\{A_{1}\},2,\{L_{1},L_{2}\}\right\} ,g=6,d=5$
 \end_inset
 
@@ -5147,6 +5234,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{18}=\left\{ L_{2},\emptyset,\{A_{2}\},1,\{L_{2}\}\right\} ,g=2,d=3$
 \end_inset
 
@@ -5155,6 +5244,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{19}=\left\{ L_{1},\emptyset,\{A_{2}\},2,\{L_{1},L_{2}\}\right\} ,g=6,d=5$
 \end_inset
 
@@ -5163,6 +5254,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{21}=\left\{ L_{2},\emptyset,\{A_{1},A_{2}\},0,\{L_{1},L_{2}\}\right\} ,g=6,d=8$
 \end_inset
 
@@ -5171,6 +5264,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{22}=\left\{ A_{1},\{A_{1}\},\{A_{2}\},0,\{L_{1},L_{2}\}\right\} ,g=2,d=8$
 \end_inset
 
@@ -5183,6 +5278,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{1},s_{2}$
 \end_inset
 
@@ -5190,6 +5287,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{4},s_{7}$
 \end_inset
 
@@ -5197,6 +5296,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{8},s_{3}$
 \end_inset
 
@@ -5204,6 +5305,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{13},s_{5}$
 \end_inset
 
@@ -5211,6 +5314,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{6},s_{9}$
 \end_inset
 
@@ -5218,6 +5323,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{20},s_{10}$
 \end_inset
 
@@ -5225,6 +5332,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{11}$
 \end_inset
 
@@ -5237,6 +5346,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{12}$
 \end_inset
 
@@ -5250,6 +5361,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 כשבאנו לפתח את הצומת 
 \begin_inset Formula $s_{11}$
 \end_inset
@@ -5270,7 +5383,7 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 
-\numeric on
+\size footnotesize
 15
 \end_layout
 
@@ -5281,6 +5394,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{16}=\left\{ L_{2},\emptyset,\{A_{1}\},1,\{L_{2}\}\right\} ,g=2,d=3$
 \end_inset
 
@@ -5289,6 +5404,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{17}=\left\{ L_{1},\emptyset,\{A_{1}\},2,\{L_{1},L_{2}\}\right\} ,g=6,d=5$
 \end_inset
 
@@ -5297,6 +5414,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{18}=\left\{ L_{2},\emptyset,\{A_{2}\},1,\{L_{2}\}\right\} ,g=2,d=3$
 \end_inset
 
@@ -5305,6 +5424,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{19}=\left\{ L_{1},\emptyset,\{A_{2}\},2,\{L_{1},L_{2}\}\right\} ,g=6,d=5$
 \end_inset
 
@@ -5313,6 +5434,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{21}=\left\{ L_{2},\emptyset,\{A_{1},A_{2}\},0,\{L_{1},L_{2}\}\right\} ,g=6,d=8$
 \end_inset
 
@@ -5321,6 +5444,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{22}=\left\{ A_{1},\{A_{1}\},\{A_{2}\},0,\{L_{1},L_{2}\}\right\} ,g=2,d=8$
 \end_inset
 
@@ -5333,6 +5458,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{1},s_{2}$
 \end_inset
 
@@ -5340,6 +5467,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{4},s_{7}$
 \end_inset
 
@@ -5347,6 +5476,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{8},s_{3}$
 \end_inset
 
@@ -5354,6 +5485,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{13},s_{5}$
 \end_inset
 
@@ -5361,6 +5494,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{6},s_{9}$
 \end_inset
 
@@ -5368,6 +5503,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{20},s_{10}$
 \end_inset
 
@@ -5375,6 +5512,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{11},s_{12}$
 \end_inset
 
@@ -5387,6 +5526,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{16}$
 \end_inset
 
@@ -5400,6 +5541,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 כשבאנו לפתח את הצומת 
 \begin_inset Formula $s_{12}$
 \end_inset
@@ -5409,6 +5552,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $P=L_{2}\rightarrow L_{1}\rightarrow A_{2}\rightarrow A_{1}$
 \end_inset
 
@@ -5417,6 +5562,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 ומתקיים 
 \begin_inset Formula $cost_{MDA}^{dist}(P)=7$
 \end_inset
@@ -5434,11 +5581,15 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 כמו כן המצב החדש שנוצר הוא:
 \end_layout
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 \begin_inset Formula $s_{23}=\left\{ L_{2},\emptyset,\{A_{1},A_{2}\},0,\{L_{1},L_{2}\}\right\} $
 \end_inset
 
@@ -5447,20 +5598,9 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align right
-נשים לב כי מצב זה זהה למצב
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
+
+\size footnotesize
+נשים לב כי מצב זה זהה למצב 
 \begin_inset Formula $s_{21}$
 \end_inset
 
@@ -5485,7 +5625,7 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 
-\numeric on
+\size footnotesize
 16
 \end_layout
 
@@ -5496,6 +5636,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{17}=\left\{ L_{1},\emptyset,\{A_{1}\},2,\{L_{1},L_{2}\}\right\} ,g=6,d=5$
 \end_inset
 
@@ -5504,6 +5646,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{18}=\left\{ L_{2},\emptyset,\{A_{2}\},1,\{L_{2}\}\right\} ,g=2,d=3$
 \end_inset
 
@@ -5512,6 +5656,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{19}=\left\{ L_{1},\emptyset,\{A_{2}\},2,\{L_{1},L_{2}\}\right\} ,g=6,d=5$
 \end_inset
 
@@ -5520,6 +5666,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{20}=\left\{ L_{2},\emptyset,\{A_{1},A_{2}\},0,\{L_{1},L_{2}\}\right\} ,g=6,d=8$
 \end_inset
 
@@ -5528,6 +5676,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{21}=\left\{ A_{1},\{A_{1}\},\{A_{2}\},0,\{L_{1},L_{2}\}\right\} ,g=2,d=8$
 \end_inset
 
@@ -5544,6 +5694,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{1},s_{2}$
 \end_inset
 
@@ -5551,6 +5703,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{4},s_{7}$
 \end_inset
 
@@ -5558,6 +5712,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{8},s_{3}$
 \end_inset
 
@@ -5565,6 +5721,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{13},s_{5}$
 \end_inset
 
@@ -5572,6 +5730,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{6},s_{9}$
 \end_inset
 
@@ -5579,6 +5739,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{20},s_{10}$
 \end_inset
 
@@ -5586,6 +5748,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{11},s_{12}$
 \end_inset
 
@@ -5593,6 +5757,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{16},s_{18}$
 \end_inset
 
@@ -5605,6 +5771,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{18}$
 \end_inset
 
@@ -5618,6 +5786,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 כשבאנו לפתח את 
 \begin_inset Formula $s_{16}$
 \end_inset
@@ -5642,7 +5812,7 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 
-\numeric on
+\size footnotesize
 17
 \end_layout
 
@@ -5653,6 +5823,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{17}=\left\{ L_{1},\emptyset,\{A_{1}\},2,\{L_{1},L_{2}\}\right\} ,g=6,d=5$
 \end_inset
 
@@ -5661,6 +5833,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{19}=\left\{ L_{1},\emptyset,\{A_{2}\},2,\{L_{1},L_{2}\}\right\} ,g=6,d=5$
 \end_inset
 
@@ -5669,6 +5843,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{21}=\left\{ L_{2},\emptyset,\{A_{1},A_{2}\},0,\{L_{1},L_{2}\}\right\} ,g=6,d=8$
 \end_inset
 
@@ -5677,6 +5853,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{22}=\left\{ A_{1},\{A_{1}\},\{A_{2}\},0,\{L_{1},L_{2}\}\right\} ,g=2,d=8$
 \end_inset
 
@@ -5689,6 +5867,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{25}=\left\{ L_{1},\emptyset,\{A_{2}\},2,\{L_{1},L_{2}\}\right\} ,g=2,d=5$
 \end_inset
 
@@ -5701,6 +5881,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{1},s_{2}$
 \end_inset
 
@@ -5708,6 +5890,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{4},s_{7}$
 \end_inset
 
@@ -5715,6 +5899,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{8},s_{3}$
 \end_inset
 
@@ -5722,6 +5908,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{13},s_{5}$
 \end_inset
 
@@ -5729,6 +5917,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{6},s_{9}$
 \end_inset
 
@@ -5736,6 +5926,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{20},s_{10}$
 \end_inset
 
@@ -5743,6 +5935,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{11},s_{12}$
 \end_inset
 
@@ -5750,6 +5944,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{16},s_{18}$
 \end_inset
 
@@ -5757,6 +5953,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{22}$
 \end_inset
 
@@ -5769,6 +5967,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{22}$
 \end_inset
 
@@ -5782,6 +5982,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 כשבאנו לפתח את 
 \begin_inset Formula $s_{18}$
 \end_inset
@@ -5813,6 +6015,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Standard
 \align right
+
+\size footnotesize
 \begin_inset Tabular
 <lyxtabular version="3" rows="5" columns="5">
 <features tabularvalignment="middle">
@@ -5836,6 +6040,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align center
+
+\size footnotesize
 \begin_inset Formula $open$
 \end_inset
 
@@ -5848,6 +6054,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $close$
 \end_inset
 
@@ -5860,6 +6068,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 הצומת הבא לפיתוח
 \end_layout
 
@@ -5870,6 +6080,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align center
+
+\size footnotesize
 הסבר
 \end_layout
 
@@ -5882,7 +6094,7 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 
-\numeric on
+\size footnotesize
 18
 \end_layout
 
@@ -5893,6 +6105,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{17}=\left\{ L_{1},\emptyset,\{A_{1}\},2,\{L_{1},L_{2}\}\right\} ,g=6,d=5$
 \end_inset
 
@@ -5901,6 +6115,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{19}=\left\{ L_{1},\emptyset,\{A_{2}\},2,\{L_{1},L_{2}\}\right\} ,g=6,d=5$
 \end_inset
 
@@ -5909,6 +6125,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{21}=\left\{ L_{2},\emptyset,\{A_{1},A_{2}\},0,\{L_{1},L_{2}\}\right\} ,g=6,d=8$
 \end_inset
 
@@ -5921,6 +6139,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{25}=\left\{ L_{1},\emptyset,\{A_{2}\},2,\{L_{1},L_{2}\}\right\} ,g=2,d=5$
 \end_inset
 
@@ -5933,6 +6153,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{1},s_{2}$
 \end_inset
 
@@ -5940,6 +6162,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{4},s_{7}$
 \end_inset
 
@@ -5947,6 +6171,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{8},s_{3}$
 \end_inset
 
@@ -5954,6 +6180,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{13},s_{5}$
 \end_inset
 
@@ -5961,6 +6189,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{6},s_{9}$
 \end_inset
 
@@ -5968,6 +6198,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{20},s_{10}$
 \end_inset
 
@@ -5975,6 +6207,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{11},s_{12}$
 \end_inset
 
@@ -5982,6 +6216,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{16},s_{18}$
 \end_inset
 
@@ -5989,6 +6225,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{22}$
 \end_inset
 
@@ -6001,6 +6239,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{24}$
 \end_inset
 
@@ -6014,6 +6254,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 כשבאנו לפתח את הצומת 
 \begin_inset Formula $s_{22}$
 \end_inset
@@ -6023,6 +6265,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $P=L_{2}\rightarrow L_{1}\rightarrow A_{1}\rightarrow L_{2}\rightarrow A_{2}$
 \end_inset
 
@@ -6031,6 +6275,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 ומתקיים 
 \begin_inset Formula $cost_{MDA}^{dist}(P)=8$
 \end_inset
@@ -6060,7 +6306,7 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 
-\numeric on
+\size footnotesize
 19
 \end_layout
 
@@ -6071,6 +6317,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{17}=\left\{ L_{1},\emptyset,\{A_{1}\},2,\{L_{1},L_{2}\}\right\} ,g=6,d=5$
 \end_inset
 
@@ -6079,6 +6327,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{19}=\left\{ L_{1},\emptyset,\{A_{2}\},2,\{L_{1},L_{2}\}\right\} ,g=6,d=5$
 \end_inset
 
@@ -6087,6 +6337,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{21}=\left\{ L_{2},\emptyset,\{A_{1},A_{2}\},0,\{L_{1},L_{2}\}\right\} ,g=6,d=8$
 \end_inset
 
@@ -6095,6 +6347,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{25}=\left\{ L_{1},\emptyset,\{A_{2}\},2,\{L_{1},L_{2}\}\right\} ,g=2,d=5$
 \end_inset
 
@@ -6107,6 +6361,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{1},s_{2}$
 \end_inset
 
@@ -6114,6 +6370,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{4},s_{7}$
 \end_inset
 
@@ -6121,6 +6379,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{8},s_{3}$
 \end_inset
 
@@ -6128,6 +6388,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{13},s_{5}$
 \end_inset
 
@@ -6135,6 +6397,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{6},s_{9}$
 \end_inset
 
@@ -6142,6 +6406,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{20},s_{10}$
 \end_inset
 
@@ -6149,6 +6415,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{11},s_{12}$
 \end_inset
 
@@ -6156,6 +6424,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{16},s_{18}$
 \end_inset
 
@@ -6163,6 +6433,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{22},s_{24}$
 \end_inset
 
@@ -6175,6 +6447,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{25}$
 \end_inset
 
@@ -6188,6 +6462,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 כשבאנו לפתח את 
 \begin_inset Formula $s_{24}$
 \end_inset
@@ -6197,6 +6473,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{26}=\left\{ A_{2},\{A_{2}\},\{A_{1}\},0,\{L_{1},L_{2}\}\right\} $
 \end_inset
 
@@ -6205,6 +6483,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 נשים לב כי מצב זה זהה למצב 
 \begin_inset Formula $s_{22}$
 \end_inset
@@ -6229,7 +6509,7 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 
-\numeric on
+\size footnotesize
 20
 \end_layout
 
@@ -6240,6 +6520,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{17}=\left\{ L_{1},\emptyset,\{A_{1}\},2,\{L_{1},L_{2}\}\right\} ,g=6,d=5$
 \end_inset
 
@@ -6248,6 +6530,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{19}=\left\{ L_{1},\emptyset,\{A_{2}\},2,\{L_{1},L_{2}\}\right\} ,g=6,d=5$
 \end_inset
 
@@ -6256,6 +6540,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{21}=\left\{ L_{2},\emptyset,\{A_{1},A_{2}\},0,\{L_{1},L_{2}\}\right\} ,g=6,d=8$
 \end_inset
 
@@ -6268,6 +6554,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{1},s_{2}$
 \end_inset
 
@@ -6275,6 +6563,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{4},s_{7}$
 \end_inset
 
@@ -6282,6 +6572,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{8},s_{3}$
 \end_inset
 
@@ -6289,6 +6581,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{13},s_{5}$
 \end_inset
 
@@ -6296,6 +6590,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{6},s_{9}$
 \end_inset
 
@@ -6303,6 +6599,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{20},s_{10}$
 \end_inset
 
@@ -6310,6 +6608,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{11},s_{12}$
 \end_inset
 
@@ -6317,6 +6617,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{16},s_{18}$
 \end_inset
 
@@ -6324,6 +6626,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{22},s_{24}$
 \end_inset
 
@@ -6331,6 +6635,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{25}$
 \end_inset
 
@@ -6343,6 +6649,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\size footnotesize
 \begin_inset Formula $s_{21}$
 \end_inset
 
@@ -6356,6 +6664,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 כשבאנו לפתח את 
 \begin_inset Formula $s_{25}$
 \end_inset
@@ -6365,6 +6675,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 \begin_inset Formula $s_{27}=\left\{ A_{1},\{A_{1}\},\{A_{2}\},0,\{L_{1},L_{2}\}\right\} $
 \end_inset
 
@@ -6373,6 +6685,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 נשים לב כי מצב זה זהה למצב 
 \begin_inset Formula $s_{21}$
 \end_inset
@@ -6397,7 +6711,7 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 
-\numeric on
+\size footnotesize
 21
 \end_layout
 
@@ -6408,6 +6722,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{17}=\left\{ L_{1},\emptyset,\{A_{1}\},2,\{L_{1},L_{2}\}\right\} ,g=6,d=5$
 \end_inset
 
@@ -6416,6 +6732,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align left
+
+\size footnotesize
 \begin_inset Formula $s_{19}=\left\{ L_{1},\emptyset,\{A_{2}\},2,\{L_{1},L_{2}\}\right\} ,g=6,d=5$
 \end_inset
 
@@ -6447,6 +6765,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Plain Layout
 \align right
+
+\size footnotesize
 \begin_inset Formula $s_{21}$
 \end_inset
 
@@ -6473,6 +6793,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 \begin_layout Standard
 \align right
+
+\size footnotesize
 ניתן לראות כי למרות 
 \series bold
 שקיים מסלול 
@@ -6503,6 +6825,8 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Standard
+
+\size footnotesize
 נשים לב כי בשני השלבים הראשונים האלגוריתמים 
 \begin_inset Formula $A_{1}$
 \end_inset
@@ -6544,20 +6868,7 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \begin_inset Quotes erd
 \end_inset
 
- שגודלו הוא מסדר גודל
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
+ שגודלו הוא מסדר גודל 
 \begin_inset Formula $2^{|S|}$
 \end_inset
 
@@ -6602,12 +6913,13 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 
 \size footnotesize
-אכן חסכנו במספר הפיתוחים, פיתחנו כ-10% פחות צמתים.
- הגמישות של 
+חסכנו.
+ פיתחנו כ-10% פחות צמתים.
+ בזכות הגמישות של 
 \begin_inset Formula $A^{*}\varepsilon$
 \end_inset
 
- תעזור לנו בכך שהיא תיתן אופציה לצמתים עם ערך 
+ צמתים עם ערך 
 \begin_inset Formula $g$
 \end_inset
 
@@ -6619,13 +6931,13 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \begin_inset Formula $h$
 \end_inset
 
- נמוך יותר להיכנס ל-open.
- כלומר, בחיפוש שלנו נבדוק גם צמתים אשר הפונקציה היוריסטית תעריך אותם כיותר
+ נמוך יותר יכנסו ל-open.
+ כלומר, בחיפוש שלנו נבדוק גם צמתים שהפונקציה היוריסטית תעריך אותם כיותר
  קרובים לפתרון, למרות שערך ה-
 \begin_inset Formula $g$
 \end_inset
 
- שלהם אינו אופטימלי.
+ שלהם לא אופטימלי.
 \size default
 
 \begin_inset Newline newline
@@ -6643,7 +6955,9 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_layout
 
 \begin_layout Standard
-המדד הביצועי שאנו משפרים הוא 
+
+\size footnotesize
+המדד הביצועי שמשתפר הוא 
 \series bold
 זכרון.
  
@@ -6652,7 +6966,12 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \begin_inset Formula $IDA^{*}$
 \end_inset
 
- הוא אלגוריתם איטרטיבי המחפש לעומק, ולכן בעל דרישות זכרון נמוכות.
+ הוא אלגוריתם איטרטיבי המחפש לעומק, ולכן בעל דרישות זכרון נמוכות מפני שאינו
+ צריך לשמור את כל חזית החיפוש כמו שמתבצע ב-
+\begin_inset Formula $BFS$
+\end_inset
+
+ למשל.
 \end_layout
 
 \begin_layout Description
@@ -6664,7 +6983,7 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_inset
 
  
-\size small
+\size footnotesize
 זמן ריצה.
 \end_layout
 
@@ -6674,9 +6993,10 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \begin_inset Formula $\text{.ii}$
 \end_inset
 
- עבור פונקציות יוריסטיות מסוימות ייתכן שנרוויח מעט צמתים בעומק כל איטרציה,
- וכל התקדמות לעומק גוררת פיתוח חוזר של כל הצמתים בדרך, מה שעלול להגדיל את
- זמן הריצה.
+ 
+\size footnotesize
+ייתכן שנרוויח מעט צמתים בעומק כל איטרציה, וכל התקדמות לעומק גוררת פיתוח
+ חוזר של כל הצמתים בדרך, מה שעלול להגדיל את זמן הריצה.
 \end_layout
 
 \begin_layout Description
@@ -6685,33 +7005,17 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \begin_inset Formula $.\text{iii}$
 \end_inset
 
- מדד זה נפגע פחות ביחס מהאופן שבו הוא נפגע ב-
-\lang english
-ID-DFS
-\lang hebrew
- לעומת 
-\lang english
-BFS
-\lang hebrew
- מכיוון שעבור 
+ 
+\size footnotesize
+מדד זה נפגע פחות ביחס מהאופן שבו הוא נפגע ב-ID-DFS לעומת BFS מכיוון שעבור
+ 
 \begin_inset Formula $IDA^{*}$
 \end_inset
 
  קיימות פונקציות יוריסטיות קבילות שעבורן הבעיה שתיארנו בסעיף הקודם לא תיגרם
  ונקבל זמן ריצה טוב יותר.
- לעומת זאת ריצה של 
-\lang english
-ID-DFS
-\lang hebrew
- תמיד מכילה באיטרציה האחרונה שלה ריצה של 
-\lang english
-BFS
-\lang hebrew
- ולכן זמנה יהיה לכל הפחות כמו זמן הריצה של 
-\lang english
-BFS
-\lang hebrew
- ולרוב אף גבוה יותר.
+ לעומת זאת ריצה של ID-DFS תמיד מכילה באיטרציה האחרונה שלה ריצה של BFS ולכן
+ זמנה יהיה לכל הפחות כמו זמן הריצה של BFS ולרוב אף גבוה יותר.
 \end_layout
 
 \begin_layout Description
@@ -6722,7 +7026,9 @@ BFS
 \begin_inset Formula $\text{.i}$
 \end_inset
 
- במקרה הגרוע ביותר, כל איטרציה נגדיל את 
+ 
+\size footnotesize
+במקרה הגרוע ביותר, כל איטרציה נגדיל את 
 \begin_inset Formula $nextFlimit$
 \end_inset
 
@@ -6759,7 +7065,9 @@ BFS
 \begin_inset Formula $\text{.ii}$
 \end_inset
 
- החסם ההדוק על 
+ 
+\size footnotesize
+החסם ההדוק על 
 \begin_inset Formula $\varepsilon(A_{1},S)$
 \end_inset
 
