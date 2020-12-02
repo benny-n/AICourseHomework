@@ -433,14 +433,6 @@
  גדול מסכום כל המטושים בכל המעבדות + מספר המטושים ההתחלתי, אינם ישיגים.
  זאת מכיוון שלקחנו את כל המטושים הזמינים במעבדות ואין לנו מאיפה לקבל עוד
  מטושים.
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-
 \end_layout
 
 \begin_layout Description
@@ -1829,20 +1821,24 @@ cost_{MDA}^{dist}(s_{i},o_{i})+\sum_{j=0}^{i-1}cost_{MDA}^{dist}(s_{j},o_{j})\le
 
 .
  יהי מסלול 
-\begin_inset Formula $P'=s'_{0}\overset{o'_{0}}{\rightarrow}s'_{1}\overset{o'_{1}}{\rightarrow}...\overset{o'_{n-1}}{\rightarrow}s'_{n}$
+\begin_inset Formula $P'=s'_{0}\overset{o'_{0}}{\rightarrow}s'_{1}\overset{o'_{1}}{\rightarrow}...\rightarrow s'_{n}$
 \end_inset
 
  כך ש- 
 \begin_inset Formula $cost_{MDA}^{dist}(P')>(1+\varepsilon)\cdot C_{dist}^{*}$
 \end_inset
 
+
+\size default
 .
+
+\size footnotesize
  נסתכל על הצומת הראשון 
-\begin_inset Formula $s'_{i}$
+\begin_inset Formula $s'_{j}$
 \end_inset
 
  עבורו 
-\begin_inset Formula $cost_{MDA}^{dist}(s'_{0}\rightarrow...\rightarrow s'_{i})>(1+\varepsilon)\cdot C_{dist}^{*}$
+\begin_inset Formula $cost_{MDA}^{dist}(s_{0}\rightarrow...\rightarrow s'_{i})>(1+\varepsilon)\cdot C_{dist}^{*}$
 \end_inset
 
 .
@@ -1860,11 +1856,11 @@ cost_{MDA}^{dist}(s_{i},o_{i})+\sum_{j=0}^{i-1}cost_{MDA}^{dist}(s_{j},o_{j})\le
 \end_inset
 
  קיים האופרטור 
-\begin_inset Formula $o'_{i-1}$
+\begin_inset Formula $o_{i-1}$
 \end_inset
 
  כך ש-
-\begin_inset Formula $o'_{i-1}(s'_{i-1})=s'_{i}$
+\begin_inset Formula $o_{i-1}(s'_{i-1})=s'_{i}$
 \end_inset
 
 .
@@ -1876,16 +1872,17 @@ cost_{MDA}^{dist}(s_{i},o_{i})+\sum_{j=0}^{i-1}cost_{MDA}^{dist}(s_{j},o_{j})\le
 \begin_inset Formula $o_{i-1}^{P}(p'_{i-1})=p'_{i}$
 \end_inset
 
+.
  אך מתקיים: 
 \begin_inset Formula 
 \[
-cost_{MDA}^{dist}(s'_{i-1},o'_{i-1})+\sum_{j=0}^{i-2}cost_{MDA}^{dist}(s'_{j},o'_{j})>(1+\varepsilon)\cdot C_{dist}^{*}
+cost_{MDA}^{dist}(s'_{i-1},o_{i-1})+\sum_{j=0}^{i-2}cost_{MDA}^{dist}(s_{j},o_{j})>(1+\varepsilon)\cdot C_{dist}^{*}
 \]
 
 \end_inset
 
 כלומר 
-\begin_inset Formula $cost(p'_{i-1},o{}_{i-1}^{P})=\infty$
+\begin_inset Formula $cost(p'_{i-1},o_{i-1}^{P})=\infty$
 \end_inset
 
  ולכן הפעלת האופרטור אינה חוקית.
@@ -1974,14 +1971,6 @@ cost_{MDA}^{dist}(s'_{i-1},o'_{i-1})+\sum_{j=0}^{i-2}cost_{MDA}^{dist}(s'_{j},o'
 \end_inset
 
  הנקוב.
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-
 \end_layout
 
 \begin_layout Description
@@ -2094,47 +2083,6 @@ cost_{MDA}^{dist}(s'_{i-1},o'_{i-1})+\sum_{j=0}^{i-2}cost_{MDA}^{dist}(s'_{j},o'
 \end_inset
 
  הוא המרחק שעברו הבדיקות על האמבולנס.
-\begin_inset Newline newline
-\end_inset
-
-בנוסף נניח כי קיימים כבישים רק מ-
-\begin_inset Formula $S$
-\end_inset
-
- ל-
-\begin_inset Formula $L_{1}$
-\end_inset
-
-, מ-
-\begin_inset Formula $L_{1}$
-\end_inset
-
- ל-
-\begin_inset Formula $A$
-\end_inset
-
-, ומ-
-\begin_inset Formula $A$
-\end_inset
-
- ל-
-\begin_inset Formula $L_{2}$
-\end_inset
-
-.
- שרטוט להמחשה )כאשר m הוא מספר המטושים ו-r הוא מספר הדיירים(:
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Graphics
-	filename ex39.png
-	lyxscale 70
-	scale 70
-
-\end_inset
-
-
 \begin_inset Newline newline
 \end_inset
 
@@ -7315,18 +7263,6 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_inset
 
 
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-
 \end_layout
 
 \begin_layout Description
@@ -7450,7 +7386,7 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \begin_layout Description
 
 \size footnotesize
-\begin_inset Formula $\boldsymbol{\varepsilon(A_{1},S)<\frac{1}{k}}$
+\begin_inset Formula $\varepsilon(A_{1},S)<\frac{1}{k}$
 \end_inset
 
 .
