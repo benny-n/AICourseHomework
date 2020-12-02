@@ -1613,44 +1613,162 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \begin_inset Newline newline
 \end_inset
 
-נניח בשלילה ש-
-\begin_inset Formula $A_{1}$
+יהי 
+\begin_inset Formula $P=s_{o}\rightarrow s_{1}\rightarrow...\rightarrow s_{n}$
 \end_inset
 
- לא החזיר פתרון.
- כלומר, הפעלת האופרטור לא הייתה חוקית עבור אף מצב.
-\begin_inset Newline newline
-\end_inset
-
-מכך נובע שלכל מסלול 
-\begin_inset Formula $P$
-\end_inset
-
- התקיים ש-
-\begin_inset Formula $cost_{MDA}^{dist}(P)>(1+\varepsilon)\cdot C_{dist}^{*}$
-\end_inset
-
- אבל נתון כי היה קיים פתרון במרחב המקורי 
+ פתרון במרחב המקורי 
 \begin_inset Formula $S_{MDA}$
 \end_inset
 
- ולכן בוודאות קיים מסלול 
-\begin_inset Formula $P$
+ לפי הקריטריון המשולב.
+\begin_inset Newline newline
 \end_inset
 
- שעבורו 
-\begin_inset Formula $cost_{MDA}^{dist}(P)=C_{dist}^{*}\leq(1+\varepsilon)\cdot C_{dist}^{*}$
-\end_inset
-
- ולכן נקבל סתירה לקבילות של 
-\begin_inset Formula $A^{*}$
-\end_inset
-
-, לכן 
+נראה כי האלגוריתם 
 \begin_inset Formula $A_{1}$
 \end_inset
 
- תמיד מחזיר פתרון.
+ מחזיר פתרון.
+\begin_inset Newline newline
+\end_inset
+
+תחילה האלגוריתם מריץ 
+\begin_inset Formula $A^{*}$
+\end_inset
+
+ על 
+\begin_inset Formula $S_{MDA}$
+\end_inset
+
+ ולכן מנכונותו מובטח כי יימצא את הפתרון האופטימלי לפי 
+\begin_inset Formula $cost_{MDA}^{dist}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+נסמן 
+\begin_inset Formula $p_{i}=s_{0}\rightarrow s_{1}\rightarrow...\rightarrow s_{i}$
+\end_inset
+
+ תת מסלול של 
+\begin_inset Formula $P$
+\end_inset
+
+ המתחיל ב-
+\begin_inset Formula $s_{0}$
+\end_inset
+
+ ומסתיים ס-
+\begin_inset Formula $s_{i}$
+\end_inset
+
+.
+ מאופן בניית המרחב לכל 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $i\leq n$
+\end_inset
+
+ מוגדר המצב 
+\begin_inset Formula $(<p_{i}>)\in S^{P}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+נסתכל על שני מצבים עוקבים בפתרון 
+\begin_inset Formula $P$
+\end_inset
+
+.
+ לכל 
+\begin_inset Formula $s_{i}\rightarrow s_{i+1}$
+\end_inset
+
+ קיים האופרטור 
+\begin_inset Formula $o_{i}\in O$
+\end_inset
+
+ כך ש- 
+\begin_inset Formula $o_{i}(s_{i})=s_{i+1}$
+\end_inset
+
+ ולכן לפי הגדרת המרחב 
+\begin_inset Formula $S^{P}$
+\end_inset
+
+ קיים האופרטור 
+\begin_inset Formula $o_{i}^{p}(p_{i})=p_{i+1}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+נראה כי הפעלת האופרטור חוקית בכל שלב במסלול:
+\begin_inset Newline newline
+\end_inset
+
+מכיוןן ש-
+\begin_inset Formula $P$
+\end_inset
+
+ הינו פתרון לפי הקריטריון המשולב מתקיים בהכרח 
+\begin_inset Formula $cost_{MDA}^{dist}(P)\leq(1+\varepsilon)\cdot C_{dist}^{*}$
+\end_inset
+
+ ולכן לכל תת מסלול 
+\begin_inset Formula $p_{i}=s_{0}\rightarrow...\rightarrow s_{i}$
+\end_inset
+
+ של 
+\begin_inset Formula $P$
+\end_inset
+
+ גם כן יתקיים כי 
+\begin_inset Formula 
+\[
+cost_{MDA}^{dist}(s_{i},o_{i})+\sum_{j=0}^{i-1}cost_{MDA}^{dist}(s_{j},o_{j})\leq(1+\varepsilon)\cdot C_{dist}^{*}<\infty
+\]
+
+\end_inset
+
+ולכן הפעלת האופרטור חוקית על המצב 
+\begin_inset Formula $s_{i}$
+\end_inset
+
+ בכל שלב במסלול לפי ההגדרה.
+ 
+\begin_inset Newline newline
+\end_inset
+
+לכן נקבל כי קיים המסלול החוקי 
+\begin_inset Formula $p_{0}\rightarrow p_{1}\rightarrow....\rightarrow p_{n}$
+\end_inset
+
+ במרחב 
+\begin_inset Formula $S^{P}$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $p_{n}$
+\end_inset
+
+ הינו צומת מטרה ולכן מנכונות 
+\begin_inset Formula $UCS$
+\end_inset
+
+ יוחזר הצומת 
+\begin_inset Formula $p_{n}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Description
@@ -1659,6 +1777,97 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 37
 \numeric off
 .
+\end_layout
+
+\begin_layout Standard
+נוכיח:
+\begin_inset Newline newline
+\end_inset
+
+יהי מסלול 
+\begin_inset Formula $P=s_{0}\rightarrow s_{1}\rightarrow...\rightarrow s_{n}$
+\end_inset
+
+ במרחב 
+\begin_inset Formula $S_{MDA}$
+\end_inset
+
+ עבורו מתקיים 
+\begin_inset Formula $cost_{MDA}^{dist}(P)\leq(1+\varepsilon)\cdot C_{dist}^{*}$
+\end_inset
+
+, באותו אופן כפי שהראינו בסעיף
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+36
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+לכל תת מסלול 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+ קיים מצב במרחב 
+\begin_inset Formula $S^{P}$
+\end_inset
+
+ ובפרט קיים המסלול 
+\begin_inset Formula $p_{0}\rightarrow p_{1}\rightarrow...\rightarrow p_{n}$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2204,7 +2413,7 @@ h(n)=\sum_{i=1}^{n}\delta(d_{i},L_{i})\cdot d_{i}.roomates\overset{(1)}{\leq}\su
 \align right
 
 \size footnotesize
-כשבאנו לפתח את הצומת 
+כשפיתחנו את הצומת 
 \begin_inset Formula $s_{2}$
 \end_inset
 
@@ -2892,7 +3101,7 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 \end_inset
 
  הינו משולש שווה צלעות שאורך כל צלע היא 1.
- כמו נניח כי קיימים כבישים רק מ-
+ כמו כן נניח כי קיימים כבישים רק מ-
 \begin_inset Formula $L_{1}$
 \end_inset
 
@@ -3495,7 +3704,7 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 \align right
 
 \size footnotesize
-כשבאנו לפתח את הצומת 
+כשפיתחנו את הצומת 
 \begin_inset Formula $s_{4}$
 \end_inset
 
@@ -3626,7 +3835,7 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 \align right
 
 \size footnotesize
-כשבאנו לפתח את הצומת 
+כשפיתחנו את הצומת 
 \begin_inset Formula $s_{7}$
 \end_inset
 
@@ -3805,7 +4014,7 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 \align right
 
 \size footnotesize
-כשבאנו לפתח את הצומת 
+כשפיתחנו את הצומת 
 \begin_inset Formula $s_{8}$
 \end_inset
 
@@ -3984,7 +4193,7 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 \align right
 
 \size footnotesize
-כשבאנו לפתח את 
+כשפיתחנו את 
 \begin_inset Formula $s_{3}$
 \end_inset
 
@@ -4138,7 +4347,7 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 \align right
 
 \size footnotesize
-כשבאנו לפתח את 
+כשפיתחנו את 
 \begin_inset Formula $s_{13}$
 \end_inset
 
@@ -4412,7 +4621,7 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 \align right
 
 \size footnotesize
-כשבאנו לפתח את 
+כשפיתחנו את 
 \begin_inset Formula $s_{5}$
 \end_inset
 
@@ -4602,7 +4811,7 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 \align right
 
 \size footnotesize
-כשבאנו לפתח את 
+כשפיתחנו את 
 \begin_inset Formula $s_{6}$
 \end_inset
 
@@ -4792,7 +5001,7 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 \align right
 
 \size footnotesize
-כשבאנו לפתח את הצומת 
+כשפיתחנו את הצומת 
 \begin_inset Formula $s_{9}$
 \end_inset
 
@@ -4973,7 +5182,7 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 \align right
 
 \size footnotesize
-כשבאנו לפתח את הצומת 
+כשפיתחנו את הצומת 
 \begin_inset Formula $s_{20}$
 \end_inset
 
@@ -5184,7 +5393,7 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \align right
 
 \size footnotesize
-כשבאנו לפתח את הצומת 
+כשפיתחנו את הצומת 
 \begin_inset Formula $s_{10}$
 \end_inset
 
@@ -5485,7 +5694,7 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \align right
 
 \size footnotesize
-כשבאנו לפתח את הצומת 
+כשפיתחנו את הצומת 
 \begin_inset Formula $s_{11}$
 \end_inset
 
@@ -5665,7 +5874,7 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \align right
 
 \size footnotesize
-כשבאנו לפתח את הצומת 
+כשפיתחנו את הצומת 
 \begin_inset Formula $s_{12}$
 \end_inset
 
@@ -5910,7 +6119,7 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \align right
 
 \size footnotesize
-כשבאנו לפתח את 
+כשפיתחנו את 
 \begin_inset Formula $s_{16}$
 \end_inset
 
@@ -6106,7 +6315,7 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \align right
 
 \size footnotesize
-כשבאנו לפתח את 
+כשפיתחנו את 
 \begin_inset Formula $s_{18}$
 \end_inset
 
@@ -6378,7 +6587,7 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \align right
 
 \size footnotesize
-כשבאנו לפתח את הצומת 
+כשפיתחנו את הצומת 
 \begin_inset Formula $s_{22}$
 \end_inset
 
@@ -6586,7 +6795,7 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \align right
 
 \size footnotesize
-כשבאנו לפתח את 
+כשפיתחנו את 
 \begin_inset Formula $s_{24}$
 \end_inset
 
@@ -6788,7 +6997,7 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \align right
 
 \size footnotesize
-כשבאנו לפתח את 
+כשפיתחנו את 
 \begin_inset Formula $s_{25}$
 \end_inset
 
@@ -7158,7 +7367,7 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
  לכן מספר האיטרציות לכל היותר יהיה 
 \begin_inset Formula 
 \[
-\#max\_iterations=\bigg\lceil\frac{Cost(A(S))-Q_{k}(h(I))}{\frac{1}{k}}\bigg\rceil=\lceil k\cdot\left(Cost(A(S))-Q_{k}(h(I))\right)\rceil
+\#max\_iterations=\bigg\lceil\frac{Cost(A(S))-Q_{k}(h(I))}{\frac{1}{k}}\bigg\rceil+1=\lceil k\cdot\left(Cost(A(S))-Q_{k}(h(I))\right)\rceil+1
 \]
 
 \end_inset
@@ -7215,7 +7424,7 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \begin_inset Formula $[C_{S}^{*},C_{S}^{*}+\frac{1}{k}-\varepsilon]$
 \end_inset
 
- ולכן נקבל כי החסם ההדוק 
+ ולכן נקבל כי החסם ההדוק ל-
 \begin_inset Formula $\varepsilon(A_{1},S)$
 \end_inset
 
