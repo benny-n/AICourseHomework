@@ -862,26 +862,148 @@ s.VisitedLabs=Labs
 \noun default
 \color inherit
 \lang english
-States_to_expand.tests_on_ambulance = States_to_expand.tests_on_ambulance
- | {apartment} 
+State_to_expand.tests_on_ambulance = State_to_expand.tests_on_ambulance |
+ {d}
 \lang hebrew
-
-\begin_inset Newline newline
+.
+ כלומר הוספת הדירה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+d
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+לרשימת הבדיקות שעל האמבולנס ל-MDAState הנוכחי, במקום יצירת MDAState חדש.
+ מימוש זה בעייתי מכיוון שעלול לפגוע בנכונות האלגוריתם.
+ נראה זאת: כפי שציינו בסעיף לעיל אנו עלולים להיתקל במצב שכבר פיתחנו בעבר
+ ונמצא כרגע ב-
+\begin_inset Formula $close$
 \end_inset
 
-כלומר עדכון של שדה ספציפי ב-MDAState במקום יצירת MDAState חדש לגמרי בעזרת
- c'tor .
- מימוש זה בעייתי מכיוון שאנו עלולים להיתקל במצב מסוים בשנית גם לאחר שפיתחנו
- אותו כבר בעבר, כפי שצוין בסעיף לעיל.
- במקרה זה, אם ננסה לעדכן את MDAState מבלי ליצור אחד חדש מה שיקרה בפועל הוא
- שנדרוס את השדות של המצב בו כבר נתקלנו מכיוון שבפייתון אנחנו מחזיקים מצביע
- לאובייקט ולא מעתיקים אותו.
- כלומר, המצב שכרגע נמצא ב-close יתעדכן, וכאשר נחפש מצב מתאים לעדכון ב-close
- לא נמצא אותו.
-\begin_inset Newline newline
+, לכן אם נחזור למצב
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+state_to_expand
+\lang hebrew
+ )שעבר ל-
+\begin_inset Formula $close$
 \end_inset
 
+ לאחר הפיתוח( האלגוריתם 
+\begin_inset Quotes eld
+\end_inset
 
+יחשוב
+\begin_inset Quotes erd
+\end_inset
+
+ שכבר ביקר בדירה
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+d
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ )מה שלא נכון( ונכונות האלגוריתם תיפגע.
+ הסיבה לכך היא כי בפייתון אנו מחזיקים מצביע לאובייקט ולכן כשאנו מריצים את
+ השורה שציינו לעיל אנו משנים את האובייקט עצמו ולא יוצרים לו העתק כמו שהיינו
+ רוצים.
 \end_layout
 
 \begin_layout Description
@@ -3515,7 +3637,7 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 \align left
 
 \size footnotesize
-\begin_inset Formula $P=L_{2}\rightarrow L_{1}\rightarrow A_{1}$
+\begin_inset Formula $P=S\rightarrow L_{2}\rightarrow L_{1}\rightarrow A_{1}$
 \end_inset
 
 
@@ -3694,7 +3816,7 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 \align left
 
 \size footnotesize
-\begin_inset Formula $P=L_{2}\rightarrow L_{1}\rightarrow A_{2}$
+\begin_inset Formula $P=S\rightarrow L_{2}\rightarrow L_{1}\rightarrow A_{2}$
 \end_inset
 
 
@@ -4862,7 +4984,7 @@ s_{15} & =\left\{ A_{2},\{A_{2}\},\emptyset,2,\{L_{1},L_{2}\}\right\}
 \align left
 
 \size footnotesize
-\begin_inset Formula $P=L_{2}\rightarrow L_{1}\rightarrow A_{1}\rightarrow L_{2}\rightarrow A_{2}$
+\begin_inset Formula $P=S\rightarrow L_{2}\rightarrow L_{1}\rightarrow A_{1}\rightarrow L_{2}\rightarrow A_{2}$
 \end_inset
 
 
@@ -5073,7 +5195,7 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \align left
 
 \size footnotesize
-\begin_inset Formula $P=L_{2}\rightarrow L_{1}\rightarrow A_{1}\rightarrow A_{2}$
+\begin_inset Formula $P=S\rightarrow L_{2}\rightarrow L_{1}\rightarrow A_{1}\rightarrow A_{2}$
 \end_inset
 
 
@@ -5554,7 +5676,7 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \align left
 
 \size footnotesize
-\begin_inset Formula $P=L_{2}\rightarrow L_{1}\rightarrow A_{2}\rightarrow A_{1}$
+\begin_inset Formula $P=S\rightarrow L_{2}\rightarrow L_{1}\rightarrow A_{2}\rightarrow A_{1}$
 \end_inset
 
 
@@ -6913,31 +7035,18 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
 
 \size footnotesize
-חסכנו.
- פיתחנו כ-10% פחות צמתים.
+חסכנו, פיתחנו כ-10% פחות צמתים.
  בזכות הגמישות של 
 \begin_inset Formula $A^{*}\varepsilon$
 \end_inset
 
- צמתים עם ערך 
+ נבדוק בחיפוש שלנו גם צמתים שהפונקציה היוריסטית תעריך כיותר קרובים לפתרון,
+ למרות שה-
 \begin_inset Formula $g$
 \end_inset
 
- גבוה יותר )לכל היותר ב-
-\begin_inset Formula $\varepsilon$
-\end_inset
-
-( אך עם ערך 
-\begin_inset Formula $h$
-\end_inset
-
- נמוך יותר יכנסו ל-open.
- כלומר, בחיפוש שלנו נבדוק גם צמתים שהפונקציה היוריסטית תעריך אותם כיותר
- קרובים לפתרון, למרות שערך ה-
-\begin_inset Formula $g$
-\end_inset
-
- שלהם לא אופטימלי.
+ שלהם לא אופטימליץ הוספנו מידע על המרחב על ידי שימוש ביוריסטיקה, לא קבילה
+ אמנם, אך יותר מיודעת ולכן נצפה להאצת הפתרון.
 \size default
 
 \begin_inset Newline newline
@@ -6967,11 +7076,7 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_inset
 
  הוא אלגוריתם איטרטיבי המחפש לעומק, ולכן בעל דרישות זכרון נמוכות מפני שאינו
- צריך לשמור את כל חזית החיפוש כמו שמתבצע ב-
-\begin_inset Formula $BFS$
-\end_inset
-
- למשל.
+ צריך לשמור את כל חזית החיפוש.
 \end_layout
 
 \begin_layout Description
@@ -7066,85 +7171,55 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 \end_inset
 
  
+\end_layout
+
+\begin_layout Description
+
 \size footnotesize
-החסם ההדוק על 
-\begin_inset Formula $\varepsilon(A_{1},S)$
-\end_inset
-
- הוא 
-\begin_inset Formula $\frac{1}{k}$
-\end_inset
-
-, כלומר מתקיים 
 \begin_inset Formula $\varepsilon(A_{1},S)<\frac{1}{k}$
 \end_inset
 
 .
-\begin_inset Newline newline
-\end_inset
-
-נוכיח: מתקיים כי 
+ בכל שלב בריצה 
 \begin_inset Formula $Q_{k}(origNextFLimit)\leq C_{S}^{*}$
 \end_inset
 
- לכל שלב באלגוריתם עד מציאת פתרון, מכיוון שמובטח לנו שקיים צומת שיביא אותנו
- לפתרון האופטימלי שערכו 
-\begin_inset Formula $C_{S}^{*}$
+, כי קיים הצומת בפתרון האופטימלי.
+ מכיוון ש-
+\begin_inset Formula $prevFLimit$
 \end_inset
 
-, ולכן ערך ה-
-\begin_inset Formula $f$
+ גדל לכל הפחות ב-
+\begin_inset Formula $\text{\ensuremath{\frac{1}{k}}}$
 \end_inset
 
- שלו יהיה קטן שווה מ-
-\begin_inset Formula $C_{S}^{*}$
+, המצב הגרוע ביותר יהיה כשבאיטרציה הלפני אחרונה הוא יקבל ערך 
+\begin_inset Formula $C_{S}^{*}-\varepsilon$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $\varepsilon\rightarrow0$
+\end_inset
+
+ )מה שיגרור איטרציה נוספת(.
+ ואז 
+\begin_inset Formula $nextFlimit$
+\end_inset
+
+ יהיה 
+\begin_inset Formula $C_{S}^{*}+\frac{1}{k}-\varepsilon$
 \end_inset
 
 .
- נסתכל על האיטרציה האחרונה לפני שאנו מוצאים את הפתרון בה נקראת הפונקציה
- 
-\begin_inset Formula $nextFLimit$
+ כעת, יכול להימצא כל פתרון בטווח 
+\begin_inset Formula $[C_{S}^{*},C_{S}^{*}+\frac{1}{k}-\varepsilon]$
 \end_inset
 
-.
- בשלב זה מתקיים 
-\begin_inset Formula $C_{S}^{*}-prevFLimit\leq\frac{1}{k}$
+ ולכן נקבל כי החסם ההדוק 
+\begin_inset Formula $\varepsilon(A_{1},S)$
 \end_inset
 
-.
- כי אחרת, היינו עושים לפחות עוד איטרציה ולא היינו באיטרציה האחרונה.
-\begin_inset Newline newline
-\end_inset
-
-מתקיים ש-
-\begin_inset Formula $Q_{k}(origNextFLimit)\leq C_{S}^{*}\leq prevFLimit+\frac{1}{k}$
-\end_inset
-
- ואז:
-\begin_inset Formula 
-\[
-nextFLimit=max\{prevFLimit+\frac{1}{k},Q_{k}(origNextFLimit)\}=prevFLimit+\frac{1}{k}
-\]
-
-\end_inset
-
-כעת, באיטרציה האחרונה האלגוריתם יכול למצוא כל פתרון בטווח 
-\begin_inset Formula $[C_{S}^{*},prevFLimit+\frac{1}{k}]$
-\end_inset
-
- נשים לב כי כאשר 
-\begin_inset Formula $C_{S}^{*}-prevFLimit\longrightarrow0$
-\end_inset
-
- נקבל את הטווח 
-\begin_inset Formula $[C_{S}^{*},C_{S}^{*}+\frac{1}{k})$
-\end_inset
-
- ולכן הסטייה המקסימלית מהפתרון חסומה ע
-\begin_inset Quotes erd
-\end_inset
-
-י 
+ הוא 
 \begin_inset Formula $\frac{1}{k}$
 \end_inset
 
