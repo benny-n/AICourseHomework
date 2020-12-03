@@ -1174,11 +1174,23 @@ d
 \begin_inset Formula $C$
 \end_inset
 
- בנקודה )4,0( ודירה 
+ בנקודה )4,0( דירה 
 \begin_inset Formula $D$
 \end_inset
 
- בנקודה )0,3(.
+ בנקודה )0,3(, ומעבדה 
+\begin_inset Formula $L$
+\end_inset
+
+ בנקודה )
+\numeric on
+1
+\numeric off
+.
+\numeric on
+4
+\numeric off
+,0(.
 \begin_inset Newline newline
 \end_inset
 
@@ -1189,7 +1201,7 @@ d
 .
 \begin_inset Formula 
 \[
-h(s)\stackrel{(1)}{=}cost_{MDA}^{dist}(A\rightarrow B\rightarrow C\rightarrow D)=9>8.6=cost_{MDA}^{dist}(A\rightarrow D\rightarrow B\rightarrow C)\stackrel{(2)}{=}h^{*}(s)
+h(s)\stackrel{(1)}{=}cost_{MDA}^{dist}(A\rightarrow B\rightarrow C\rightarrow D)\stackrel{(2)}{=}9>8.7\stackrel{(3)}{=}cost_{MDA}^{dist}(A\rightarrow D\rightarrow B\rightarrow C\rightarrow L)\stackrel{(4)}{=}h^{*}(s)
 \]
 
 \end_inset
@@ -1199,11 +1211,31 @@ h(s)\stackrel{(1)}{=}cost_{MDA}^{dist}(A\rightarrow B\rightarrow C\rightarrow D)
 \begin_inset Newline newline
 \end_inset
 
-מעבר )2( נובע מכך שזה המסלול שעובר בכל ארבעת הדירות )כאשר מתחילים ב-
+מעברים )
+\numeric on
+2
+\numeric off
+( ו-)
+\numeric on
+3
+\numeric off
+( נובעים מחישוב המסלול לפי פוקנציית העלות 
+\begin_inset Formula $cost_{MDA}^{dist}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+מעבר )
+\numeric on
+4
+\numeric off
+( נובע מכך שזה המסלול שעובר בכל ארבעת הדירות )כאשר מתחילים ב-
 \begin_inset Formula $A$
 \end_inset
 
- ( במחיר האופטימלי.
+ ( ומסיים במעבדה, במחיר האופטימלי.
 \begin_inset Newline newline
 \end_inset
 
