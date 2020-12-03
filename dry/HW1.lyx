@@ -283,6 +283,224 @@
 2
 \numeric off
 .
+
+\size footnotesize
+ הביטוי: 
+\begin_inset Formula 
+\begin{align*}
+\underbrace{k!}_{\boldsymbol{(1)}}\cdot\underbrace{\sum_{i_{1}=0}^{m}P_{m}^{i_{1}}}_{\boldsymbol{(2)}}\left(\cdot\underbrace{\sum_{i_{2}=0}^{m-i_{1}}(i_{1}+1)\cdot P_{m}^{i_{2}}}_{\boldsymbol{(3)}}\underbrace{\left(\cdot\sum_{i_{3}=0}^{m-i_{1}-i_{2}}(i_{1}+i_{2}+1)\cdot P_{m}^{i_{2}}\left(...\sum_{i_{k}=0}^{m-i_{1}-i_{2}-...-i_{k-1}}(i_{1}+i_{2}+...+i_{k-1}+1)\cdot P_{m}^{i_{k}}\right)...\right)}_{\boldsymbol{(4)}}\right)\cdot\underbrace{m}_{\boldsymbol{(5)}} & =
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+ & \stackrel{\boldsymbol{(*)}}{=}k!\cdot m\cdot\sum_{i_{1}+i_{2}+...+i_{k}\leq m}\left(\prod_{j=1}^{k}P_{m}^{i_{j}}\cdot(i_{1}+1)\cdot(i_{1}+i_{2}+1)\cdot...\cdot(i_{1}+...+i_{k-1}+1)\right)=\\
+ & \stackrel{\boldsymbol{(*)}}{=}\boldsymbol{k!\cdot m\cdot\sum_{\sum_{s=1}^{k}i_{s}\leq m}\left(\prod_{j=1}^{k}P_{m}^{i_{j}}\cdot\prod_{l=1}^{k-1}\left(\left(\sum_{t=1}^{l}i_{t}\right)+1\right)\right)}
+\end{align*}
+
+\end_inset
+
+
+\series bold
+)1(
+\series default
+ מתן סדר לדירות.
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+)2(
+\series default
+ קביעת המעבדות לביקור לפני הביקור בדירה הראשונה וסידורן.
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+)3(
+\series default
+ קביעת המעבדות לביקור מבין המעבדות שעוד לא ביקרנו בהן אחרי הביקור בדירה
+ הראשונה ולפני הביקור בדירה השניה וסידורן, והחלטה האם לבקר במעבדה שכבר ביקרנו
+ בה בתור המעבדה הראשונה בסדר הביקור, או לא.
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+)4(
+\series default
+ המשך באינדוקציה עד הדירה ה-
+\begin_inset Formula $k$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+)5(
+\series default
+ קביעת המעבדה האחרונה לביקור.
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+)*(
+\series default
+ כינוס איברים וצמצום הביטוי.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+הסבר:
+\begin_inset Newline newline
+\end_inset
+
+
+\series default
+לפני הביקור בדירה הראשונה, נוכל לבקר ב-
+\begin_inset Formula $m$
+\end_inset
+
+ מעבדות )או לא לבקר במעבדה( עם חשיבות לסדר הביקור )ביטוי
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\numeric off
+(.
+ לאחר הביקור בדירה הראשונה ולפני הדירה השניה, ניתן לבקר באחת מ-
+\begin_inset Formula $i_{1}$
+\end_inset
+
+ המעבדות שכבר ביקרנו בהן )או לא לבקר(, ולאחר מכן לבקר ב-
+\begin_inset Formula $m-i_{1}$
+\end_inset
+
+ מעבדות )או לא לבקר במעבדה( עם חשיבות לסדר הביקור )ביטוי 
+\numeric on
+3
+\numeric off
+(.
+ נמשיך באינדוקציה עד הדירה ה-
+\begin_inset Formula $k$
+\end_inset
+
+, נכפיל בביטוי
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+ ובביטוי
+\family roman
+\series medium
+\shape up
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+5
+\numeric off
+, ונקבל את הביטוי המלא.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Description
@@ -433,14 +651,6 @@
  גדול מסכום כל המטושים בכל המעבדות + מספר המטושים ההתחלתי, אינם ישיגים.
  זאת מכיוון שלקחנו את כל המטושים הזמינים במעבדות ואין לנו מאיפה לקבל עוד
  מטושים.
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-
 \end_layout
 
 \begin_layout Description
@@ -579,6 +789,18 @@ s.VisitedLabs=Labs
 {\scriptstyle \cup} & {\scriptstyle {\scriptstyle \{(d_{i},\{d_{i}\}\cup s.Taken,s.Transferred,s.Matoshim-d_{i}.roomates,s.VisitedLabs)\:|\:i\in[k]\boldsymbol{\land}CanVisit(s,d_{i})\}}}
 \end{align*}
 
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
 \end_inset
 
 
@@ -1158,7 +1380,11 @@ d
 \begin_inset Formula $s$
 \end_inset
 
-: יש 4 דירות והאמבולנס נמצא בנקודה )0,0(.
+: יש 4 דירות והאמבולנס נמצא בנקודה 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+.
 \begin_inset Newline newline
 \end_inset
 
@@ -1166,31 +1392,43 @@ d
 \begin_inset Formula $A$
 \end_inset
 
- בנקודה )0,0( שבא האמבולנס נמצא כרגע, דירה 
+ בנקודה 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+ שבא האמבולנס נמצא כרגע, דירה 
 \begin_inset Formula $B$
 \end_inset
 
- בנקודה )2,0(, דירה 
+ בנקודה 
+\begin_inset Formula $(0,2)$
+\end_inset
+
+, דירה 
 \begin_inset Formula $C$
 \end_inset
 
- בנקודה )4,0( דירה 
+ בנקודה 
+\begin_inset Formula $(0,4)$
+\end_inset
+
+ דירה 
 \begin_inset Formula $D$
 \end_inset
 
- בנקודה )0,3(, ומעבדה 
+ בנקודה 
+\begin_inset Formula $(3,0)$
+\end_inset
+
+, ומעבדה 
 \begin_inset Formula $L$
 \end_inset
 
- בנקודה )
-\numeric on
-1
-\numeric off
+ בנקודה 
+\begin_inset Formula $(0,4.1)$
+\end_inset
+
 .
-\numeric on
-4
-\numeric off
-,0(.
 \begin_inset Newline newline
 \end_inset
 
@@ -1201,7 +1439,7 @@ d
 .
 \begin_inset Formula 
 \[
-h(s)\stackrel{(1)}{=}cost_{MDA}^{dist}(A\rightarrow B\rightarrow C\rightarrow D)\stackrel{(2)}{=}9>8.7\stackrel{(3)}{=}cost_{MDA}^{dist}(A\rightarrow D\rightarrow B\rightarrow C\rightarrow L)\stackrel{(4)}{=}h^{*}(s)
+h(s)\stackrel{(1)}{=}cost_{MDA}^{dist}(A\rightarrow B)+cost_{MDA}^{dist}(B\rightarrow C)+cost_{MDA}^{dist}(C\rightarrow D)\stackrel{(2)}{=}9>8.7\stackrel{(3)}{=}cost_{MDA}^{dist}(A\rightarrow D\rightarrow B\rightarrow C\rightarrow L)\stackrel{(4)}{=}h^{*}(s)
 \]
 
 \end_inset
@@ -2170,7 +2408,7 @@ cost_{MDA}^{dist}(s'_{i-1},o'_{i-1})+\sum_{j=0}^{i-2}cost_{MDA}^{dist}(s'_{j},o'
 \begin_inset Newline newline
 \end_inset
 
-טבלת המעקב העמוד הבא.
+טבלת המעקב:
 \size default
 
 \begin_inset Newline newline
@@ -7418,13 +7656,13 @@ cost_{MDA}^{dist}(P & \rightarrow L_{1})=11>8.5
 
  
 \size footnotesize
-מדד זה נפגע פחות ביחס מהאופן שבו הוא נפגע ב-ID-DFS לעומת BFS מכיוון שעבור
- 
+מדד זה נפגע פחות ביחס לאופן שבו הוא נפגע ב-ID-DFS לעומת BFS .
+ זאת מכיוון שעבור 
 \begin_inset Formula $IDA^{*}$
 \end_inset
 
- קיימות פונקציות יוריסטיות קבילות שעבורן הבעיה שתיארנו בסעיף הקודם לא תיגרם
- ונקבל זמן ריצה טוב יותר.
+ מספר האיטרציות תלוי גם במרחב, וקיימים מרחבים שעבורם הבעיה שתיארנו בסעיף
+ הקודם לא תיגרם ונקבל זמן ריצה טוב יותר.
  לעומת זאת ריצה של ID-DFS תמיד מכילה באיטרציה האחרונה שלה ריצה של BFS ולכן
  זמנה יהיה לכל הפחות כמו זמן הריצה של BFS ולרוב אף גבוה יותר.
 \end_layout

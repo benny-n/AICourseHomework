@@ -472,30 +472,7 @@
 \color inherit
 5
 \numeric off
-, ונקבל את הביטוי המלא.
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
+, ונקבל את הביטוי המלא לעיל.
  
 \begin_inset Newline newline
 \end_inset
@@ -651,6 +628,14 @@
  גדול מסכום כל המטושים בכל המעבדות + מספר המטושים ההתחלתי, אינם ישיגים.
  זאת מכיוון שלקחנו את כל המטושים הזמינים במעבדות ואין לנו מאיפה לקבל עוד
  מטושים.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Description
@@ -789,18 +774,6 @@ s.VisitedLabs=Labs
 {\scriptstyle \cup} & {\scriptstyle {\scriptstyle \{(d_{i},\{d_{i}\}\cup s.Taken,s.Transferred,s.Matoshim-d_{i}.roomates,s.VisitedLabs)\:|\:i\in[k]\boldsymbol{\land}CanVisit(s,d_{i})\}}}
 \end{align*}
 
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Newline newline
 \end_inset
 
 
@@ -1406,11 +1379,11 @@ d
 
  בנקודה )
 \numeric on
-4
+1
 \numeric off
 .
 \numeric on
-1
+4
 \numeric off
 ,0(.
 \begin_inset Newline newline
@@ -2392,7 +2365,7 @@ cost_{MDA}^{dist}(s'_{i-1},o'_{i-1})+\sum_{j=0}^{i-2}cost_{MDA}^{dist}(s'_{j},o'
 \begin_inset Newline newline
 \end_inset
 
-טבלת המעקב:
+טבלת המעקב העמוד הבא.
 \size default
 
 \begin_inset Newline newline
