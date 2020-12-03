@@ -1380,7 +1380,11 @@ d
 \begin_inset Formula $s$
 \end_inset
 
-: יש 4 דירות והאמבולנס נמצא בנקודה )0,0(.
+: יש 4 דירות והאמבולנס נמצא בנקודה 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+.
 \begin_inset Newline newline
 \end_inset
 
@@ -1388,31 +1392,43 @@ d
 \begin_inset Formula $A$
 \end_inset
 
- בנקודה )0,0( שבא האמבולנס נמצא כרגע, דירה 
+ בנקודה 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+ שבא האמבולנס נמצא כרגע, דירה 
 \begin_inset Formula $B$
 \end_inset
 
- בנקודה )2,0(, דירה 
+ בנקודה 
+\begin_inset Formula $(0,2)$
+\end_inset
+
+, דירה 
 \begin_inset Formula $C$
 \end_inset
 
- בנקודה )4,0( דירה 
+ בנקודה 
+\begin_inset Formula $(0,4)$
+\end_inset
+
+ דירה 
 \begin_inset Formula $D$
 \end_inset
 
- בנקודה )0,3(, ומעבדה 
+ בנקודה 
+\begin_inset Formula $(3,0)$
+\end_inset
+
+, ומעבדה 
 \begin_inset Formula $L$
 \end_inset
 
- בנקודה )
-\numeric on
-4
-\numeric off
+ בנקודה 
+\begin_inset Formula $(0,4.1)$
+\end_inset
+
 .
-\numeric on
-1
-\numeric off
-,0(.
 \begin_inset Newline newline
 \end_inset
 
@@ -2228,14 +2244,6 @@ cost_{MDA}^{dist}(s'_{i-1},o'_{i-1})+\sum_{j=0}^{i-2}cost_{MDA}^{dist}(s'_{j},o'
 \end_inset
 
  הנקוב.
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-
 \end_layout
 
 \begin_layout Description
@@ -2384,7 +2392,7 @@ cost_{MDA}^{dist}(s'_{i-1},o'_{i-1})+\sum_{j=0}^{i-2}cost_{MDA}^{dist}(s'_{j},o'
 \begin_inset Graphics
 	filename ex39.png
 	lyxscale 70
-	scale 70
+	scale 50
 
 \end_inset
 

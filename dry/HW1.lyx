@@ -2244,14 +2244,6 @@ cost_{MDA}^{dist}(s'_{i-1},o'_{i-1})+\sum_{j=0}^{i-2}cost_{MDA}^{dist}(s'_{j},o'
 \end_inset
 
  הנקוב.
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-
 \end_layout
 
 \begin_layout Description
@@ -2400,7 +2392,7 @@ cost_{MDA}^{dist}(s'_{i-1},o'_{i-1})+\sum_{j=0}^{i-2}cost_{MDA}^{dist}(s'_{j},o'
 \begin_inset Graphics
 	filename ex39.png
 	lyxscale 70
-	scale 70
+	scale 50
 
 \end_inset
 
@@ -2408,7 +2400,7 @@ cost_{MDA}^{dist}(s'_{i-1},o'_{i-1})+\sum_{j=0}^{i-2}cost_{MDA}^{dist}(s'_{j},o'
 \begin_inset Newline newline
 \end_inset
 
-טבלת המעקב:
+טבלת המעקב בעמוד הבא:
 \size default
 
 \begin_inset Newline newline
@@ -3595,7 +3587,7 @@ cost_{MDA}^{dist} & (L_{2}\rightarrow L_{1}\rightarrow A\rightarrow L_{2})=7>6
 \begin_inset Newline newline
 \end_inset
 
-טבלת המעקב העמוד הבא.
+טבלת המעקב העמוד הבא:
 \size default
 
 \begin_inset Newline newline
